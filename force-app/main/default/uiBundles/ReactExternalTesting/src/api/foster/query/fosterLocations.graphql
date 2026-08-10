@@ -1,0 +1,24 @@
+query FosterLocations {
+  uiapi {
+    query {
+      animalos__Location__c(
+        where: {
+          and: [
+            { Available_in_Community__c: { eq: true } }
+            { RecordType: { DeveloperName: { eq: "Foster" } } }
+          ]
+        }
+        first: 200
+      ) {
+        edges {
+          node {
+            Id
+            Name {
+              value
+            }
+          }
+        }
+      }
+    }
+  }
+}
