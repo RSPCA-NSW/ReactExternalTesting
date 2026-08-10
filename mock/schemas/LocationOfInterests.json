@@ -1,0 +1,367 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef1"
+      },
+      "Name": "54 Lotus Avenue, Kalkite, NSW 2627 AU",
+      "animalos__Reported_Physical_Violence_Summary__c": "<p>Neighbours reported repeated physical intimidation and property damage at this location.</p>",
+      "animalos__Children_at_Location__c": "Yes",
+      "animalos__Number_of_Residents__c": 3
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef2"
+      },
+      "Name": "47 Hodge Street, Hurstville, NSW 2220 AU",
+      "animalos__Observed_Verbal_Abuse_Summary__c": "<p>Attending officer observed aggressive yelling directed at occupants during site visit.</p>",
+      "animalos__POI_Time_at_Location__c": "Afternoons and evenings"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef3"
+      },
+      "Name": "22 Hewitts Road, Young, NSW 2594 AU",
+      "animalos__Location_Safety_Concerns__c": "<p>Caller reported suspected substance misuse and erratic behaviour around animals on the property.</p>"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef4"
+      },
+      "Name": "162 Carr Street, Grafton, NSW 2460 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef5"
+      },
+      "Name": "1502 Kaputar Road, Bullawa Creek",
+      "animalos__Children_at_Location__c": "No"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef6"
+      },
+      "Name": "1502 Bullawa Creek, NSW 2390 AU",
+      "animalos__Observed_Physical_Violence_Summary__c": "<p>Inspector observed threatening physical behaviour between occupants during attendance.</p>"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef7"
+      },
+      "Name": "11/21 Hope Street, Blaxland, NSW 2774 AU",
+      "animalos__Reported_Verbal_Abuse_Summary__c": "<p>Multiple callers described escalating verbal abuse and intimidation at the property.</p>"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef8"
+      },
+      "Name": "43A Pandora Street, Greenacre, NSW 2190 AU",
+      "animalos__POI_Time_at_Location__c": "Late mornings"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef9"
+      },
+      "Name": "30 Websdale Drive, Dubbo, NSW 2830 AU",
+      "animalos__Location_Safety_Concerns__c": "<p>Report indicates a firearm may be stored on site and visible during animal feeding.</p>"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef10"
+      },
+      "Name": "Tweed Heads, NSW 2486 AU",
+      "animalos__Children_Details__c": "Two children reportedly visit this location on alternate weekends.",
+      "animalos__Children_at_Location__c": "Yes"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef11"
+      },
+      "Name": "87 Old Backwater Road, Narromine, NSW 2821 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef12"
+      },
+      "Name": "1126 Bruxner Way, Tenterfield, NSW 2372 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef13"
+      },
+      "Name": "1/49 College Avenue, Blackbutt, NSW 2529 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef14"
+      },
+      "Name": "75 Wirrinya Road, Forbes, NSW 2871 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef15"
+      },
+      "Name": "Blackwall Road, Woy Woy, NSW 2256 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef16"
+      },
+      "Name": "Kyogle Road, Bray Park, NSW 2484 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef17"
+      },
+      "Name": "61 golf links dr,, Watanobbi, NSW 2259 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef18"
+      },
+      "Name": "7 Hilton Place, Junee, NSW 2663 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef19"
+      },
+      "Name": "1274 Sextonville Road, Dobies Bight, NSW 2470 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef20"
+      },
+      "Name": "3/20-22 Owen Avenue, Wyong, NSW 2259 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef21"
+      },
+      "Name": "400 Clemens Road, Woodlands, NSW 2575 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef22"
+      },
+      "Name": "Clemens Road, Woodlands, NSW 2575 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef23"
+      },
+      "Name": "2a/26 Boeing Avenue, Ballina, NSW 2478 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef24"
+      },
+      "Name": "4A Hallidise Street, Nambucca Heads, NSW 2448 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef25"
+      },
+      "Name": "29 Mungindi Street, Mungindi, NSW 2406 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef26"
+      },
+      "Name": "5 Friends Lane, Young, NSW 2594 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef27"
+      },
+      "Name": "3 Melia Way, South Grafton, NSW 2460 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef28"
+      },
+      "Name": "1/2 Long Street, Strathfield, NSW 2135 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef29"
+      },
+      "Name": "8 Stone Street, Stockton, NSW 2295 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef30"
+      },
+      "Name": "27 Short Street, Wellington, NSW 2820 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef31"
+      },
+      "Name": "5 Ruddocks Road, Lakesland, NSW 2572 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef32"
+      },
+      "Name": "6/45 Churchill Crescent, Rutherford, NSW 2320 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef33"
+      },
+      "Name": "58 Kippax Avenue, Leumeah, NSW 2560 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef34"
+      },
+      "Name": "2513 Getta Getta Road, North Star, NSW 2408 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef35"
+      },
+      "Name": "63 Greendale Road, Wallacia, NSW 2745 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef36"
+      },
+      "Name": "Gullengamble Road, Obley, NSW 2868 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef37"
+      },
+      "Name": "38 Banks Road, Miller, NSW 2168 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef38"
+      },
+      "Name": "187 Top Somerton Road, Attunga"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef39"
+      },
+      "Name": "2/4 Borton Street, Ballina, NSW 2478 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef40"
+      },
+      "Name": "182 Gresford Road, Sedgefield, NSW 2330 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef41"
+      },
+      "Name": "11/44 Minto Road, Minto, NSW 2566 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef42"
+      },
+      "Name": "30A Trevanna Street, Busby, NSW 2168 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef43"
+      },
+      "Name": "3/1-5 Peel Street, Toukley, NSW 2263 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef44"
+      },
+      "Name": "7/66 Marsden Road, Liverpool, NSW 2170 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef45"
+      },
+      "Name": "3 Cheney Road, Parkes, NSW 2870 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef46"
+      },
+      "Name": "3A MacGowan Street, East Maitland, NSW 2323 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef47"
+      },
+      "Name": "60b Oaklands Circuit, Gregory Hills, NSW 2557 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef48"
+      },
+      "Name": "3 Tindale Street, Rylstone, NSW 2849 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef49"
+      },
+      "Name": "1629 Timor Road, Murrurundi, NSW 2338 AU"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location_Of_Interest__c",
+        "referenceId": "LOIRef50"
+      },
+      "Name": "105 Links Road, Gunnedah, NSW 2380 AU"
+    }
+  ]
+}

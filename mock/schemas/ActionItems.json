@@ -1,0 +1,207 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef1"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef1",
+      "animalos__Action_Type__c": "Enrichment",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Enrichment activities from at least three enrichment categories (Cognitive, Dietary, Physical, Sensory and Social) should be implemented each day, and on a rotational basis to ensure maximum benefit and avoid animals becoming bored"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef2"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef2",
+      "animalos__Action_Type__c": "Exercise",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Exercise time"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef3"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef3",
+      "animalos__Action_Type__c": "Daily Observation",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Daily Observation tasks, including EDUF."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef4"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef4",
+      "animalos__Action_Type__c": "Enrichment",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Interaction with animal"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef5"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef5",
+      "animalos__Action_Type__c": "Weigh In",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Weekly Weigh-In"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef6"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef6",
+      "animalos__Action_Type__c": "Treatment",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Sanitation",
+      "animalos__Time_of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef7"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef7",
+      "animalos__Action_Type__c": "Weigh In",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Daily Weigh-In"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef8"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef8",
+      "animalos__Action_Type__c": "Weigh In",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Weigh-in Every 2 Days"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef9"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef9",
+      "animalos__Action_Type__c": "Treatment",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Malaseb Bath"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef10"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef10",
+      "animalos__Action_Type__c": "Treatment",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Malaseb Bath"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef11"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef11",
+      "animalos__Action_Type__c": "Weigh In",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Weekly Weigh-In"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef12"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef12",
+      "animalos__Action_Type__c": "Daily Observation",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Fear/Anxiety/Stress Score (FAS)",
+      "animalos__Time_of_Day__c": "Lunch"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef13"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef13",
+      "animalos__Action_Type__c": "Daily Observation",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Feline Toileting Habits",
+      "animalos__Time_of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef14"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef14",
+      "animalos__Action_Type__c": "Weigh In",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Monthly Weigh-In"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef15"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef15",
+      "animalos__Action_Type__c": "Daily Observation",
+      "animalos__First_Given__c": false,
+      "animalos__Time_of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef16"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef16",
+      "animalos__Action_Type__c": "Treatment",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Default treatment action item"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef17"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef17",
+      "animalos__Action_Type__c": "Nutrition",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Default nutrition action item"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef18"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef18",
+      "animalos__Action_Type__c": "Enrichment",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Default enrichment action item"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef19"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef19",
+      "animalos__Action_Type__c": "Weigh In",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Default weigh-in action item"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Item__c",
+        "referenceId": "ActionItemRef20"
+      },
+      "animalos__Action_Plan__c": "@ActionPlanRef20",
+      "animalos__Action_Type__c": "Weigh In",
+      "animalos__First_Given__c": false,
+      "animalos__Description__c": "Weigh-in Every 3 Days"
+    }
+  ]
+}

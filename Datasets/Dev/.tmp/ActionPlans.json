@@ -1,0 +1,22 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "animalos__Action_Plan__c", "referenceId": "ActionPlanRef1" },
+      "Name": "Daily Dog Walking",
+      "animalos__Animal_Type__c": "Dog",
+      "animalos__Description__c": "Standard daily walking routine for shelter dogs to ensure adequate exercise and socialisation.",
+      "animalos__Frequency__c": "Daily",
+      "animalos__Frequency_Interval__c": "1",
+      "animalos__Status__c": "Active"
+    },
+    {
+      "attributes": { "type": "animalos__Action_Plan__c", "referenceId": "ActionPlanRef2" },
+      "Name": "Cat Socialisation Program",
+      "animalos__Animal_Type__c": "Cat",
+      "animalos__Description__c": "Weekly socialisation sessions for cats to improve adoptability and reduce stress.",
+      "animalos__Frequency__c": "Weekly",
+      "animalos__Frequency_Interval__c": "1",
+      "animalos__Status__c": "Active"
+    }
+  ]
+}

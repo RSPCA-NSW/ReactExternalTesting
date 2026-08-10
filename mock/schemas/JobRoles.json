@@ -1,0 +1,94 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Job_Role__c",
+        "referenceId": "JobRoleRef1"
+      },
+      "animalos__Job__c": "@JobRef1",
+      "animalos__Role__c": "Animal Officer",
+      "animalos__Start_Date__c": "2026-03-28"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Role__c",
+        "referenceId": "JobRoleRef2"
+      },
+      "animalos__Job__c": "@JobRef2",
+      "animalos__Role__c": "Case Worker",
+      "animalos__Start_Date__c": "2026-03-29"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Role__c",
+        "referenceId": "JobRoleRef3"
+      },
+      "animalos__Job__c": "@JobRef3",
+      "animalos__Role__c": "Animal Officer",
+      "animalos__Start_Date__c": "2026-03-30"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Role__c",
+        "referenceId": "JobRoleRef4"
+      },
+      "animalos__Job__c": "@JobRef4",
+      "animalos__Role__c": "Case Worker",
+      "animalos__Start_Date__c": "2026-03-31"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Role__c",
+        "referenceId": "JobRoleRef5"
+      },
+      "animalos__Job__c": "@JobRef5",
+      "animalos__Role__c": "Animal Officer",
+      "animalos__Start_Date__c": "2026-04-01"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Role__c",
+        "referenceId": "JobRoleRef6"
+      },
+      "animalos__Job__c": "@JobRef6",
+      "animalos__Role__c": "Case Worker",
+      "animalos__Start_Date__c": "2026-04-02"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Role__c",
+        "referenceId": "JobRoleRef7"
+      },
+      "animalos__Job__c": "@JobRef7",
+      "animalos__Role__c": "Animal Officer",
+      "animalos__Start_Date__c": "2026-04-03"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Role__c",
+        "referenceId": "JobRoleRef8"
+      },
+      "animalos__Job__c": "@JobRef8",
+      "animalos__Role__c": "Case Worker",
+      "animalos__Start_Date__c": "2026-04-04"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Role__c",
+        "referenceId": "JobRoleRef9"
+      },
+      "animalos__Job__c": "@JobRef9",
+      "animalos__Role__c": "Animal Officer",
+      "animalos__Start_Date__c": "2026-04-05"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Role__c",
+        "referenceId": "JobRoleRef10"
+      },
+      "animalos__Job__c": "@JobRef10",
+      "animalos__Role__c": "Case Worker",
+      "animalos__Start_Date__c": "2026-04-06"
+    }
+  ]
+}

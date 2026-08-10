@@ -1,0 +1,84 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity_Animal__c",
+        "referenceId": "JobActivityAnimalRef1"
+      },
+      "animalos__Job_Activity__c": "@JobActivityRef1",
+      "animalos__Animal__c": "@AnimalRef1"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity_Animal__c",
+        "referenceId": "JobActivityAnimalRef2"
+      },
+      "animalos__Job_Activity__c": "@JobActivityRef2",
+      "animalos__Animal__c": "@AnimalRef2"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity_Animal__c",
+        "referenceId": "JobActivityAnimalRef3"
+      },
+      "animalos__Job_Activity__c": "@JobActivityRef3",
+      "animalos__Animal__c": "@AnimalRef3"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity_Animal__c",
+        "referenceId": "JobActivityAnimalRef4"
+      },
+      "animalos__Job_Activity__c": "@JobActivityRef4",
+      "animalos__Animal__c": "@AnimalRef4"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity_Animal__c",
+        "referenceId": "JobActivityAnimalRef5"
+      },
+      "animalos__Job_Activity__c": "@JobActivityRef5",
+      "animalos__Animal__c": "@AnimalRef5"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity_Animal__c",
+        "referenceId": "JobActivityAnimalRef6"
+      },
+      "animalos__Job_Activity__c": "@JobActivityRef6",
+      "animalos__Animal__c": "@AnimalRef6"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity_Animal__c",
+        "referenceId": "JobActivityAnimalRef7"
+      },
+      "animalos__Job_Activity__c": "@JobActivityRef7",
+      "animalos__Animal__c": "@AnimalRef7"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity_Animal__c",
+        "referenceId": "JobActivityAnimalRef8"
+      },
+      "animalos__Job_Activity__c": "@JobActivityRef8",
+      "animalos__Animal__c": "@AnimalRef8"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity_Animal__c",
+        "referenceId": "JobActivityAnimalRef9"
+      },
+      "animalos__Job_Activity__c": "@JobActivityRef9",
+      "animalos__Animal__c": "@AnimalRef9"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity_Animal__c",
+        "referenceId": "JobActivityAnimalRef10"
+      },
+      "animalos__Job_Activity__c": "@JobActivityRef10",
+      "animalos__Animal__c": "@AnimalRef10"
+    }
+  ]
+}

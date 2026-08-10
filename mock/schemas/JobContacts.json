@@ -1,0 +1,224 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef1"
+      },
+      "animalos__Job__c": "@JobRef1",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Organization__c": "@AccountRef2",
+      "animalos__Contact_Type__c": "Informant",
+      "animalos__Start_Date__c": "2026-04-01T09:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef2"
+      },
+      "animalos__Job__c": "@JobRef1",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Organization__c": "@AccountRef3",
+      "animalos__Contact_Type__c": "Person Of Interest",
+      "animalos__Start_Date__c": "2026-04-01T09:30:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef3"
+      },
+      "animalos__Job__c": "@JobRef2",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Organization__c": "@AccountRef3",
+      "animalos__Contact_Type__c": "Informant",
+      "animalos__Start_Date__c": "2026-04-02T09:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef4"
+      },
+      "animalos__Job__c": "@JobRef2",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Organization__c": "@AccountRef1",
+      "animalos__Contact_Type__c": "Person Of Interest",
+      "animalos__Start_Date__c": "2026-04-02T09:30:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef5"
+      },
+      "animalos__Job__c": "@JobRef3",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Organization__c": "@AccountRef1",
+      "animalos__Contact_Type__c": "Informant",
+      "animalos__Start_Date__c": "2026-04-03T09:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef6"
+      },
+      "animalos__Job__c": "@JobRef3",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Organization__c": "@AccountRef2",
+      "animalos__Contact_Type__c": "Person Of Interest",
+      "animalos__Start_Date__c": "2026-04-03T09:30:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef7"
+      },
+      "animalos__Job__c": "@JobRef4",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Organization__c": "@AccountRef2",
+      "animalos__Contact_Type__c": "Informant",
+      "animalos__Start_Date__c": "2026-04-04T09:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef8"
+      },
+      "animalos__Job__c": "@JobRef4",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Organization__c": "@AccountRef3",
+      "animalos__Contact_Type__c": "Person Of Interest",
+      "animalos__Start_Date__c": "2026-04-04T09:30:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef9"
+      },
+      "animalos__Job__c": "@JobRef5",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Organization__c": "@AccountRef3",
+      "animalos__Contact_Type__c": "Informant",
+      "animalos__Start_Date__c": "2026-04-05T09:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef10"
+      },
+      "animalos__Job__c": "@JobRef5",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Organization__c": "@AccountRef1",
+      "animalos__Contact_Type__c": "Person Of Interest",
+      "animalos__Start_Date__c": "2026-04-05T09:30:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef11"
+      },
+      "animalos__Job__c": "@JobRef6",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Organization__c": "@AccountRef1",
+      "animalos__Contact_Type__c": "Informant",
+      "animalos__Start_Date__c": "2026-04-06T09:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef12"
+      },
+      "animalos__Job__c": "@JobRef6",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Organization__c": "@AccountRef2",
+      "animalos__Contact_Type__c": "Person Of Interest",
+      "animalos__Start_Date__c": "2026-04-06T09:30:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef13"
+      },
+      "animalos__Job__c": "@JobRef7",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Organization__c": "@AccountRef2",
+      "animalos__Contact_Type__c": "Informant",
+      "animalos__Start_Date__c": "2026-04-07T09:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef14"
+      },
+      "animalos__Job__c": "@JobRef7",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Organization__c": "@AccountRef3",
+      "animalos__Contact_Type__c": "Person Of Interest",
+      "animalos__Start_Date__c": "2026-04-07T09:30:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef15"
+      },
+      "animalos__Job__c": "@JobRef8",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Organization__c": "@AccountRef3",
+      "animalos__Contact_Type__c": "Informant",
+      "animalos__Start_Date__c": "2026-04-08T09:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef16"
+      },
+      "animalos__Job__c": "@JobRef8",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Organization__c": "@AccountRef1",
+      "animalos__Contact_Type__c": "Person Of Interest",
+      "animalos__Start_Date__c": "2026-04-08T09:30:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef17"
+      },
+      "animalos__Job__c": "@JobRef9",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Organization__c": "@AccountRef1",
+      "animalos__Contact_Type__c": "Informant",
+      "animalos__Start_Date__c": "2026-04-09T09:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef18"
+      },
+      "animalos__Job__c": "@JobRef9",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Organization__c": "@AccountRef2",
+      "animalos__Contact_Type__c": "Person Of Interest",
+      "animalos__Start_Date__c": "2026-04-09T09:30:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef19"
+      },
+      "animalos__Job__c": "@JobRef10",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Organization__c": "@AccountRef2",
+      "animalos__Contact_Type__c": "Informant",
+      "animalos__Start_Date__c": "2026-04-10T09:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Contact__c",
+        "referenceId": "JobContactRef20"
+      },
+      "animalos__Job__c": "@JobRef10",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Organization__c": "@AccountRef3",
+      "animalos__Contact_Type__c": "Person Of Interest",
+      "animalos__Start_Date__c": "2026-04-10T09:30:00.000+0000"
+    }
+  ]
+}

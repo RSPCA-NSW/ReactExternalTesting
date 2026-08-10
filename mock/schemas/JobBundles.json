@@ -1,0 +1,17 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "animalos__Job_Bundle__c", "referenceId": "JobBundleRef1" },
+      "animalos__Status__c": "In Progress",
+      "animalos__Outcome__c": "Enforcement Action",
+      "animalos__Start_Date__c": "2026-03-28",
+      "animalos__Description__c": "<p>Inspectorate mock bundle used to group seeded job records for scratch org demos.</p>"
+    },
+    {
+      "attributes": { "type": "animalos__Job_Bundle__c", "referenceId": "JobBundleRef2" },
+      "animalos__Status__c": "Pending",
+      "animalos__Start_Date__c": "2026-04-02",
+      "animalos__Description__c": "<p>Crisis support mock bundle for seeded package demo data.</p>"
+    }
+  ]
+}

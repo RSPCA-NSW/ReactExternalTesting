@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Contact", "referenceId": "ContactRef1" },
+      "LastName": "Smith"
+    },
+    {
+      "attributes": { "type": "Contact", "referenceId": "ContactRef2" },
+      "LastName": "Johnson"
+    },
+    {
+      "attributes": { "type": "Contact", "referenceId": "ContactRef3" },
+      "LastName": "Williams"
+    }
+  ]
+}

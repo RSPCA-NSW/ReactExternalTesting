@@ -1,0 +1,84 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Location__c",
+        "referenceId": "UnitRef1"
+      },
+      "Name": "Dog Kennel 1",
+      "animalos__Parent_Block__c": "@BlockRef1",
+      "animalos__Capacity__c": 4,
+      "animalos__Availability__c": 2,
+      "animalos__Adjusted_Capacity__c": 4,
+      "animalos__Adjusted_Availability__c": 2,
+      "animalos__Unit_Status__c": "Allocated",
+      "animalos__Allocation__c": 2,
+      "animalos__Unavailable_for_Boarding__c": false,
+      "RecordTypeId": "0129t000003MJSKAA4"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location__c",
+        "referenceId": "UnitRef2"
+      },
+      "Name": "Dog Kennel 2",
+      "animalos__Parent_Block__c": "@BlockRef1",
+      "animalos__Capacity__c": 4,
+      "animalos__Availability__c": 3,
+      "animalos__Adjusted_Capacity__c": 4,
+      "animalos__Adjusted_Availability__c": 3,
+      "animalos__Unit_Status__c": "Allocated",
+      "animalos__Allocation__c": 1,
+      "animalos__Unavailable_for_Boarding__c": false,
+      "RecordTypeId": "0129t000003MJSKAA4"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location__c",
+        "referenceId": "UnitRef3"
+      },
+      "Name": "Cat Room 1",
+      "animalos__Parent_Block__c": "@BlockRef2",
+      "animalos__Capacity__c": 6,
+      "animalos__Availability__c": 5,
+      "animalos__Adjusted_Capacity__c": 6,
+      "animalos__Adjusted_Availability__c": 5,
+      "animalos__Unit_Status__c": "Allocated",
+      "animalos__Allocation__c": 1,
+      "animalos__Unavailable_for_Boarding__c": false,
+      "RecordTypeId": "0129t000003MJSKAA4"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location__c",
+        "referenceId": "UnitRef4"
+      },
+      "Name": "Cat Room 2",
+      "animalos__Parent_Block__c": "@BlockRef2",
+      "animalos__Capacity__c": 6,
+      "animalos__Availability__c": 4,
+      "animalos__Adjusted_Capacity__c": 6,
+      "animalos__Adjusted_Availability__c": 4,
+      "animalos__Unit_Status__c": "Allocated",
+      "animalos__Allocation__c": 2,
+      "animalos__Unavailable_for_Boarding__c": false,
+      "RecordTypeId": "0129t000003MJSKAA4"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location__c",
+        "referenceId": "UnitRef5"
+      },
+      "Name": "Small Animal Room 1",
+      "animalos__Parent_Block__c": "@BlockRef3",
+      "animalos__Capacity__c": 8,
+      "animalos__Availability__c": 6,
+      "animalos__Adjusted_Capacity__c": 8,
+      "animalos__Adjusted_Availability__c": 6,
+      "animalos__Unit_Status__c": "Allocated",
+      "animalos__Allocation__c": 2,
+      "animalos__Unavailable_for_Boarding__c": false,
+      "RecordTypeId": "0129t000003MJSKAA4"
+    }
+  ]
+}

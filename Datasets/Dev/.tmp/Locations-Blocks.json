@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Location__c",
+        "referenceId": "BlockRef1"
+      },
+      "Name": "Dog Wing",
+      "animalos__Parent_Block__c": "@SiteRef1",
+      "animalos__Capacity__c": 40,
+      "animalos__Availability__c": 18,
+      "animalos__Adjusted_Capacity__c": 40,
+      "animalos__Adjusted_Availability__c": 18,
+      "animalos__Unit_Status__c": "Available",
+      "animalos__Unavailable_for_Boarding__c": false,
+      "RecordTypeId": "0129t000003MJSGAA4"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location__c",
+        "referenceId": "BlockRef2"
+      },
+      "Name": "Cat Wing",
+      "animalos__Parent_Block__c": "@SiteRef1",
+      "animalos__Capacity__c": 30,
+      "animalos__Availability__c": 15,
+      "animalos__Adjusted_Capacity__c": 30,
+      "animalos__Adjusted_Availability__c": 15,
+      "animalos__Unit_Status__c": "Available",
+      "animalos__Unavailable_for_Boarding__c": false,
+      "RecordTypeId": "0129t000003MJSGAA4"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Location__c",
+        "referenceId": "BlockRef3"
+      },
+      "Name": "Small Animal Wing",
+      "animalos__Parent_Block__c": "@SiteRef2",
+      "animalos__Capacity__c": 20,
+      "animalos__Availability__c": 12,
+      "animalos__Adjusted_Capacity__c": 20,
+      "animalos__Adjusted_Availability__c": 12,
+      "animalos__Unit_Status__c": "Available",
+      "animalos__Unavailable_for_Boarding__c": false,
+      "RecordTypeId": "0129t000003MJSGAA4"
+    }
+  ]
+}

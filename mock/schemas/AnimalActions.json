@@ -1,0 +1,2077 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef1"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef1",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-01-11T18:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-01-11T18:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Max (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef2"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef1",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-01-13T17:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Max.",
+      "animalos__Weight_KG__c": 30.5
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef3"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef1",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-09T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Max."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef4"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef2",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-29T23:30:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-29T23:50:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Bella (Stray).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef5"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef2",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-31T22:30:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Bella.",
+      "animalos__Weight_KG__c": 28.0
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef6"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef2",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-10T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Bella."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef7"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef3",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-06T19:15:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-06T19:35:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Luna (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef8"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef3",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-08T18:15:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Luna."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef9"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef3",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-11T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Luna.",
+      "animalos__Weight_KG__c": 4.2
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef10"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef4",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-01-21T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-01-21T20:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Milo (Stray)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef11"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef4",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-01-23T19:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Milo."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef12"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef4",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-12T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Milo.",
+      "animalos__Weight_KG__c": 5.1
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef13"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef5",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-16T17:45:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-16T18:05:00.000+0000",
+      "animalos__Description__c": "Completed care observation. Historical seed data for Kiwi (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef14"
+      },
+      "RecordType": {
+        "DeveloperName": "Treatment"
+      },
+      "animalos__Animal__c": "@AnimalRef5",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-18T16:45:00.000+0000",
+      "animalos__Description__c": "Follow-up treatment action overdue. Historical overdue seed data for Kiwi."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef15"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef5",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-13T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming care observation. Upcoming seed data for Kiwi."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef16"
+      },
+      "RecordType": {
+        "DeveloperName": "Nutrition"
+      },
+      "animalos__Animal__c": "@AnimalRef6",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-01T22:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-01T22:20:00.000+0000",
+      "animalos__Description__c": "Completed nutrition check. Historical seed data for Pepper (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef17"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef6",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-03T21:00:00.000+0000",
+      "animalos__Description__c": "Weight review overdue. Historical overdue seed data for Pepper.",
+      "animalos__Weight_KG__c": 1.8
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef18"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef6",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-08T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming care observation. Upcoming seed data for Pepper."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef19"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef7",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-11T18:30:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-11T18:50:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Rocky (Returns).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef20"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef7",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-13T17:30:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Rocky.",
+      "animalos__Weight_KG__c": 18.5
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef21"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef7",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-09T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Rocky."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef22"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef8",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-02T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-02T19:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Whiskers (Stray)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef23"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef8",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-04T18:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Whiskers."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef24"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef8",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-10T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Whiskers.",
+      "animalos__Weight_KG__c": 3.8
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef25"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef9",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-01-18T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-01-18T19:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Daisy (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef26"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef9",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-01-20T18:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Daisy.",
+      "animalos__Weight_KG__c": 18.2
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef27"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef9",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-11T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Daisy."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef28"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef10",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-01-20T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-01-20T20:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Charlie (Stray).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef29"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef10",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-01-22T19:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Charlie.",
+      "animalos__Weight_KG__c": 22.5
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef30"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef10",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-12T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Charlie."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef31"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef11",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-01-22T21:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-01-22T21:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Coco (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef32"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef11",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-01-24T20:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Coco."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef33"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef11",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-13T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Coco.",
+      "animalos__Weight_KG__c": 4.8
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef34"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef12",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-01-24T18:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-01-24T18:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Archie (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef35"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef12",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-01-26T17:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Archie."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef36"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef12",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-08T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Archie.",
+      "animalos__Weight_KG__c": 5.0
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef37"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef13",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-01-26T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-01-26T19:20:00.000+0000",
+      "animalos__Description__c": "Completed care observation. Historical seed data for Hazel (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef38"
+      },
+      "RecordType": {
+        "DeveloperName": "Treatment"
+      },
+      "animalos__Animal__c": "@AnimalRef13",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-01-28T18:00:00.000+0000",
+      "animalos__Description__c": "Follow-up treatment action overdue. Historical overdue seed data for Hazel."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef39"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef13",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-09T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming care observation. Upcoming seed data for Hazel."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef40"
+      },
+      "RecordType": {
+        "DeveloperName": "Nutrition"
+      },
+      "animalos__Animal__c": "@AnimalRef14",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-01-28T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-01-28T20:20:00.000+0000",
+      "animalos__Description__c": "Completed nutrition check. Historical seed data for Ollie (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef41"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef14",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-01-30T19:00:00.000+0000",
+      "animalos__Description__c": "Weight review overdue. Historical overdue seed data for Ollie.",
+      "animalos__Weight_KG__c": 2.1
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef42"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef14",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-10T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming care observation. Upcoming seed data for Ollie."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef43"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef15",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-01-30T21:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-01-30T21:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Ruby (Returns).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef44"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef15",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-01T20:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Ruby.",
+      "animalos__Weight_KG__c": 18.2
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef45"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef15",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-11T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Ruby."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef46"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef16",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-01T18:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-01T18:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Toby (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef47"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef16",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-03T17:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Toby.",
+      "animalos__Weight_KG__c": 22.5
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef48"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef16",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-12T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Toby."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef49"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef17",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-03T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-03T19:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Nala (Stray)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef50"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef17",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-05T18:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Nala."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef51"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef17",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-13T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Nala.",
+      "animalos__Weight_KG__c": 4.8
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef52"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef18",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-05T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-05T20:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Jasper (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef53"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef18",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-07T19:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Jasper."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef54"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef18",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-08T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Jasper.",
+      "animalos__Weight_KG__c": 5.0
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef55"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef19",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-07T21:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-07T21:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Poppy (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef56"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef19",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-09T20:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Poppy.",
+      "animalos__Weight_KG__c": 15.9
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef57"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef19",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-09T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Poppy."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef58"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef20",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-09T18:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-09T18:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Leo (Stray).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef59"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef20",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-11T17:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Leo.",
+      "animalos__Weight_KG__c": 24.7
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef60"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef20",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-10T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Leo."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef61"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef21",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-11T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-11T19:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Willow (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef62"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef21",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-13T18:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Willow."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef63"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef21",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-11T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Willow.",
+      "animalos__Weight_KG__c": 3.4
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef64"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef22",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-13T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-13T20:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Finn (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef65"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef22",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-15T19:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Finn.",
+      "animalos__Weight_KG__c": 22.5
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef66"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef22",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-12T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Finn."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef67"
+      },
+      "RecordType": {
+        "DeveloperName": "Nutrition"
+      },
+      "animalos__Animal__c": "@AnimalRef23",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-15T21:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-15T21:20:00.000+0000",
+      "animalos__Description__c": "Completed nutrition check. Historical seed data for Rosie (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef68"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef23",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-17T20:00:00.000+0000",
+      "animalos__Description__c": "Weight review overdue. Historical overdue seed data for Rosie.",
+      "animalos__Weight_KG__c": 2.1
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef69"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef23",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-13T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming care observation. Upcoming seed data for Rosie."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef70"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef24",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-17T18:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-17T18:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Scout (Returns).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef71"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef24",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-19T17:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Scout.",
+      "animalos__Weight_KG__c": 31.4
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef72"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef24",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-08T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Scout."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef73"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef25",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-19T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-19T19:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Cleo (Stray)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef74"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef25",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-21T18:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Cleo."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef75"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef25",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-09T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Cleo.",
+      "animalos__Weight_KG__c": 3.9
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef76"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef26",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-21T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-21T20:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Bruno (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef77"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef26",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-23T19:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Bruno.",
+      "animalos__Weight_KG__c": 24.7
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef78"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef26",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-10T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Bruno."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef79"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef27",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-23T21:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-23T21:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Maisie (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef80"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef27",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-25T20:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Maisie."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef81"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef27",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-11T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Maisie.",
+      "animalos__Weight_KG__c": 3.4
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef82"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef28",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-25T18:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-25T18:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Oscar (Stray).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef83"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef28",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-02-27T17:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Oscar.",
+      "animalos__Weight_KG__c": 22.5
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef84"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef28",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-12T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Oscar."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef85"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef29",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-02-27T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-02-27T19:20:00.000+0000",
+      "animalos__Description__c": "Completed care observation. Historical seed data for Bonnie (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef86"
+      },
+      "RecordType": {
+        "DeveloperName": "Treatment"
+      },
+      "animalos__Animal__c": "@AnimalRef29",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-01T18:00:00.000+0000",
+      "animalos__Description__c": "Follow-up treatment action overdue. Historical overdue seed data for Bonnie."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef87"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef29",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-13T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming care observation. Upcoming seed data for Bonnie."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef88"
+      },
+      "RecordType": {
+        "DeveloperName": "Nutrition"
+      },
+      "animalos__Animal__c": "@AnimalRef30",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-01T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-01T20:20:00.000+0000",
+      "animalos__Description__c": "Completed nutrition check. Historical seed data for Teddy (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef89"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef30",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-03T19:00:00.000+0000",
+      "animalos__Description__c": "Weight review overdue. Historical overdue seed data for Teddy.",
+      "animalos__Weight_KG__c": 1.6
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef90"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef30",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-08T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming care observation. Upcoming seed data for Teddy."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef91"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef31",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-03T21:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-03T21:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Maple (Returns).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef92"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef31",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-05T20:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Maple.",
+      "animalos__Weight_KG__c": 15.9
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef93"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef31",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-09T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Maple."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef94"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef32",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-05T18:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-05T18:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Gus (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef95"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef32",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-07T17:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Gus.",
+      "animalos__Weight_KG__c": 24.7
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef96"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef32",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-10T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Gus."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef97"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef33",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-07T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-07T19:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Millie (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef98"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef33",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-09T18:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Millie."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef99"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef33",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-11T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Millie.",
+      "animalos__Weight_KG__c": 3.4
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef100"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef34",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-09T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-09T20:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Winston (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef101"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef34",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-11T19:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Winston.",
+      "animalos__Weight_KG__c": 22.5
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef102"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef34",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-12T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Winston."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef103"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef35",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-11T21:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-11T21:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Frankie (Stray)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef104"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef35",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-13T20:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Frankie."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef105"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef35",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-13T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Frankie.",
+      "animalos__Weight_KG__c": 4.8
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef106"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef36",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-13T18:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-13T18:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Olive (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef107"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef36",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-15T17:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Olive."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef108"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef36",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-08T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Olive.",
+      "animalos__Weight_KG__c": 5.0
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef109"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef37",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-15T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-15T19:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Harvey (Stray).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef110"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef37",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-17T18:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Harvey.",
+      "animalos__Weight_KG__c": 15.9
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef111"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef37",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-09T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Harvey."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef112"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef38",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-17T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-17T20:20:00.000+0000",
+      "animalos__Description__c": "Completed care observation. Historical seed data for Ziggy (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef113"
+      },
+      "RecordType": {
+        "DeveloperName": "Treatment"
+      },
+      "animalos__Animal__c": "@AnimalRef38",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-19T19:00:00.000+0000",
+      "animalos__Description__c": "Follow-up treatment action overdue. Historical overdue seed data for Ziggy."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef114"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef38",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-10T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming care observation. Upcoming seed data for Ziggy."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef115"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef39",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-19T21:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-19T21:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Ginger (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef116"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef39",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-21T20:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Ginger."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef117"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef39",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-11T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Ginger.",
+      "animalos__Weight_KG__c": 3.4
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef118"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef40",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-21T18:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-21T18:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Baxter (Returns).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef119"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef40",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-23T17:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Baxter.",
+      "animalos__Weight_KG__c": 22.5
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef120"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef40",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-12T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Baxter."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef121"
+      },
+      "RecordType": {
+        "DeveloperName": "Nutrition"
+      },
+      "animalos__Animal__c": "@AnimalRef41",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-23T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-23T19:20:00.000+0000",
+      "animalos__Description__c": "Completed nutrition check. Historical seed data for Mochi (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef122"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef41",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-25T18:00:00.000+0000",
+      "animalos__Description__c": "Weight review overdue. Historical overdue seed data for Mochi.",
+      "animalos__Weight_KG__c": 2.1
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef123"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef41",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-13T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming care observation. Upcoming seed data for Mochi."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef124"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef42",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-25T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-25T20:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Marley (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef125"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef42",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-27T19:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Marley.",
+      "animalos__Weight_KG__c": 31.4
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef126"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef42",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-08T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Marley."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef127"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef43",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-27T21:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-27T21:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Piper (Stray)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef128"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef43",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-29T20:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Piper."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef129"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef43",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-09T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Piper.",
+      "animalos__Weight_KG__c": 3.9
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef130"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef44",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-29T18:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-29T18:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Murphy (Stray).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef131"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef44",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-03-31T17:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Murphy.",
+      "animalos__Weight_KG__c": 24.7
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef132"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef44",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-10T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Murphy."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef133"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef45",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-03-31T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-03-31T19:20:00.000+0000",
+      "animalos__Description__c": "Completed care observation. Historical seed data for Sunny (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef134"
+      },
+      "RecordType": {
+        "DeveloperName": "Treatment"
+      },
+      "animalos__Animal__c": "@AnimalRef45",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-04-02T18:00:00.000+0000",
+      "animalos__Description__c": "Follow-up treatment action overdue. Historical overdue seed data for Sunny."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef135"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef45",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-11T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming care observation. Upcoming seed data for Sunny."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef136"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef46",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-04-02T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-04-02T20:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Lulu (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef137"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef46",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-04-04T19:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Lulu."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef138"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef46",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-12T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Lulu.",
+      "animalos__Weight_KG__c": 4.1
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef139"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef47",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-04-04T21:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-04-04T21:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Chester (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef140"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef47",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-04-06T20:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Chester.",
+      "animalos__Weight_KG__c": 27.8
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef141"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef47",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-13T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Chester."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef142"
+      },
+      "RecordType": {
+        "DeveloperName": "Exercise"
+      },
+      "animalos__Animal__c": "@AnimalRef48",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-04-06T18:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-04-06T18:20:00.000+0000",
+      "animalos__Description__c": "Completed exercise session. Historical seed data for Blue (Returns).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef143"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef48",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-04-08T17:00:00.000+0000",
+      "animalos__Description__c": "Follow-up weigh-in pending. Historical overdue seed data for Blue.",
+      "animalos__Weight_KG__c": 31.4
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef144"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef48",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-08T09:00:00.000+0000",
+      "animalos__Description__c": "Upcoming welfare observation. Upcoming seed data for Blue."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef145"
+      },
+      "RecordType": {
+        "DeveloperName": "Enrichment"
+      },
+      "animalos__Animal__c": "@AnimalRef49",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-04-08T19:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-04-08T19:20:00.000+0000",
+      "animalos__Description__c": "Completed enrichment activity. Historical seed data for Phoebe (Owner Surrender)."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef146"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef49",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-04-10T18:00:00.000+0000",
+      "animalos__Description__c": "Observation review overdue. Historical overdue seed data for Phoebe."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef147"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef49",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-09T10:00:00.000+0000",
+      "animalos__Description__c": "Upcoming weigh-in to monitor condition. Upcoming seed data for Phoebe.",
+      "animalos__Weight_KG__c": 3.9
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef148"
+      },
+      "RecordType": {
+        "DeveloperName": "Nutrition"
+      },
+      "animalos__Animal__c": "@AnimalRef50",
+      "animalos__Action_Status__c": "Given",
+      "animalos__Date_Time_of_Action__c": "2026-04-10T20:00:00.000+0000",
+      "animalos__Date_Time_Action_Completed__c": "2026-04-10T20:20:00.000+0000",
+      "animalos__Description__c": "Completed nutrition check. Historical seed data for Remy (Owner Surrender).",
+      "animalos__Time_Of_Day__c": "Breakfast"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef149"
+      },
+      "RecordType": {
+        "DeveloperName": "Weigh_In"
+      },
+      "animalos__Animal__c": "@AnimalRef50",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-04-12T19:00:00.000+0000",
+      "animalos__Description__c": "Weight review overdue. Historical overdue seed data for Remy.",
+      "animalos__Weight_KG__c": 2.1
+    },
+    {
+      "attributes": {
+        "type": "animalos__Animal_Action__c",
+        "referenceId": "AnimalActionRef150"
+      },
+      "RecordType": {
+        "DeveloperName": "Daily_Observation"
+      },
+      "animalos__Animal__c": "@AnimalRef50",
+      "animalos__Action_Status__c": "Scheduled",
+      "animalos__Date_Time_of_Action__c": "2026-05-10T11:00:00.000+0000",
+      "animalos__Description__c": "Upcoming care observation. Upcoming seed data for Remy."
+    }
+  ]
+}

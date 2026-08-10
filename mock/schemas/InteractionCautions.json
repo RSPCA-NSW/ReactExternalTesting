@@ -1,0 +1,172 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef1"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef1",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Caution_Type__c": "Physical Violence",
+      "animalos__Caution_Source__c": "Reported",
+      "animalos__Caution_Date_Time__c": "2026-04-12T08:20:00.000+0000",
+      "animalos__Caution_Details__c": "Caller reported prior physical violence incident at the location."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef2"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef1",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Caution_Type__c": "Physical Violence",
+      "animalos__Caution_Source__c": "Reported",
+      "animalos__Caution_Date_Time__c": "2026-04-18T09:15:00.000+0000",
+      "animalos__Caution_Details__c": "Caller reported a further physical violence concern during follow-up."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef3"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef4",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Caution_Type__c": "Verbal Abuse",
+      "animalos__Caution_Source__c": "Observed",
+      "animalos__Caution_Date_Time__c": "2026-04-22T14:05:00.000+0000",
+      "animalos__Caution_Details__c": "Officer observed verbal abuse on attendance."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef4"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef5",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Caution_Type__c": "Substance Abuse",
+      "animalos__Caution_Source__c": "Reported",
+      "animalos__Caution_Date_Time__c": "2026-04-11T20:45:00.000+0000",
+      "animalos__Caution_Details__c": "Informant reported suspected substance abuse at the premises."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef5"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef8",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Caution_Type__c": "Firearms/weapons",
+      "animalos__Caution_Source__c": "Observed",
+      "animalos__Caution_Date_Time__c": "2026-04-24T10:10:00.000+0000",
+      "animalos__Caution_Details__c": "Weapons were observed during inspection."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef6"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef8",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Caution_Type__c": "Firearms/weapons",
+      "animalos__Caution_Source__c": "Observed",
+      "animalos__Caution_Date_Time__c": "2026-04-26T11:20:00.000+0000",
+      "animalos__Caution_Details__c": "Additional weapons observed on re-attendance."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef7"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef9",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Caution_Type__c": "Known to Police",
+      "animalos__Caution_Source__c": "Reported",
+      "animalos__Caution_Date_Time__c": "2026-04-03T08:00:00.000+0000",
+      "animalos__Caution_Details__c": "Informant advised the occupant is known to police."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef8"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef12",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Caution_Type__c": "Physical Violence",
+      "animalos__Caution_Source__c": "Observed",
+      "animalos__Caution_Date_Time__c": "2026-04-29T16:10:00.000+0000",
+      "animalos__Caution_Details__c": "Physical violence was observed during attendance."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef9"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef13",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Caution_Type__c": "Verbal Abuse",
+      "animalos__Caution_Source__c": "Reported",
+      "animalos__Caution_Date_Time__c": "2026-03-26T17:00:00.000+0000",
+      "animalos__Caution_Details__c": "Initial report of verbal abuse at the location."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef10"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef13",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Caution_Type__c": "Verbal Abuse",
+      "animalos__Caution_Source__c": "Reported",
+      "animalos__Caution_Date_Time__c": "2026-03-28T17:40:00.000+0000",
+      "animalos__Caution_Details__c": "Second verbal abuse report received from informant."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef11"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef13",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Caution_Type__c": "Verbal Abuse",
+      "animalos__Caution_Source__c": "Reported",
+      "animalos__Caution_Date_Time__c": "2026-03-30T18:25:00.000+0000",
+      "animalos__Caution_Details__c": "Latest verbal abuse report recorded prior to triage."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef12"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef16",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Caution_Type__c": "Substance Abuse",
+      "animalos__Caution_Source__c": "Observed",
+      "animalos__Caution_Date_Time__c": "2026-04-15T13:40:00.000+0000",
+      "animalos__Caution_Details__c": "Substance abuse indicators were observed on site."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef13"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef17",
+      "animalos__Contact__c": "@ContactRef1",
+      "animalos__Caution_Type__c": "Firearms/weapons",
+      "animalos__Caution_Source__c": "Reported",
+      "animalos__Caution_Date_Time__c": "2026-04-10T07:55:00.000+0000",
+      "animalos__Caution_Details__c": "Informant reported firearms/weapons kept at the location."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Interaction_Caution__c",
+        "referenceId": "InteractionCautionRef14"
+      },
+      "animalos__Job_Contact__c": "@JobContactRef20",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Caution_Type__c": "Known to Police",
+      "animalos__Caution_Source__c": "Observed",
+      "animalos__Caution_Date_Time__c": "2026-04-20T10:30:00.000+0000",
+      "animalos__Caution_Details__c": "Officer confirmed the party is known to police."
+    }
+  ]
+}

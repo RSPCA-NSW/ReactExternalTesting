@@ -1,0 +1,154 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity__c",
+        "referenceId": "JobActivityRef1"
+      },
+      "animalos__Job__c": "@JobRef1",
+      "animalos__Subject__c": "Initial review for 00365308",
+      "animalos__Type_of_Work__c": "Inspection",
+      "animalos__Job_Classification__c": "Routine",
+      "animalos__Start_Date_Time__c": "2026-03-28T09:20:00.000+0000",
+      "animalos__End_Date_Time__c": "2026-03-28T10:35:00.000+0000",
+      "animalos__Due_Date__c": "2026-03-30T08:20:00.000+0000",
+      "animalos__Description__c": "<p>Seeded activity for job 00365308: Animal Welfare - Other - Cat x1.</p>",
+      "animalos__Direction__c": "Document findings and update the case record with the next recommended step."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity__c",
+        "referenceId": "JobActivityRef2"
+      },
+      "animalos__Job__c": "@JobRef2",
+      "animalos__Subject__c": "Initial review for 00365310",
+      "animalos__Type_of_Work__c": "Inspection",
+      "animalos__Job_Classification__c": "High Vigilance",
+      "animalos__Start_Date_Time__c": "2026-03-29T09:40:00.000+0000",
+      "animalos__End_Date_Time__c": "2026-03-29T10:55:00.000+0000",
+      "animalos__Due_Date__c": "2026-03-31T08:40:00.000+0000",
+      "animalos__Description__c": "<p>Seeded activity for job 00365310: Animal Welfare - Food & Water, Dead - Cattle x10.</p>",
+      "animalos__Direction__c": "Document findings and update the case record with the next recommended step."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity__c",
+        "referenceId": "JobActivityRef3"
+      },
+      "animalos__Job__c": "@JobRef3",
+      "animalos__Subject__c": "Initial review for 00365311",
+      "animalos__Type_of_Work__c": "Other",
+      "animalos__Job_Classification__c": "Routine",
+      "animalos__Start_Date_Time__c": "2026-03-30T10:00:00.000+0000",
+      "animalos__End_Date_Time__c": "2026-03-30T11:15:00.000+0000",
+      "animalos__Due_Date__c": "2026-04-01T09:00:00.000+0000",
+      "animalos__Description__c": "<p>Seeded activity for job 00365311: Proactive Job Animal Welfare - Breeder - Cat x1,Dog x1.</p>",
+      "animalos__Direction__c": "Document findings and update the case record with the next recommended step."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity__c",
+        "referenceId": "JobActivityRef4"
+      },
+      "animalos__Job__c": "@JobRef4",
+      "animalos__Subject__c": "Initial review for 00365313",
+      "animalos__Type_of_Work__c": "Inspection",
+      "animalos__Job_Classification__c": "High Vigilance",
+      "animalos__Start_Date_Time__c": "2026-03-31T10:20:00.000+0000",
+      "animalos__End_Date_Time__c": "2026-03-31T11:35:00.000+0000",
+      "animalos__Due_Date__c": "2026-04-02T09:20:00.000+0000",
+      "animalos__Description__c": "<p>Seeded activity for job 00365313: Animal Welfare - Food & Water, Unattended 24hrs - Cat x1.</p>",
+      "animalos__Direction__c": "Document findings and update the case record with the next recommended step."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity__c",
+        "referenceId": "JobActivityRef5"
+      },
+      "animalos__Job__c": "@JobRef5",
+      "animalos__Subject__c": "Initial review for 00365314",
+      "animalos__Type_of_Work__c": "Inspection",
+      "animalos__Job_Classification__c": "High Vigilance",
+      "animalos__Start_Date_Time__c": "2026-04-01T10:40:00.000+0000",
+      "animalos__End_Date_Time__c": "2026-04-01T11:55:00.000+0000",
+      "animalos__Due_Date__c": "2026-04-03T09:40:00.000+0000",
+      "animalos__Description__c": "<p>Seeded activity for job 00365314: Animal Welfare - Food & Water - Dog x4.</p>",
+      "animalos__Direction__c": "Document findings and update the case record with the next recommended step."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity__c",
+        "referenceId": "JobActivityRef6"
+      },
+      "animalos__Job__c": "@JobRef6",
+      "animalos__Subject__c": "Initial review for 00365315",
+      "animalos__Type_of_Work__c": "Inspection",
+      "animalos__Job_Classification__c": "High Vigilance",
+      "animalos__Start_Date_Time__c": "2026-04-02T11:00:00.000+0000",
+      "animalos__End_Date_Time__c": "2026-04-02T12:15:00.000+0000",
+      "animalos__Due_Date__c": "2026-04-04T10:00:00.000+0000",
+      "animalos__Description__c": "<p>Seeded activity for job 00365315: Animal Welfare - Dead, Ill Treatment - Dog x1.</p>",
+      "animalos__Direction__c": "Document findings and update the case record with the next recommended step."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity__c",
+        "referenceId": "JobActivityRef7"
+      },
+      "animalos__Job__c": "@JobRef7",
+      "animalos__Subject__c": "Initial review for 00365316",
+      "animalos__Type_of_Work__c": "Inspection",
+      "animalos__Job_Classification__c": "High Vigilance",
+      "animalos__Start_Date_Time__c": "2026-04-03T11:20:00.000+0000",
+      "animalos__End_Date_Time__c": "2026-04-03T12:35:00.000+0000",
+      "animalos__Due_Date__c": "2026-04-05T10:20:00.000+0000",
+      "animalos__Description__c": "<p>Seeded activity for job 00365316: Animal Welfare - Locked In Car - Dog x1.</p>",
+      "animalos__Direction__c": "Document findings and update the case record with the next recommended step."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity__c",
+        "referenceId": "JobActivityRef8"
+      },
+      "animalos__Job__c": "@JobRef8",
+      "animalos__Subject__c": "Initial review for 00365317",
+      "animalos__Type_of_Work__c": "Inspection",
+      "animalos__Job_Classification__c": "High Vigilance",
+      "animalos__Start_Date_Time__c": "2026-04-04T11:40:00.000+0000",
+      "animalos__End_Date_Time__c": "2026-04-04T12:55:00.000+0000",
+      "animalos__Due_Date__c": "2026-04-06T10:40:00.000+0000",
+      "animalos__Description__c": "<p>Seeded activity for job 00365317: Animal Welfare - Abandoned - Cat x2.</p>",
+      "animalos__Direction__c": "Document findings and update the case record with the next recommended step."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity__c",
+        "referenceId": "JobActivityRef9"
+      },
+      "animalos__Job__c": "@JobRef9",
+      "animalos__Subject__c": "Initial review for 00365318",
+      "animalos__Type_of_Work__c": "Inspection",
+      "animalos__Job_Classification__c": "High Vigilance",
+      "animalos__Start_Date_Time__c": "2026-04-05T12:00:00.000+0000",
+      "animalos__End_Date_Time__c": "2026-04-05T13:15:00.000+0000",
+      "animalos__Due_Date__c": "2026-04-07T11:00:00.000+0000",
+      "animalos__Description__c": "<p>Seeded activity for job 00365318: Animal Welfare - Shelter Inadequate, Food & Water - Rabbit x6.</p>",
+      "animalos__Direction__c": "Document findings and update the case record with the next recommended step."
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Activity__c",
+        "referenceId": "JobActivityRef10"
+      },
+      "animalos__Job__c": "@JobRef10",
+      "animalos__Subject__c": "Initial review for 00365319",
+      "animalos__Type_of_Work__c": "Other",
+      "animalos__Job_Classification__c": "Routine",
+      "animalos__Start_Date_Time__c": "2026-04-06T12:20:00.000+0000",
+      "animalos__End_Date_Time__c": "2026-04-06T13:35:00.000+0000",
+      "animalos__Due_Date__c": "2026-04-08T11:20:00.000+0000",
+      "animalos__Description__c": "<p>Seeded activity for job 00365319: Proactive Job Animal Welfare - Kennel Inspection - Dog x12.</p>",
+      "animalos__Direction__c": "Document findings and update the case record with the next recommended step."
+    }
+  ]
+}

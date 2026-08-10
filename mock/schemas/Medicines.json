@@ -1,0 +1,470 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef1"
+      },
+      "Name": "Parvo Test",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef2"
+      },
+      "Name": "easOtic Ear Suspension",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef3"
+      },
+      "Name": "AWAG - Animal Welfare Assessment Grid",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef4"
+      },
+      "Name": "Hylo-Forte Eye Drops 2mg/mL",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Lubricant"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef5"
+      },
+      "Name": "Ulcershield Oral Paste - Omeprazole 370 mg/g Buffered Paste",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef6"
+      },
+      "Name": "Bute- Phenylbutazone",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "AntiInflammatory"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef7"
+      },
+      "Name": "Flagyl Suspension",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Antibiotic"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef8"
+      },
+      "Name": "Clavulox drops (15ml)",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Antibiotic"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef9"
+      },
+      "Name": "Pain Index Assessment",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef10"
+      },
+      "Name": "maxidex",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef11"
+      },
+      "Name": "Viscotears",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef12"
+      },
+      "Name": "Baytril",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Anti-bacterial"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef13"
+      },
+      "Name": "Chlorasone",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef14"
+      },
+      "Name": "Venlafaxine",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef15"
+      },
+      "Name": "Risperidone",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Neurological Agent"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef16"
+      },
+      "Name": "Maxolon",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef17"
+      },
+      "Name": "Antinol Canine Rapid",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef18"
+      },
+      "Name": "Ranvet Canine All Wormer (3-Monthly)",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Anti-parasitic"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef19"
+      },
+      "Name": "Essential 6",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef20"
+      },
+      "Name": "Clavulox Tablets",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef21"
+      },
+      "Name": "Ulcer Shield",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef22"
+      },
+      "Name": "Iodine Solution",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef23"
+      },
+      "Name": "Macrolone",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef24"
+      },
+      "Name": "Antinol Feline Rapid",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef25"
+      },
+      "Name": "Propalin syrup",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef26"
+      },
+      "Name": "Megaderm",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef27"
+      },
+      "Name": "Aloveen Oatmeal Shampoo",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef28"
+      },
+      "Name": "Alprazalom",
+      "animalos__Type__c": "Both",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef29"
+      },
+      "Name": "Oralfungol",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef30"
+      },
+      "Name": "Paroxetine",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Neurological Agent"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef31"
+      },
+      "Name": "Pyohex Conditioner",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef32"
+      },
+      "Name": "Acidurin",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef33"
+      },
+      "Name": "Panadol",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef34"
+      },
+      "Name": "Previcox",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef35"
+      },
+      "Name": "Malaseb",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef36"
+      },
+      "Name": "Barazone Condition",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef37"
+      },
+      "Name": "Chlorhex Surgical Scrub",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef38"
+      },
+      "Name": "Betadine Wipe",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Antiseptic"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef39"
+      },
+      "Name": "Wagg&Purr Spot-On (Puppy & Kitten)",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Anti-parasitic"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef40"
+      },
+      "Name": "Bravecto Dog Spot-On (6-Monthly)",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Anti-parasitic"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef41"
+      },
+      "Name": "Bravecto Cat Spot-on (3-Monthly)",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Anti-parasitic"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef42"
+      },
+      "Name": "Bravecto Dog Chew (3-Monthly)",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Anti-parasitic"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef43"
+      },
+      "Name": "Milpro Heartworm & Intestinal",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Anti-parasitic"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef44"
+      },
+      "Name": "Wagg&Purr All Wormer",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Anti-parasitic"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef45"
+      },
+      "Name": "4Cyte",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef46"
+      },
+      "Name": "Adaptil Collar",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef47"
+      },
+      "Name": "Ear Cleaner",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef48"
+      },
+      "Name": "Tribrissen 80",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef49"
+      },
+      "Name": "Linctol Cough Mixture",
+      "animalos__Type__c": "Medicine",
+      "animalos__Active__c": true
+    },
+    {
+      "attributes": {
+        "type": "animalos__Medicine__c",
+        "referenceId": "MedicineRef50"
+      },
+      "Name": "Filavac Vaccination",
+      "animalos__Type__c": "Treatment",
+      "animalos__Active__c": true,
+      "animalos__Category__c": "Vaccination"
+    }
+  ]
+}

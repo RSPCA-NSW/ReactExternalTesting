@@ -1,0 +1,90 @@
+[
+  {
+    "sobject": "Account",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "Accounts.json"
+    ]
+  },
+  {
+    "sobject": "Contact",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "Contacts.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Breed__c",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "Breeds.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Location__c",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "Locations-Sites.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Location__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "Locations-Blocks.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Location__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "Locations-Units.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Action_Plan__c",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "ActionPlans.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Animal__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "Animals.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Referral__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "Referrals.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Animal_Note__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "AnimalNotes.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Movement__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "Movements.json"
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+# List files or directories below to ignore them when running prettier
+# More information: https://prettier.io/docs/en/ignore.html
+#
+
+**/staticresources/**
+.localdevserver
+.sfdx
+.sf
+.vscode
+
+coverage/
+
+# The React UI Bundle owns its own formatting (its own .prettierrc + ESLint)
+# and its build output. The root Prettier run covers SFDX metadata only.
+force-app/main/default/uiBundles/**
+
+node_modules/

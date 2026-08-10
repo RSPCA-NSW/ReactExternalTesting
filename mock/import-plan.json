@@ -1,0 +1,202 @@
+[
+  {
+    "sobject": "Account",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "schemas/Accounts.json"
+    ]
+  },
+  {
+    "sobject": "Contact",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "schemas/Contacts.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Breed__c",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "schemas/Breeds.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Location__c",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "schemas/Locations-Sites.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Location__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/Locations-Blocks.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Location__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/Locations-Units.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Location_Of_Interest__c",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "schemas/LocationOfInterests.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Job_Bundle__c",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "schemas/JobBundles.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Job__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/Jobs.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Job_Contact__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/JobContacts.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Interaction_Caution__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/InteractionCautions.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Action_Plan__c",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "schemas/ActionPlans.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Action_Item__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/ActionItems.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Medicine__c",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": [
+      "schemas/Medicines.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Animal__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/Animals.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Referral__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/Referrals.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Animal_Referral__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/AnimalReferrals.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Job_Activity__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/JobActivities.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Job_Status_Tracking__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/JobStatusTrackings.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Job_Role__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/JobRoles.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Job_Note__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/JobNotes.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Animal_Note__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/AnimalNotes.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Animal_Action__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/AnimalActions.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Job_Activity_Animal__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/JobActivityAnimals.json"
+    ]
+  },
+  {
+    "sobject": "animalos__Movement__c",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "schemas/Movements.json"
+    ]
+  }
+]

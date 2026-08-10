@@ -1,0 +1,186 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Job__c",
+        "referenceId": "JobRef1"
+      },
+      "Name": "00365308",
+      "RecordType": {
+        "DeveloperName": "Inspectorate"
+      },
+      "animalos__Subject__c": "Animal Welfare - Other - Cat x1",
+      "animalos__Codes__c": "Other",
+      "animalos__Type__c": "Animal Welfare",
+      "animalos__Status__c": "Assigned",
+      "animalos__Priority__c": "Routine",
+      "animalos__Job_Categorisation__c": "Other",
+      "animalos__Job_Bundle__c": "@JobBundleRef1",
+      "animalos__Location_Of_Interest__c": "@LOIRef1"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job__c",
+        "referenceId": "JobRef2"
+      },
+      "Name": "00365310",
+      "RecordType": {
+        "DeveloperName": "Inspectorate"
+      },
+      "animalos__Subject__c": "Animal Welfare - Food & Water, Dead - Cattle x10",
+      "animalos__Codes__c": "Dead;Food & Water",
+      "animalos__Type__c": "Animal Welfare",
+      "animalos__Status__c": "Assigned",
+      "animalos__Priority__c": "Urgent",
+      "animalos__Job_Categorisation__c": "Insufficient Food and Water",
+      "animalos__Job_Bundle__c": "@JobBundleRef1",
+      "animalos__Location_Of_Interest__c": "@LOIRef2"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job__c",
+        "referenceId": "JobRef3"
+      },
+      "Name": "00365311",
+      "RecordType": {
+        "DeveloperName": "Inspectorate"
+      },
+      "animalos__Subject__c": "Proactive Job Animal Welfare - Breeder - Cat x1,Dog x1",
+      "animalos__Codes__c": "Breeder",
+      "animalos__Type__c": "Proactive Job",
+      "animalos__Status__c": "New",
+      "animalos__Priority__c": "Routine",
+      "animalos__Job_Categorisation__c": "Breeder or Pet Shop Inspection",
+      "animalos__Job_Bundle__c": "@JobBundleRef1",
+      "animalos__Proactive_Type__c": "Breeding Facility - Dogs and Cats",
+      "animalos__Location_Of_Interest__c": "@LOIRef3"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job__c",
+        "referenceId": "JobRef4"
+      },
+      "Name": "00365313",
+      "RecordType": {
+        "DeveloperName": "Inspectorate"
+      },
+      "animalos__Subject__c": "Animal Welfare - Food & Water, Unattended 24hrs - Cat x1",
+      "animalos__Codes__c": "Food & Water;Unattended 24hrs",
+      "animalos__Type__c": "Animal Welfare",
+      "animalos__Status__c": "Attended",
+      "animalos__Priority__c": "ASAP",
+      "animalos__Job_Categorisation__c": "Insufficient Food and Water",
+      "animalos__Job_Bundle__c": "@JobBundleRef1",
+      "animalos__Location_Of_Interest__c": "@LOIRef4"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job__c",
+        "referenceId": "JobRef5"
+      },
+      "Name": "00365314",
+      "RecordType": {
+        "DeveloperName": "Inspectorate"
+      },
+      "animalos__Subject__c": "Animal Welfare - Food & Water - Dog x4",
+      "animalos__Codes__c": "Food & Water",
+      "animalos__Type__c": "Animal Welfare",
+      "animalos__Status__c": "Assigned",
+      "animalos__Priority__c": "ASAP",
+      "animalos__Job_Categorisation__c": "Insufficient Food and Water",
+      "animalos__Job_Bundle__c": "@JobBundleRef1",
+      "animalos__Location_Of_Interest__c": "@LOIRef5"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job__c",
+        "referenceId": "JobRef6"
+      },
+      "Name": "00365315",
+      "RecordType": {
+        "DeveloperName": "Inspectorate"
+      },
+      "animalos__Subject__c": "Animal Welfare - Dead, Ill Treatment - Dog x1",
+      "animalos__Codes__c": "Dead;Ill Treatment",
+      "animalos__Type__c": "Animal Welfare",
+      "animalos__Status__c": "Awaiting Recheck",
+      "animalos__Priority__c": "Urgent",
+      "animalos__Job_Categorisation__c": "Ill-treatment (direct physical abuse)",
+      "animalos__Job_Bundle__c": "@JobBundleRef2",
+      "animalos__Location_Of_Interest__c": "@LOIRef6"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job__c",
+        "referenceId": "JobRef7"
+      },
+      "Name": "00365316",
+      "RecordType": {
+        "DeveloperName": "Inspectorate"
+      },
+      "animalos__Subject__c": "Animal Welfare - Locked In Car - Dog x1",
+      "animalos__Codes__c": "Locked In Car",
+      "animalos__Type__c": "Animal Welfare",
+      "animalos__Status__c": "Assigned",
+      "animalos__Priority__c": "Urgent",
+      "animalos__Job_Categorisation__c": "Other",
+      "animalos__Job_Bundle__c": "@JobBundleRef2",
+      "animalos__Location_Of_Interest__c": "@LOIRef7"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job__c",
+        "referenceId": "JobRef8"
+      },
+      "Name": "00365317",
+      "RecordType": {
+        "DeveloperName": "Inspectorate"
+      },
+      "animalos__Subject__c": "Animal Welfare - Abandoned - Cat x2",
+      "animalos__Codes__c": "Abandoned",
+      "animalos__Type__c": "Animal Welfare",
+      "animalos__Status__c": "Awaiting Further Information",
+      "animalos__Priority__c": "ASAP",
+      "animalos__Job_Categorisation__c": "Abandonment",
+      "animalos__Job_Bundle__c": "@JobBundleRef2",
+      "animalos__Location_Of_Interest__c": "@LOIRef8"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job__c",
+        "referenceId": "JobRef9"
+      },
+      "Name": "00365318",
+      "RecordType": {
+        "DeveloperName": "Inspectorate"
+      },
+      "animalos__Subject__c": "Animal Welfare - Shelter Inadequate, Food & Water - Rabbit x6",
+      "animalos__Codes__c": "Shelter Inadequate;Food & Water",
+      "animalos__Type__c": "Animal Welfare",
+      "animalos__Status__c": "Assigned",
+      "animalos__Priority__c": "ASAP",
+      "animalos__Job_Categorisation__c": "Insufficient Shelter",
+      "animalos__Job_Bundle__c": "@JobBundleRef2",
+      "animalos__Location_Of_Interest__c": "@LOIRef9"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job__c",
+        "referenceId": "JobRef10"
+      },
+      "Name": "00365319",
+      "RecordType": {
+        "DeveloperName": "Inspectorate"
+      },
+      "animalos__Subject__c": "Proactive Job Animal Welfare - Kennel Inspection - Dog x12",
+      "animalos__Codes__c": "Kennel Inspection",
+      "animalos__Type__c": "Proactive Job",
+      "animalos__Status__c": "Finalised",
+      "animalos__Priority__c": "Routine",
+      "animalos__Job_Categorisation__c": "Breeder or Pet Shop Inspection",
+      "animalos__Job_Bundle__c": "@JobBundleRef2",
+      "animalos__Proactive_Type__c": "Boarding Establishments \u2013 Dogs and Cats",
+      "animalos__Location_Of_Interest__c": "@LOIRef10"
+    }
+  ]
+}

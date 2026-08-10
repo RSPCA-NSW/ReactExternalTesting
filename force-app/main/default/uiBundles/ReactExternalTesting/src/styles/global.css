@@ -1,0 +1,202 @@
+@import 'tailwindcss';
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply min-h-screen;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /*
+   * Brand kit type pairing: Cormorant Garamond (headings) + Inter (body).
+   * Fonts are not yet bundled (CSP blocks font CDNs) — the stacks fall
+   * back to Georgia / system sans. To self-host, drop woff2 files into
+   * src/assets/fonts/ and add @font-face rules here.
+   */
+  --font-sans:
+    'Inter', ui-sans-serif, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  --font-display:
+    'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif;
+
+  /*
+   * Paw loader: the outline draws itself in, holds, then un-draws as the
+   * line continues travelling forward. Paths are normalised with
+   * pathLength=100 so every toe and the pad draw in sync.
+   */
+  --animate-paw-draw: paw-draw 2s ease-in-out infinite;
+
+  @keyframes paw-draw {
+    0% {
+      stroke-dashoffset: 100;
+    }
+    45%,
+    55% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -100;
+    }
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-ink: var(--brand-ink);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /*
+   * Brand kit palette (cormorant-garamond-inter-brand-kit.pdf):
+   * Dark Lime #65A30D · Deep Green #144F00 · White #FFFFFF · Ink #001F00
+   */
+  --brand: oklch(0.648 0.175 131.7);
+  --brand-deep: oklch(0.375 0.12 139.8);
+  --brand-ink: oklch(0.207 0.071 142.5);
+
+  --background: oklch(0.962 0.01 128);
+  --foreground: var(--brand-ink);
+  --card: oklch(0.992 0.004 122);
+  --card-foreground: var(--brand-ink);
+  --popover: oklch(0.992 0.004 122);
+  --popover-foreground: var(--brand-ink);
+  --primary: var(--brand);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.936 0.014 128);
+  --secondary-foreground: var(--brand-deep);
+  --muted: oklch(0.932 0.012 128);
+  --muted-foreground: oklch(0.5 0.03 138);
+  --accent: oklch(0.915 0.045 130);
+  --accent-foreground: var(--brand-deep);
+  --destructive: oklch(0.577 0.245 27.325);
+  --success: var(--brand-deep);
+  --warning: oklch(0.68 0.15 65);
+  --border: oklch(0.895 0.014 128);
+  --input: oklch(0.895 0.014 128);
+  --ring: var(--brand);
+  --chart-1: var(--brand);
+  --chart-2: var(--brand-deep);
+  --chart-3: oklch(0.78 0.16 75);
+  --chart-4: oklch(0.7 0.12 195);
+  --chart-5: oklch(0.5 0.08 137);
+  --sidebar: oklch(0.95 0.011 128);
+  --sidebar-foreground: var(--brand-ink);
+  --sidebar-primary: var(--brand);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.95 0.045 130);
+  --sidebar-accent-foreground: var(--brand-deep);
+  --sidebar-border: oklch(0.93 0.008 130);
+  --sidebar-ring: var(--brand);
+}
+
+.dark {
+  --brand: oklch(0.768 0.19 131);
+  --brand-deep: oklch(0.55 0.14 138);
+
+  --background: oklch(0.185 0.045 143);
+  --foreground: oklch(0.965 0.012 130);
+  --card: oklch(0.235 0.05 142);
+  --card-foreground: oklch(0.965 0.012 130);
+  --popover: oklch(0.235 0.05 142);
+  --popover-foreground: oklch(0.965 0.012 130);
+  --primary: var(--brand);
+  --primary-foreground: oklch(0.19 0.06 141);
+  --secondary: oklch(0.28 0.045 141);
+  --secondary-foreground: oklch(0.965 0.012 130);
+  --muted: oklch(0.28 0.045 141);
+  --muted-foreground: oklch(0.73 0.04 133);
+  --accent: oklch(0.32 0.06 136);
+  --accent-foreground: oklch(0.9 0.1 130);
+  --destructive: oklch(0.704 0.191 22.216);
+  --success: var(--brand);
+  --warning: oklch(0.8 0.14 80);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: var(--brand);
+  --chart-1: var(--brand);
+  --chart-2: oklch(0.6 0.14 138);
+  --chart-3: oklch(0.8 0.14 80);
+  --chart-4: oklch(0.75 0.11 195);
+  --chart-5: oklch(0.88 0.12 128);
+  --sidebar: oklch(0.235 0.05 142);
+  --sidebar-foreground: oklch(0.965 0.012 130);
+  --sidebar-primary: var(--brand);
+  --sidebar-primary-foreground: oklch(0.19 0.06 141);
+  --sidebar-accent: oklch(0.32 0.06 136);
+  --sidebar-accent-foreground: oklch(0.9 0.1 130);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: var(--brand);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      'cv11' 1,
+      'ss01' 1;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight text-balance;
+  }
+  ::selection {
+    background: color-mix(in oklch, var(--brand) 30%, transparent);
+  }
+}

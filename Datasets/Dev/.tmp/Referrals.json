@@ -1,0 +1,51 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Referral__c",
+        "referenceId": "ReferralRef1"
+      },
+      "animalos__Animal_Source__c": "Stray",
+      "animalos__Stage__c": "New",
+      "animalos__Priority__c": "High",
+      "animalos__Referral_Description__c": "Stray dog found wandering near Central Park. No collar or visible identification. Appears healthy but nervous.",
+      "animalos__Date_Collected__c": "2026-03-28",
+      "animalos__Scheduled_Date_Time__c": "2026-03-28T14:00:00.000+0000",
+      "animalos__Entry_Site__c": "@SiteRef1",
+      "animalos__Contact__c": "@ContactRef1",
+      "RecordTypeId": "0129t000003MJSSAA4"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Referral__c",
+        "referenceId": "ReferralRef2"
+      },
+      "animalos__Animal_Source__c": "Owner Surrender",
+      "animalos__Stage__c": "Completed",
+      "animalos__Priority__c": "Medium",
+      "animalos__Result__c": "Approved",
+      "animalos__Referral_Description__c": "Owner relocating overseas and unable to take cat. Cat is friendly and litter trained. Up to date on vaccinations.",
+      "animalos__Date_Collected__c": "2026-02-05",
+      "animalos__Entry_Site__c": "@SiteRef1",
+      "animalos__Contact__c": "@ContactRef2",
+      "animalos__Referral_Organisation__c": "@AccountRef3",
+      "RecordTypeId": "0129t000003MJSTAA4"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Referral__c",
+        "referenceId": "ReferralRef3"
+      },
+      "animalos__Animal_Source__c": "Transfer In",
+      "animalos__Stage__c": "Completed",
+      "animalos__Priority__c": "Low",
+      "animalos__Result__c": "Approved",
+      "animalos__Referral_Description__c": "Transfer of small animals from City Animal Control due to capacity issues at their facility.",
+      "animalos__Date_Collected__c": "2026-02-27",
+      "animalos__Entry_Site__c": "@SiteRef2",
+      "animalos__Referral_Organisation__c": "@AccountRef2",
+      "animalos__Referral_Organisation_Contact__c": "@ContactRef3",
+      "RecordTypeId": "0129t000003MJSNAA4"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "animalos__Breed__c", "referenceId": "BreedRef1" },
+      "Name": "Labrador Retriever",
+      "animalos__Breed_ID__c": "BRD-001",
+      "animalos__Class__c": "Domestic",
+      "animalos__Size__c": "Large",
+      "animalos__Type__c": "Dog",
+      "animalos__Endangered_Status__c": "Not Applicable"
+    },
+    {
+      "attributes": { "type": "animalos__Breed__c", "referenceId": "BreedRef2" },
+      "Name": "German Shepherd",
+      "animalos__Breed_ID__c": "BRD-002",
+      "animalos__Class__c": "Domestic",
+      "animalos__Size__c": "Large",
+      "animalos__Type__c": "Dog",
+      "animalos__Endangered_Status__c": "Not Applicable"
+    },
+    {
+      "attributes": { "type": "animalos__Breed__c", "referenceId": "BreedRef3" },
+      "Name": "Domestic Shorthair",
+      "animalos__Breed_ID__c": "BRD-003",
+      "animalos__Class__c": "Domestic",
+      "animalos__Size__c": "Medium",
+      "animalos__Type__c": "Cat",
+      "animalos__Endangered_Status__c": "Not Applicable"
+    },
+    {
+      "attributes": { "type": "animalos__Breed__c", "referenceId": "BreedRef4" },
+      "Name": "Ragdoll",
+      "animalos__Breed_ID__c": "BRD-004",
+      "animalos__Class__c": "Domestic",
+      "animalos__Size__c": "Large",
+      "animalos__Type__c": "Cat",
+      "animalos__Endangered_Status__c": "Not Applicable"
+    },
+    {
+      "attributes": { "type": "animalos__Breed__c", "referenceId": "BreedRef5" },
+      "Name": "Budgerigar",
+      "animalos__Breed_ID__c": "BRD-005",
+      "animalos__Class__c": "Domestic",
+      "animalos__Size__c": "Small",
+      "animalos__Type__c": "Bird",
+      "animalos__Endangered_Status__c": "Least Concern"
+    },
+    {
+      "attributes": { "type": "animalos__Breed__c", "referenceId": "BreedRef6" },
+      "Name": "Holland Lop",
+      "animalos__Breed_ID__c": "BRD-006",
+      "animalos__Class__c": "Domestic",
+      "animalos__Size__c": "Small",
+      "animalos__Type__c": "Rabbit",
+      "animalos__Endangered_Status__c": "Not Applicable"
+    },
+    {
+      "attributes": { "type": "animalos__Breed__c", "referenceId": "BreedRef7" },
+      "Name": "Staffordshire Bull Terrier",
+      "animalos__Breed_ID__c": "BRD-007",
+      "animalos__Class__c": "Domestic",
+      "animalos__Size__c": "Medium",
+      "animalos__Type__c": "Dog",
+      "animalos__Endangered_Status__c": "Not Applicable"
+    },
+    {
+      "attributes": { "type": "animalos__Breed__c", "referenceId": "BreedRef8" },
+      "Name": "Domestic Medium Hair",
+      "animalos__Breed_ID__c": "BRD-008",
+      "animalos__Class__c": "Domestic",
+      "animalos__Size__c": "Medium",
+      "animalos__Type__c": "Cat",
+      "animalos__Endangered_Status__c": "Not Applicable"
+    }
+  ]
+}

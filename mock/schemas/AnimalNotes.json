@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "animalos__Animal_Note__c", "referenceId": "NoteRef1" },
+      "RecordType": { "DeveloperName": "Animal_Note" },
+      "animalos__Animal__c": "@AnimalRef1",
+      "animalos__Type__c": "Animal Care",
+      "animalos__Flag__c": "Information",
+      "animalos__Content__c": "Max is friendly with children and other dogs. Walks well on leash. Knows basic commands (sit, stay, shake). Would suit an active family.",
+      "animalos__Interaction_Date_Time__c": "2026-01-20T14:00:00.000+0000"
+    },
+    {
+      "attributes": { "type": "animalos__Animal_Note__c", "referenceId": "NoteRef2" },
+      "RecordType": { "DeveloperName": "Animal_Note" },
+      "animalos__Animal__c": "@AnimalRef2",
+      "animalos__Type__c": "Behaviour General",
+      "animalos__Flag__c": "Warning",
+      "animalos__Content__c": "Bella is nervous around loud noises and sudden movements. Requires a calm, quiet environment during her stray hold assessment period. Shows signs of previous neglect.",
+      "animalos__Interaction_Date_Time__c": "2026-03-29T09:30:00.000+0000"
+    },
+    {
+      "attributes": { "type": "animalos__Animal_Note__c", "referenceId": "NoteRef3" },
+      "RecordType": { "DeveloperName": "Animal_Note" },
+      "animalos__Animal__c": "@AnimalRef7",
+      "animalos__Type__c": "Behaviour Rehabilitation and Training",
+      "animalos__Flag__c": "Warning",
+      "animalos__Content__c": "Rocky displays leash reactivity towards other dogs. Currently on a desensitisation program with the behaviour team. Only experienced handlers should walk him. Progress is steady - reduced lunging distance from 5m to 2m.",
+      "animalos__Interaction_Date_Time__c": "2026-03-20T11:00:00.000+0000"
+    },
+    {
+      "attributes": { "type": "animalos__Animal_Note__c", "referenceId": "NoteRef4" },
+      "RecordType": { "DeveloperName": "Block_Note" },
+      "animalos__Block__c": "@BlockRef1",
+      "animalos__Type__c": "Block/Row",
+      "animalos__Flag__c": "Information",
+      "animalos__Content__c": "Deep clean of all kennels completed. New enrichment toys distributed. Water bowls replaced with anti-tip models.",
+      "animalos__Interaction_Date_Time__c": "2026-04-01T08:00:00.000+0000"
+    },
+    {
+      "attributes": { "type": "animalos__Animal_Note__c", "referenceId": "NoteRef5" },
+      "RecordType": { "DeveloperName": "Animal_Note" },
+      "animalos__Animal__c": "@AnimalRef8",
+      "animalos__Type__c": "Veterinary",
+      "animalos__Flag__c": "Critical",
+      "animalos__Content__c": "Whiskers diagnosed with mild upper respiratory infection on intake. Started on antibiotics. Must be isolated from other cats until cleared by vet. Recheck scheduled for 2026-04-10.",
+      "animalos__Interaction_Date_Time__c": "2026-03-02T15:00:00.000+0000"
+    }
+  ]
+}

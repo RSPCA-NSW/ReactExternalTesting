@@ -1,0 +1,94 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Job_Status_Tracking__c",
+        "referenceId": "JobStatusTrackingRef1"
+      },
+      "animalos__Job__c": "@JobRef1",
+      "animalos__Status__c": "Assigned",
+      "animalos__Start_Date_Time__c": "2026-03-28T08:20:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Status_Tracking__c",
+        "referenceId": "JobStatusTrackingRef2"
+      },
+      "animalos__Job__c": "@JobRef2",
+      "animalos__Status__c": "Assigned",
+      "animalos__Start_Date_Time__c": "2026-03-29T08:40:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Status_Tracking__c",
+        "referenceId": "JobStatusTrackingRef3"
+      },
+      "animalos__Job__c": "@JobRef3",
+      "animalos__Status__c": "New",
+      "animalos__Start_Date_Time__c": "2026-03-30T09:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Status_Tracking__c",
+        "referenceId": "JobStatusTrackingRef4"
+      },
+      "animalos__Job__c": "@JobRef4",
+      "animalos__Status__c": "Attended",
+      "animalos__Start_Date_Time__c": "2026-03-31T09:20:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Status_Tracking__c",
+        "referenceId": "JobStatusTrackingRef5"
+      },
+      "animalos__Job__c": "@JobRef5",
+      "animalos__Status__c": "Assigned",
+      "animalos__Start_Date_Time__c": "2026-04-01T09:40:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Status_Tracking__c",
+        "referenceId": "JobStatusTrackingRef6"
+      },
+      "animalos__Job__c": "@JobRef6",
+      "animalos__Status__c": "Awaiting Recheck",
+      "animalos__Start_Date_Time__c": "2026-04-02T10:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Status_Tracking__c",
+        "referenceId": "JobStatusTrackingRef7"
+      },
+      "animalos__Job__c": "@JobRef7",
+      "animalos__Status__c": "Assigned",
+      "animalos__Start_Date_Time__c": "2026-04-03T10:20:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Status_Tracking__c",
+        "referenceId": "JobStatusTrackingRef8"
+      },
+      "animalos__Job__c": "@JobRef8",
+      "animalos__Status__c": "Awaiting Further Information",
+      "animalos__Start_Date_Time__c": "2026-04-04T10:40:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Status_Tracking__c",
+        "referenceId": "JobStatusTrackingRef9"
+      },
+      "animalos__Job__c": "@JobRef9",
+      "animalos__Status__c": "Assigned",
+      "animalos__Start_Date_Time__c": "2026-04-05T11:00:00.000+0000"
+    },
+    {
+      "attributes": {
+        "type": "animalos__Job_Status_Tracking__c",
+        "referenceId": "JobStatusTrackingRef10"
+      },
+      "animalos__Job__c": "@JobRef10",
+      "animalos__Status__c": "Finalised",
+      "animalos__Start_Date_Time__c": "2026-04-06T11:20:00.000+0000"
+    }
+  ]
+}

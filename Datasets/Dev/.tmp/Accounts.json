@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Account", "referenceId": "AccountRef1" },
+      "Name": "Happy Tails Rescue"
+    },
+    {
+      "attributes": { "type": "Account", "referenceId": "AccountRef2" },
+      "Name": "City Animal Control"
+    },
+    {
+      "attributes": { "type": "Account", "referenceId": "AccountRef3" },
+      "Name": "Paws & Claws Veterinary Clinic"
+    }
+  ]
+}

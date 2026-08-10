@@ -1,0 +1,26 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "animalos__Location__c", "referenceId": "SiteRef1" },
+      "Name": "Sydney - Yagoona",
+      "RecordType": { "DeveloperName": "Site" },
+      "animalos__Capacity__c": 80,
+      "animalos__Availability__c": 45,
+      "animalos__Adjusted_Capacity__c": 80,
+      "animalos__Adjusted_Availability__c": 45,
+      "animalos__Unit_Status__c": "Available",
+      "animalos__Unavailable_for_Boarding__c": false
+    },
+    {
+      "attributes": { "type": "animalos__Location__c", "referenceId": "SiteRef2" },
+      "Name": "Hunter",
+      "RecordType": { "DeveloperName": "Site" },
+      "animalos__Capacity__c": 40,
+      "animalos__Availability__c": 22,
+      "animalos__Adjusted_Capacity__c": 40,
+      "animalos__Adjusted_Availability__c": 22,
+      "animalos__Unit_Status__c": "Available",
+      "animalos__Unavailable_for_Boarding__c": false
+    }
+  ]
+}

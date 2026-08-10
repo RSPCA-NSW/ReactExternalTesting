@@ -1,0 +1,224 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef1"
+      },
+      "Name": "Standard Enrichment Plan",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Cat;Dog;Kitten;Puppy",
+      "animalos__Frequency__c": "Daily",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef2"
+      },
+      "Name": "Standard Exercise Plan",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Dog;Puppy",
+      "animalos__Frequency__c": "Daily",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef3"
+      },
+      "Name": "Daily Observation",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Bird;Cat;Cattle;Crab/Fish;Dog;Farm;Ferret;Fowl;Goat;Guinea Pig;Hamster;Horse;Insect / Arachnid;Kitten;Livestock;Native Amphibians;Native Birds;Native Mammal;Native Marsupial;Native Monotreme;Native Reptiles;Non Native Amphibians;Non Native Birds;Non Native Mammals;Non Native Reptiles;Pig;Puppy;Rabbit;Rodent;Sheep;Zoo",
+      "animalos__Frequency__c": "Daily",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef4"
+      },
+      "Name": "Standard Interaction",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Cat;Kitten",
+      "animalos__Frequency__c": "Daily",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef5"
+      },
+      "Name": "Weigh In - Weekly",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Arachnid;Bird;Cat;Cattle;Crab/Fish;Dog;Donkey;Farm;Ferret;Fowl;Gerbil;Goat;Guinea Pig;Hamster;Hedgehog;Horse;Insect / Arachnid;Kitten;Livestock;Mammal;Marsupial;Monotremes;Native Amphibians;Native Birds;Native Mammal;Native Marsupial;Native Monotreme;Native Reptiles;Non Native Amphibians;Non Native Birds;Non Native Mammals;Non Native Reptiles;Pig;Placental Mammals;Pony;Poultry;Puppy;Rabbit;Rat;Reptile;Rodent;Sheep;Small Pets;Unknown;Wildlife;Zoo;Fish;Chicken;Duck;Goose;Other",
+      "animalos__Frequency__c": "Weekly",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef6"
+      },
+      "Name": "Weekly Sanitation Plan",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Bird;Cat;Dog;Ferret;Guinea Pig;Hamster;Horse;Kitten;Puppy;Rabbit",
+      "animalos__Frequency__c": "Weekly",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef7"
+      },
+      "Name": "Weigh In - Daily",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Arachnid;Bird;Cat;Cattle;Crab/Fish;Dog;Donkey;Farm;Ferret;Fowl;Gerbil;Goat;Guinea Pig;Hamster;Hedgehog;Horse;Insect / Arachnid;Kitten;Livestock;Mammal;Marsupial;Monotremes;Native Amphibians;Native Birds;Native Mammal;Native Marsupial;Native Monotreme;Native Reptiles;Non Native Amphibians;Non Native Birds;Non Native Mammals;Non Native Reptiles;Pig;Placental Mammals;Pony;Poultry;Puppy;Rabbit;Rat;Reptile;Rodent;Sheep;Small Pets;Unknown;Wildlife;Zoo;Fish;Chicken;Duck;Goose;Other",
+      "animalos__Frequency__c": "Daily",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef8"
+      },
+      "Name": "Weigh In - Every 2 Days",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Arachnid;Bird;Cat;Cattle;Crab/Fish;Dog;Donkey;Farm;Ferret;Fowl;Gerbil;Goat;Guinea Pig;Hamster;Hedgehog;Horse;Insect / Arachnid;Kitten;Livestock;Mammal;Marsupial;Monotremes;Native Amphibians;Native Birds;Native Mammal;Native Marsupial;Native Monotreme;Native Reptiles;Non Native Amphibians;Non Native Birds;Non Native Mammals;Non Native Reptiles;Pig;Placental Mammals;Pony;Poultry;Puppy;Rabbit;Rat;Reptile;Rodent;Sheep;Small Pets;Unknown;Wildlife;Zoo;Fish;Chicken;Duck;Goose;Other",
+      "animalos__Frequency__c": "Daily",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef9"
+      },
+      "Name": "Malaseb Bath Weekly",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Bird;Cat;Cattle;Crab/Fish;Dog;Farm;Ferret;Fowl;Goat;Guinea Pig;Hamster;Horse;Insect / Arachnid;Kitten;Livestock;Native Amphibians;Native Birds;Native Mammal;Native Marsupial;Native Monotreme;Native Reptiles;Non Native Amphibians;Non Native Birds;Non Native Mammals;Non Native Reptiles;Pig;Puppy;Rabbit;Rodent;Sheep;Zoo",
+      "animalos__Frequency__c": "Weekly",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef10"
+      },
+      "Name": "Malaseb Bath Every 3 Days",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Bird;Cat;Cattle;Crab/Fish;Dog;Farm;Ferret;Fowl;Goat;Guinea Pig;Hamster;Horse;Insect / Arachnid;Kitten;Livestock;Native Amphibians;Native Birds;Native Mammal;Native Marsupial;Native Monotreme;Native Reptiles;Non Native Amphibians;Non Native Birds;Non Native Mammals;Non Native Reptiles;Pig;Puppy;Rabbit;Rodent;Sheep;Zoo",
+      "animalos__Frequency__c": "Daily",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef11"
+      },
+      "Name": "Weekly Weigh-In (Pocket Pet)",
+      "animalos__Status__c": "Inactive",
+      "animalos__Animal_Type__c": "Crab/Fish;Ferret;Guinea Pig;Rabbit;Rodent",
+      "animalos__Frequency__c": "Weekly",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef12"
+      },
+      "Name": "FAS Observations",
+      "animalos__Status__c": "Inactive",
+      "animalos__Animal_Type__c": "Cat;Dog;Kitten;Puppy",
+      "animalos__Frequency__c": "Daily",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef13"
+      },
+      "Name": "Feline Toileting Habits",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Cat;Kitten",
+      "animalos__Frequency__c": "Daily",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef14"
+      },
+      "Name": "Weigh In - Monthly",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Arachnid;Bird;Cat;Cattle;Crab/Fish;Dog;Donkey;Farm;Ferret;Fowl;Gerbil;Goat;Guinea Pig;Hamster;Hedgehog;Horse;Insect / Arachnid;Kitten;Livestock;Mammal;Marsupial;Monotremes;Native Amphibians;Native Birds;Native Mammal;Native Marsupial;Native Monotreme;Native Reptiles;Non Native Amphibians;Non Native Birds;Non Native Mammals;Non Native Reptiles;Pig;Placental Mammals;Pony;Poultry;Puppy;Rabbit;Rat;Reptile;Rodent;Sheep;Small Pets;Unknown;Wildlife;Zoo;Fish;Chicken;Duck;Goose;Other",
+      "animalos__Frequency__c": "Monthly",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef15"
+      },
+      "Name": "Fortnightly In Care Review",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Bird;Cat;Cattle;Crab/Fish;Dog;Farm;Ferret;Fowl;Goat;Guinea Pig;Hamster;Horse;Insect / Arachnid;Kitten;Livestock;Native Amphibians;Native Birds;Native Mammal;Native Marsupial;Native Monotreme;Native Reptiles;Non Native Amphibians;Non Native Birds;Non Native Mammals;Non Native Reptiles;Pig;Puppy;Rabbit;Rodent;Sheep;Zoo",
+      "animalos__Frequency__c": "Weekly",
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef16"
+      },
+      "Name": "Treatment Default Plan",
+      "animalos__Status__c": "Inactive",
+      "animalos__Animal_Type__c": null,
+      "animalos__Frequency__c": null,
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef17"
+      },
+      "Name": "Nutrition",
+      "animalos__Status__c": "Inactive",
+      "animalos__Animal_Type__c": null,
+      "animalos__Frequency__c": null,
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef18"
+      },
+      "Name": "Enrichment",
+      "animalos__Status__c": "Inactive",
+      "animalos__Animal_Type__c": null,
+      "animalos__Frequency__c": null,
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef19"
+      },
+      "Name": "Weigh In",
+      "animalos__Status__c": "Inactive",
+      "animalos__Animal_Type__c": null,
+      "animalos__Frequency__c": null,
+      "animalos__Specific_Animal__c": false
+    },
+    {
+      "attributes": {
+        "type": "animalos__Action_Plan__c",
+        "referenceId": "ActionPlanRef20"
+      },
+      "Name": "Weigh In - Every 3 Days",
+      "animalos__Status__c": "Active",
+      "animalos__Animal_Type__c": "Arachnid;Bird;Cat;Cattle;Crab/Fish;Dog;Donkey;Farm;Ferret;Fowl;Gerbil;Goat;Guinea Pig;Hamster;Hedgehog;Horse;Insect / Arachnid;Kitten;Livestock;Mammal;Marsupial;Monotremes;Native Amphibians;Native Birds;Native Mammal;Native Marsupial;Native Monotreme;Native Reptiles;Non Native Amphibians;Non Native Birds;Non Native Mammals;Non Native Reptiles;Pig;Placental Mammals;Pony;Poultry;Puppy;Rabbit;Rat;Reptile;Rodent;Sheep;Small Pets;Unknown;Wildlife;Zoo;Fish;Chicken;Duck;Goose;Other",
+      "animalos__Frequency__c": "Daily",
+      "animalos__Specific_Animal__c": false
+    }
+  ]
+}
