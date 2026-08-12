@@ -1,0 +1,32 @@
+query PetbarnAnimals ($locationIds: [ID!]){
+    uiapi {
+        query{
+            animalos__Animal__c(
+                where:{
+                    and: [
+                        {animalos__Current_Site__c: { in: $locationIds} }
+                        {animalos__Stage__c: {like: "%Available for Adoption%" }}
+                    ]
+                }
+                orderBy: { animalos__Animal_Name__c: { order: ASC } }
+                first: 200
+            ) {
+                edges{
+                    node{
+                        Id
+                        animalos__Animal_Name__c{
+                            value
+                        }
+                        animalos__Stage__c{
+                            value
+                        }
+                        animalos__Status__c{
+                            value
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

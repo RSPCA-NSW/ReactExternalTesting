@@ -105586,3 +105586,15 @@ export type FosterLocationsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type FosterLocationsQuery = { uiapi: { query: { animalos__Location__c?: { edges?: Array<{ node?: { Id: string, Name?: { value?: string | null } | null } | null } | null> | null } | null } } };
+
+export type PetbarnAnimalsQueryVariables = Exact<{
+  locationIds?: InputMaybe<Array<Scalars['ID']['input']> | Scalars['ID']['input']>;
+}>;
+
+
+export type PetbarnAnimalsQuery = { uiapi: { query: { animalos__Animal__c?: { edges?: Array<{ node?: { Id: string, animalos__Animal_Name__c?: { value?: string | null } | null, animalos__Stage__c?: { value?: string | null } | null, animalos__Status__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
+
+export type PetbarnLocationsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type PetbarnLocationsQuery = { uiapi: { query: { animalos__Location__c?: { edges?: Array<{ node?: { Id: string, Name?: { value?: string | null } | null } | null } | null> | null } | null } } };
