@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchFosterLocations } from '@/api/foster/fosterService';
+import { fetchPetbarnLocations } from '@/api/petbarn/petbarnService';
 
 export function usePetbarnLocations(){
     const [locations, setLocations] = useState<any[]>([]);
@@ -9,7 +9,7 @@ export function usePetbarnLocations(){
     useEffect (() => {
         let cancelled = false;
 
-        fetchFosterLocations()
+        fetchPetbarnLocations()
         .then (result => {
             if(!cancelled) setLocations(result?.edges ?? [])                
         })

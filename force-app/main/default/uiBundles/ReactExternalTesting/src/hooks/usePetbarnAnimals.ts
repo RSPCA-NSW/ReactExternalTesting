@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { fetchPetbarnAnimals } from '@/api/foster/fosterService';
+import { fetchPetbarnAnimals } from '@/api/petbarn/petbarnService';
 
 export function usePetbarnAnimals(locations: any[]){
     const [animals, setAnimals] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<String | null>(null);
 
-    const ids = locations.map(l => l.node.id);
+    const ids = locations.map(l => l.node.Id);
     const idKey = ids.join(',');
 
     useEffect (() =>{

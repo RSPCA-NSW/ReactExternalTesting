@@ -68645,6 +68645,7 @@ export type Animalos__Location__C_Filter = {
   AdoptAPet_Location_Ranking__c?: InputMaybe<DoubleOperators>;
   Adoptapet_ID__c?: InputMaybe<DoubleOperators>;
   Adoption_Website_Location_Name_Sync__c?: InputMaybe<StringOperators>;
+  Adoptions_From_Location__c?: InputMaybe<DoubleOperators>;
   Allocated_to_Animal__c?: InputMaybe<IdOperators>;
   Allocated_to_Animal__r?: InputMaybe<Animalos__Animal__C_Filter>;
   Animal_Type__c?: InputMaybe<PicklistOperators>;
@@ -68746,6 +68747,7 @@ export type Animalos__Location__C_OrderBy = {
   AdoptAPet_Location_Ranking__c?: InputMaybe<OrderByClause>;
   Adoptapet_ID__c?: InputMaybe<OrderByClause>;
   Adoption_Website_Location_Name_Sync__c?: InputMaybe<OrderByClause>;
+  Adoptions_From_Location__c?: InputMaybe<OrderByClause>;
   After_Hours_Emergency__c?: InputMaybe<AggregateOrderByStringClause>;
   Allocated_to_Animal__c?: InputMaybe<OrderByClause>;
   Allocated_to_Animal__r?: InputMaybe<Animalos__Animal__C_OrderBy>;
@@ -105592,7 +105594,7 @@ export type PetbarnAnimalsQueryVariables = Exact<{
 }>;
 
 
-export type PetbarnAnimalsQuery = { uiapi: { query: { animalos__Animal__c?: { edges?: Array<{ node?: { Id: string, animalos__Animal_Name__c?: { value?: string | null } | null, animalos__Stage__c?: { value?: string | null } | null, animalos__Status__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
+export type PetbarnAnimalsQuery = { uiapi: { query: { animalos__Animal__c?: { edges?: Array<{ node?: { Id: string, animalos__Animal_Name__c?: { value?: string | null } | null, animalos__Stage__c?: { value?: string | null } | null, animalos__Status__c?: { value?: string | null } | null, animalos__Current_Site__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
 
 export type PetbarnLocationsQueryVariables = Exact<{ [key: string]: never; }>;
 

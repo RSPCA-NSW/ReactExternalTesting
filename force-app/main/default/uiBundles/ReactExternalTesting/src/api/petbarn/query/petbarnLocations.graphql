@@ -4,7 +4,7 @@ query PetbarnLocations {
             animalos__Location__c(
             where: {
                 and: [
-                    { Name: {like: "%Petbarn"} }
+                    { Name: {like: "%Petbarn%"} }
                     { animalos__Active__c: { eq: true } }
                 ]
             }

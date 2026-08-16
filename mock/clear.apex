@@ -1,24 +1,79 @@
+// Clear seeded mock data from an org.
+//
+// GENERATED from mock/schemas/*.json: the identifier sets below are derived
+// from the seeded records' names/external ids. Regenerate after editing the JSON.
+//
+// Usage: sf apex run --file mock/clear.apex --target-org <alias>
+//
+// Contacts, Accounts, Job Bundles and Job Activities are located via their
+// relationships to the seeded Jobs/Animals, then everything is deleted
+// children-first. Also removes any leftover 'mock-seed-refs' file from a
+// partially-run seed.
 
-
-set -euo pipefail
-
-: "${SF_TARGET_ORG:?SF_TARGET_ORG is required. Run: cci task run clear --org dev}"
-
-DIR="$(cd "$(dirname "$0")" && pwd)"
-TEMP_APEX="$(mktemp "$DIR/clear.XXXXXX.apex")"
-
-cleanup() { rm -f "$TEMP_APEX"; }
-trap cleanup EXIT
-
-command -v sf >/dev/null || { echo "ERROR: sf CLI is required" >&2; exit 1; }
-
-cat > "$TEMP_APEX" <<'EOF'
 Set<String> seededJobNames = new Set<String>{
-    '00365308', '00365310', '00365311', '00365313', '00365314',
-    '00365315', '00365316', '00365317', '00365318', '00365319',
-    'JOB-INS-0001', 'JOB-CRS-0001'
+    '00365308',
+    '00365310',
+    '00365311',
+    '00365313',
+    '00365314',
+    '00365315',
+    '00365316',
+    '00365317',
+    '00365318',
+    '00365319'
 };
-String seededShelterPattern = '053 %';
+Set<String> animalShelterIds = new Set<String>{
+    '053 0001',
+    '053 0002',
+    '053 0003',
+    '053 0004',
+    '053 0005',
+    '053 0006',
+    '053 0007',
+    '053 0008',
+    '053 0009',
+    '053 0010',
+    '053 0011',
+    '053 0012',
+    '053 0013',
+    '053 0014',
+    '053 0015',
+    '053 0016',
+    '053 0017',
+    '053 0018',
+    '053 0019',
+    '053 0020',
+    '053 0021',
+    '053 0022',
+    '053 0023',
+    '053 0024',
+    '053 0025',
+    '053 0026',
+    '053 0027',
+    '053 0028',
+    '053 0029',
+    '053 0030',
+    '053 0031',
+    '053 0032',
+    '053 0033',
+    '053 0034',
+    '053 0035',
+    '053 0036',
+    '053 0037',
+    '053 0038',
+    '053 0039',
+    '053 0040',
+    '053 0041',
+    '053 0042',
+    '053 0043',
+    '053 0044',
+    '053 0045',
+    '053 0046',
+    '053 0047',
+    '053 0048',
+    '053 0049',
+    '053 0050'
+};
 Set<String> locationOfInterestNames = new Set<String>{
     '54 Lotus Avenue, Kalkite, NSW 2627 AU',
     '47 Hodge Street, Hurstville, NSW 2220 AU',
@@ -72,12 +127,26 @@ Set<String> locationOfInterestNames = new Set<String>{
     '105 Links Road, Gunnedah, NSW 2380 AU'
 };
 Set<String> breedIds = new Set<String>{
-    'BRD-001', 'BRD-002', 'BRD-003', 'BRD-004', 'BRD-005', 'BRD-006', 'BRD-007', 'BRD-008'
+    'BRD-001',
+    'BRD-002',
+    'BRD-003',
+    'BRD-004',
+    'BRD-005',
+    'BRD-006',
+    'BRD-007',
+    'BRD-008'
 };
 Set<String> locationNames = new Set<String>{
-    'Main Shelter', 'Satellite Centre',
-    'Dog Wing', 'Cat Wing', 'Small Animal Wing',
-    'Dog Kennel 1', 'Dog Kennel 2', 'Cat Room 1', 'Cat Room 2', 'Small Animal Room 1'
+    'Sydney - Yagoona',
+    'Hunter',
+    'Dog Wing',
+    'Cat Wing',
+    'Small Animal Wing',
+    'Dog Kennel 1',
+    'Dog Kennel 2',
+    'Cat Room 1',
+    'Cat Room 2',
+    'Small Animal Room 1'
 };
 Set<String> actionPlanNames = new Set<String>{
     'Standard Enrichment Plan',
@@ -96,9 +165,9 @@ Set<String> actionPlanNames = new Set<String>{
     'Weigh In - Monthly',
     'Fortnightly In Care Review',
     'Treatment Default Plan',
-    'Nutrition Default Plan',
-    'Enrichment Default Plan',
-    'Weigh In Default Plan',
+    'Nutrition',
+    'Enrichment',
+    'Weigh In',
     'Weigh In - Every 3 Days'
 };
 Set<String> medicineNames = new Set<String>{
@@ -153,6 +222,12 @@ Set<String> medicineNames = new Set<String>{
     'Linctol Cough Mixture',
     'Filavac Vaccination'
 };
+Set<String> seededContactLastNames = new Set<String>{
+    'Smith',
+    'Johnson',
+    'Williams'
+};
+
 Set<Id> contactIds = new Set<Id>();
 Set<Id> accountIds = new Set<Id>();
 Set<Id> jobIds = new Set<Id>();
@@ -172,7 +247,7 @@ for (animalos__Job__c record : [
 for (animalos__Animal_Referral__c record : [
     SELECT animalos__Job__c
     FROM animalos__Animal_Referral__c
-    WHERE animalos__Animal__r.animalos__Shelter_ID__c LIKE :seededShelterPattern
+    WHERE animalos__Animal__r.animalos__Shelter_ID__c IN :animalShelterIds
       AND animalos__Job__c != null
 ]) {
     jobIds.add(record.animalos__Job__c);
@@ -230,7 +305,7 @@ if (!jobActivityIds.isEmpty()) {
     delete [SELECT Id FROM animalos__Job_Activity_Animal__c WHERE animalos__Job_Activity__c IN :jobActivityIds];
 }
 
-delete [SELECT Id FROM animalos__Animal_Referral__c WHERE animalos__Animal__r.animalos__Shelter_ID__c LIKE :seededShelterPattern];
+delete [SELECT Id FROM animalos__Animal_Referral__c WHERE animalos__Animal__r.animalos__Shelter_ID__c IN :animalShelterIds];
 
 if (!jobIds.isEmpty()) {
     delete [SELECT Id FROM animalos__Job_Note__c WHERE animalos__Job__c IN :jobIds];
@@ -247,9 +322,9 @@ if (!jobActivityIds.isEmpty()) {
     delete [SELECT Id FROM animalos__Job_Activity__c WHERE Id IN :jobActivityIds];
 }
 
-delete [SELECT Id FROM animalos__Animal_Action__c WHERE animalos__Animal__r.animalos__Shelter_ID__c LIKE :seededShelterPattern];
-delete [SELECT Id FROM animalos__Animal_Note__c WHERE animalos__Animal__r.animalos__Shelter_ID__c LIKE :seededShelterPattern];
-delete [SELECT Id FROM animalos__Movement__c WHERE animalos__Animal__r.animalos__Shelter_ID__c LIKE :seededShelterPattern];
+delete [SELECT Id FROM animalos__Animal_Action__c WHERE animalos__Animal__r.animalos__Shelter_ID__c IN :animalShelterIds];
+delete [SELECT Id FROM animalos__Animal_Note__c WHERE animalos__Animal__r.animalos__Shelter_ID__c IN :animalShelterIds];
+delete [SELECT Id FROM animalos__Movement__c WHERE animalos__Animal__r.animalos__Shelter_ID__c IN :animalShelterIds];
 
 if (!jobIds.isEmpty()) {
     delete [SELECT Id FROM animalos__Referral__c WHERE animalos__Job__c IN :jobIds];
@@ -262,7 +337,7 @@ if (!jobContactIds.isEmpty()) {
     delete [SELECT Id FROM animalos__Job_Contact__c WHERE Id IN :jobContactIds];
 }
 
-delete [SELECT Id FROM animalos__Animal__c WHERE animalos__Shelter_ID__c LIKE :seededShelterPattern];
+delete [SELECT Id FROM animalos__Animal__c WHERE animalos__Shelter_ID__c IN :animalShelterIds];
 
 if (!jobIds.isEmpty()) {
     delete [SELECT Id FROM animalos__Job__c WHERE Id IN :jobIds];
@@ -279,6 +354,19 @@ delete [SELECT Id FROM animalos__Medicine__c WHERE Name IN :medicineNames];
 delete [SELECT Id FROM animalos__Location__c WHERE Name IN :locationNames];
 delete [SELECT Id FROM animalos__Breed__c WHERE animalos__Breed_ID__c IN :breedIds];
 
+// Seeded contacts carry only a last name; pick up any not linked to a seeded
+// job (their NPSP household accounts are removed automatically by NPSP).
+for (Contact record : [
+    SELECT Id
+    FROM Contact
+    WHERE LastName IN :seededContactLastNames
+      AND FirstName = null
+      AND Email = null
+      AND Phone = null
+]) {
+    contactIds.add(record.Id);
+}
+
 if (!contactIds.isEmpty()) {
     delete [SELECT Id FROM Contact WHERE Id IN :contactIds];
 }
@@ -287,10 +375,7 @@ if (!accountIds.isEmpty()) {
     delete [SELECT Id FROM Account WHERE Id IN :accountIds];
 }
 
-System.debug('Mock dataset clear complete.');
-EOF
+// Leftover reference-map file from a partially-run seed, if any.
+delete [SELECT Id FROM ContentDocument WHERE Title = 'mock-seed-refs'];
 
-echo "Clearing mock dataset from org: $SF_TARGET_ORG ..."
-sf apex run --file "$TEMP_APEX" --target-org "$SF_TARGET_ORG"
-echo ""
-echo "Done! Mock dataset records cleared."
+System.debug('Mock dataset clear complete.');

@@ -1,0 +1,123 @@
+minimum_cumulusci_version: '3.71.0'
+project:
+    name: AnimalOS-RSPCA-NSW
+    package:
+        name: AnimalOS-RSPCA-NSW
+        api_version: '65.0'
+
+    git:
+        repo_url: https://github.com/danielvelesevich123/AnimalOS-RSPCA-NSW
+        default_branch: 'dev'
+        prefix_feature: feature/
+    test:
+        name_match: '%Test'
+    source_format: sfdx
+    dependencies:
+      - version_id: 04tRF000002U3k5YAC # name: AnimalOS | version: 0.533.0.1 | namespace: animalos
+      - version_id: 04tRF000002U3wzYAC # name: AnimalOS-Core | version: 0.3.0.1 | unclocked
+      - version_id: 04t2L000000Y06MQAS # name: NPSP+ Dependency Resolver | version: 0.1.0.2 | namespace: npsp_plus_dres
+      - github: https://github.com/SalesforceFoundation/NPSP
+        tag: rel/3.237 # name: Nonprofit Success Pack | version: 3.237.0.2 | namespace: npsp
+      - version_id: 04tQp000000dlqHIAQ # name: Vertic NPSP+ | version: 0.188.0.2 | namespace: npsp_plus
+      - github: https://github.com/SalesforceFoundation/PMM
+        tag: release/1.34 # name: Program Management Module | version: 1.34.0.4 | namespace: pmdm
+      - version_id: 04t0N000000YGN4QAO # name: Declarative Lookup Rollup Summaries Tool | version: 2.12.0.4 | namespace: dlrs
+      - version_id: 04t2w0000097hCRAAY # name: MoveData | version: 1.142.0.1 | namespace: movedata
+      - version_id: 04t2w000008K4XGAA0 # name: MoveData NPSP Extensions | version: 1.81.0.1 | namespace: md_npsp_pack
+      - version_id: 04t5j0000011U6nAAE # name: MoveData Forms Extensions | version: 1.4.0.1 | namespace: md_forms_pack
+      - version_id: 04t4W000002GvnFQAS # name: Twilio For Salesforce | version: 4.159.0.2 | namespace: TwilioSF
+      - version_id: 04t3a000001yvEhAAI # name: Genesys Cloud for Salesforce | version: 4.12.0.6 | namespace: purecloud
+      - version_id: 04t1t000002i07wAAA # name: Innovation Hub | version: 4.4.0.3 | namespace: innohub
+      - version_id: 04tB0000000P3LNIA0 # name: Flow Buttons (UnofficialSF) | version: 1.0.0.0 | namespace: (none)
+      - version_id: 04t8b00000170r5AAA # name: FlowActionsBasePack | version: 3.19.0.0 | namespace: usf3
+      - version_id: 04t5G000004fzDQQAY # name: FlowScreenComponentsBasePack | version: 3.3.10.0 | namespace: (none)
+      - version_id: 04t41000002if0vAAA # name: GS_LXPartner Component | version: 1.14.0.2 | namespace: GS_LXPartner
+      - version_id: 04tal000007AHBdAAO # name: Salesforce Maps | version: 260.26.0.1 | namespace: maps
+      - version_id: 04t7F000005EwiZQAS # name: Funraisin Managed | version: 1.9.0.1 | namespace: Funraisin
+
+tasks:
+    robot:
+        options:
+            suites: robot/AnimalOS-NSW/tests
+            options:
+                outputdir: robot/AnimalOS-NSW/results
+
+    robot_testdoc:
+        options:
+            path: robot/AnimalOS-NSW/tests
+            output: robot/AnimalOS-NSW/doc/animalOS_NSW_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
+
+    enable_debug_mode:
+        description: Enable Debug Mode for Admin
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        group: projectName
+        options:
+            apex: "update new User(Id = [SELECT Id FROM User WHERE Profile.Name = 'System Administrator' LIMIT 1][0].Id, UserPreferencesUserDebugModePref = true, UserPreferencesApexPagesDeveloperMode = true);"
+
+    import:
+        description: Import canonical mock data into the target scratch org
+        class_path: tasks.mock_command.MockDataCommand
+        group: projectName
+        options:
+            command: bash ./mock/import.sh
+
+    clear:
+        description: Clear mock data from the target scratch org
+        class_path: tasks.mock_command.MockDataCommand
+        group: projectName
+        options:
+            command: bash ./mock/clear.sh
+
+    assign_full_access:
+        description: Assign permission sets for mock data import (record types + AnimalOS Core)
+        class_path: cumulusci.tasks.salesforce.users.permsets.AssignPermissionSets
+        group: projectName
+        options:
+            api_names:
+                - Mock_Data_Import
+                - AnimalOS_Full_Access
+                - AnimalOS_Core_Full_Access
+
+flows:
+    release_2gp_beta:
+        steps:
+            4:
+                task: None
+    ci_beta:
+        steps:
+            2:
+                task: None
+
+    dev_org:
+        steps:
+            4:
+                task: enable_debug_mode
+
+    scratch_stage2:
+        description: After dependencies + manual steps — deploy force-app, config_dev, enable_debug_mode, import mock data
+        steps:
+            1:
+                flow: deploy_unmanaged
+            2:
+                flow: config_dev
+            3:
+                task: assign_full_access
+            4:
+                task: enable_debug_mode
+            5:
+                task: import
+
+orgs:
+    scratch:
+        dev:
+            config_file: orgs/dev.json
+            days: 30
+            namespaced: False
+        devtest:
+            config_file: orgs/dev.json
+            days: 30
+            namespaced: False

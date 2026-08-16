@@ -5,7 +5,7 @@ query PetbarnAnimals ($locationIds: [ID!]){
                 where:{
                     and: [
                         {animalos__Current_Site__c: { in: $locationIds} }
-                        {animalos__Stage__c: {like: "%Available for Adoption%" }}
+                        {animalos__Stage__c: {like: "%Adoption Ready%" }}
                     ]
                 }
                 orderBy: { animalos__Animal_Name__c: { order: ASC } }
@@ -22,6 +22,10 @@ query PetbarnAnimals ($locationIds: [ID!]){
                         }
                         animalos__Status__c{
                             value
+                        }
+                        animalos__Current_Site__c{
+                            value
+                            
                         }
                     }
                 }
