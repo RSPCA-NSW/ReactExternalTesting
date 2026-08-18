@@ -1,12 +1,16 @@
 import PETBARN_LOCATIONS_QUERY from "./query/petbarnLocations.graphql?raw";
-import PETBARN_ANIMALS_QUERY from "./query/petbarnAnimals.graphql?raw"; 
+import PETBARN_ANIMALS_QUERY from "./query/petbarnAnimals.graphql?raw";
+import PETBARN_ANIMAL_ALERTS_QUERY from "./query/petbarnAnimalAlerts.graphql?raw"; 
 
 import { executeGraphQL } from "../graphqlClient";
 
-import type {
+import {
     PetbarnLocationsQuery,
     PetbarnAnimalsQuery,
     PetbarnAnimalsQueryVariables,
+    PetbarnAnimalAlertsQuery,
+    PetbarnAnimalAlertsQueryVariables,
+
 } from "../graphql-operations-types";
 
 export async function fetchPetbarnLocations() {

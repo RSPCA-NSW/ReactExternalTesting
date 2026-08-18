@@ -30,6 +30,10 @@ query PetbarnAnimals ($locationIds: [ID!]){
                         animalos__Primary_Breed_Formula__c{
                             value
                         }
+                        animalos__Calculated_Age__c{
+                            value
+                        }
+                        Alerts__r
                     }
                 }
 

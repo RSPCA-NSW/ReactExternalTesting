@@ -105597,12 +105597,19 @@ export type FosterLocationsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type FosterLocationsQuery = { uiapi: { query: { animalos__Location__c?: { edges?: Array<{ node?: { Id: string, Name?: { value?: string | null } | null } | null } | null> | null } | null } } };
 
+export type PetbarnAnimalAlertsQueryVariables = Exact<{
+  animalIds?: InputMaybe<Array<Scalars['String']['input']> | Scalars['String']['input']>;
+}>;
+
+
+export type PetbarnAnimalAlertsQuery = { uiapi: { query: { animalos__Alert__c?: { edges?: Array<{ node?: { Id: string, animalos__Message_Formatted__c?: { value?: string | null } | null, animalos__Variant__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
+
 export type PetbarnAnimalsQueryVariables = Exact<{
   locationIds?: InputMaybe<Array<Scalars['ID']['input']> | Scalars['ID']['input']>;
 }>;
 
 
-export type PetbarnAnimalsQuery = { uiapi: { query: { animalos__Animal__c?: { edges?: Array<{ node?: { Id: string, animalos__Animal_Name__c?: { value?: string | null } | null, animalos__Stage__c?: { value?: string | null } | null, animalos__Status__c?: { value?: string | null } | null, animalos__Current_Site__c?: { value?: string | null } | null, animalos__Primary_Breed_Formula__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
+export type PetbarnAnimalsQuery = { uiapi: { query: { animalos__Animal__c?: { edges?: Array<{ node?: { Id: string, animalos__Animal_Name__c?: { value?: string | null } | null, animalos__Stage__c?: { value?: string | null } | null, animalos__Status__c?: { value?: string | null } | null, animalos__Current_Site__c?: { value?: string | null } | null, animalos__Primary_Breed_Formula__c?: { value?: string | null } | null, animalos__Calculated_Age__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
 
 export type PetbarnLocationsQueryVariables = Exact<{ [key: string]: never; }>;
 
