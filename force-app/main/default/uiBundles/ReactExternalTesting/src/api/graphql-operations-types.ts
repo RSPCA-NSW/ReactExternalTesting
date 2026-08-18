@@ -41044,6 +41044,7 @@ export type PermissionSetLicense_Filter = {
   MaximumPermissionsManageExternalConnections?: InputMaybe<BooleanOperators>;
   MaximumPermissionsManageFilesAndAttachments?: InputMaybe<BooleanOperators>;
   MaximumPermissionsManageGlobalPrivacyCenterVO?: InputMaybe<BooleanOperators>;
+  MaximumPermissionsManageHealthAssessments?: InputMaybe<BooleanOperators>;
   MaximumPermissionsManageHealthCheck?: InputMaybe<BooleanOperators>;
   MaximumPermissionsManageHerokuAppLink?: InputMaybe<BooleanOperators>;
   MaximumPermissionsManageHubConnections?: InputMaybe<BooleanOperators>;
@@ -41324,6 +41325,7 @@ export type PermissionSetLicense_Filter = {
   MaximumPermissionsViewEncryptedData?: InputMaybe<BooleanOperators>;
   MaximumPermissionsViewEventLogFiles?: InputMaybe<BooleanOperators>;
   MaximumPermissionsViewGlobalHeader?: InputMaybe<BooleanOperators>;
+  MaximumPermissionsViewHealthAssessments?: InputMaybe<BooleanOperators>;
   MaximumPermissionsViewHealthCheck?: InputMaybe<BooleanOperators>;
   MaximumPermissionsViewHelpLink?: InputMaybe<BooleanOperators>;
   MaximumPermissionsViewIncidentAnlytDshbrd?: InputMaybe<BooleanOperators>;
@@ -41752,6 +41754,7 @@ export type PermissionSet_Filter = {
   PermissionsManageExternalConnections?: InputMaybe<BooleanOperators>;
   PermissionsManageFilesAndAttachments?: InputMaybe<BooleanOperators>;
   PermissionsManageGlobalPrivacyCenterVO?: InputMaybe<BooleanOperators>;
+  PermissionsManageHealthAssessments?: InputMaybe<BooleanOperators>;
   PermissionsManageHealthCheck?: InputMaybe<BooleanOperators>;
   PermissionsManageHerokuAppLink?: InputMaybe<BooleanOperators>;
   PermissionsManageHubConnections?: InputMaybe<BooleanOperators>;
@@ -42032,6 +42035,7 @@ export type PermissionSet_Filter = {
   PermissionsViewEncryptedData?: InputMaybe<BooleanOperators>;
   PermissionsViewEventLogFiles?: InputMaybe<BooleanOperators>;
   PermissionsViewGlobalHeader?: InputMaybe<BooleanOperators>;
+  PermissionsViewHealthAssessments?: InputMaybe<BooleanOperators>;
   PermissionsViewHealthCheck?: InputMaybe<BooleanOperators>;
   PermissionsViewHelpLink?: InputMaybe<BooleanOperators>;
   PermissionsViewIncidentAnlytDshbrd?: InputMaybe<BooleanOperators>;
@@ -46592,6 +46596,7 @@ export type Profile_Filter = {
   PermissionsManageExternalConnections?: InputMaybe<BooleanOperators>;
   PermissionsManageFilesAndAttachments?: InputMaybe<BooleanOperators>;
   PermissionsManageGlobalPrivacyCenterVO?: InputMaybe<BooleanOperators>;
+  PermissionsManageHealthAssessments?: InputMaybe<BooleanOperators>;
   PermissionsManageHealthCheck?: InputMaybe<BooleanOperators>;
   PermissionsManageHerokuAppLink?: InputMaybe<BooleanOperators>;
   PermissionsManageHubConnections?: InputMaybe<BooleanOperators>;
@@ -46872,6 +46877,7 @@ export type Profile_Filter = {
   PermissionsViewEncryptedData?: InputMaybe<BooleanOperators>;
   PermissionsViewEventLogFiles?: InputMaybe<BooleanOperators>;
   PermissionsViewGlobalHeader?: InputMaybe<BooleanOperators>;
+  PermissionsViewHealthAssessments?: InputMaybe<BooleanOperators>;
   PermissionsViewHealthCheck?: InputMaybe<BooleanOperators>;
   PermissionsViewHelpLink?: InputMaybe<BooleanOperators>;
   PermissionsViewIncidentAnlytDshbrd?: InputMaybe<BooleanOperators>;
@@ -47294,6 +47300,7 @@ export type Profile_OrderBy = {
   PermissionsManageExternalConnections?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsManageFilesAndAttachments?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsManageGlobalPrivacyCenterVO?: InputMaybe<NoFunctionAggregateOrderByClause>;
+  PermissionsManageHealthAssessments?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsManageHealthCheck?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsManageHerokuAppLink?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsManageHubConnections?: InputMaybe<NoFunctionAggregateOrderByClause>;
@@ -47574,6 +47581,7 @@ export type Profile_OrderBy = {
   PermissionsViewEncryptedData?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsViewEventLogFiles?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsViewGlobalHeader?: InputMaybe<NoFunctionAggregateOrderByClause>;
+  PermissionsViewHealthAssessments?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsViewHealthCheck?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsViewHelpLink?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsViewIncidentAnlytDshbrd?: InputMaybe<NoFunctionAggregateOrderByClause>;
@@ -105594,7 +105602,7 @@ export type PetbarnAnimalsQueryVariables = Exact<{
 }>;
 
 
-export type PetbarnAnimalsQuery = { uiapi: { query: { animalos__Animal__c?: { edges?: Array<{ node?: { Id: string, animalos__Animal_Name__c?: { value?: string | null } | null, animalos__Stage__c?: { value?: string | null } | null, animalos__Status__c?: { value?: string | null } | null, animalos__Current_Site__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
+export type PetbarnAnimalsQuery = { uiapi: { query: { animalos__Animal__c?: { edges?: Array<{ node?: { Id: string, animalos__Animal_Name__c?: { value?: string | null } | null, animalos__Stage__c?: { value?: string | null } | null, animalos__Status__c?: { value?: string | null } | null, animalos__Current_Site__c?: { value?: string | null } | null, animalos__Primary_Breed_Formula__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
 
 export type PetbarnLocationsQueryVariables = Exact<{ [key: string]: never; }>;
 

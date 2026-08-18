@@ -27,6 +27,9 @@ query PetbarnAnimals ($locationIds: [ID!]){
                             value
                             
                         }
+                        animalos__Primary_Breed_Formula__c{
+                            value
+                        }
                     }
                 }
 
