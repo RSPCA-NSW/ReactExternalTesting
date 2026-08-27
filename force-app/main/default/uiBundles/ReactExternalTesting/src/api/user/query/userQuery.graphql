@@ -1,0 +1,14 @@
+query getCurrentUser {
+  uiapi {
+    currentUser {
+      Id
+      FirstName {
+        value
+      }
+      LastName {
+        value
+      }
+    }
+    
+  }
+}

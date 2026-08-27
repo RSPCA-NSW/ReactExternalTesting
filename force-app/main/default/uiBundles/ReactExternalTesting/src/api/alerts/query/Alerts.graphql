@@ -1,4 +1,4 @@
-query Alerts($ids: [ID!]) {
+query Alerts($ids: [String!]) {
     uiapi{
         query{
             animalos__Alert__c(
@@ -6,11 +6,12 @@ query Alerts($ids: [ID!]) {
                     and: [
                         { animalos__Target_Record_Id__c: {in: $ids}}
                         { animalos__Available_In_Community__c: {eq: true}}
-                        { animalos__Is_Active__c: {eq: true}}
+                        { animalos__Active__c: {eq: true}}
 
                     ]
-                    first: 200
+                    
                 }
+                first: 200
             ) {
                 edges{
                     node{
@@ -19,6 +20,9 @@ query Alerts($ids: [ID!]) {
                             value
                         }
                         animalos__Variant__c{
+                            value
+                        }
+                        animalos__Target_Record_Id__c{
                             value
                         }
                     }

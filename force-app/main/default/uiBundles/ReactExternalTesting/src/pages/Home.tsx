@@ -1,52 +1,175 @@
 import { usePetbarnHome } from "@/hooks/usePetbarnHome";
 import { CenteredState } from "@/components/CenteredState";
-import { PawLoader } from "@/components/brand";
-import { Button, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
+import { PawLoader, MetricCard } from "@/components/brand";
+import { Button, Skeleton, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
 import { useAlerts } from "@/hooks/useAlerts";
+import { StatusAlert } from "@/components/alerts/status-alert";
+import React from "react";
+import { useState } from "react";
+import { stripHTML } from "@/lib/utils";
+import { ChevronRight, HeartIcon, HomeIcon, PawPrintIcon } from "lucide-react";
+import { Badge } from "@components/ui/badge";
+import { usePetbarnStats } from "@/hooks/usePetbarnStats";
+import { useUserData } from "@/hooks/useUserData";
+
+
+
+
+const VARIANT_MAP: Record<string, "success" | "info" | "error"> = {
+  error: 'error',
+  info: 'info',
+  success: 'success',
+  warning: 'error'
+};
 
 
 
 export default function HomePage() {
-  const { animals,loading, error } = usePetbarnHome();
-  const { animalIds } = animals.map(e => e.node.Id);
+  const { animals, locations, loading, error } = usePetbarnHome();
+  const [expandedId, setExpandedId] = useState<String | null>(null);
+  const animalIds = animals.map(e => e.node.Id);
   const { alertsByTarget } = useAlerts(animalIds);
+  const locationId = animals.map(l => l.node.animalos__Current_Site__c?.value);
+  const { stats, statsLoading, statsError } = usePetbarnStats(locationId);
+  const { user, userLoading, userError } = useUserData();
 
+  let storeName = locations[0]?.node?.Name?.value.replace("Petbarn", "")
+  
+  let userName; 
+  if(userLoading) userName = <Skeleton></Skeleton>;
+  else if(userError) userName = <StatusAlert variant="error">{userError}</StatusAlert>
+  else userName = user?.FirstName?.value
   return (
     <div>
-      
+
 
       {loading && <CenteredState><PawLoader /></CenteredState>}
-      {error && <p>{error}</p>}
+      {error &&
+        <div>
+          <StatusAlert variant="error">{error}</StatusAlert>
+        </div>
+      }
 
       {!loading && !error && (
-        <CenteredState>
-          <div className="max-w-5xl mx-auto p-4">
-          <h1 className="text-1xl font-semibold mb-4 text-center">My Animals</h1>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Name</TableHead>
-                <TableHead>Breed</TableHead>
-                <TableHead>Age</TableHead>
-                <TableHead>Adopt</TableHead>
-                <TableHead>Alert</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {animals.map(edge => (
-                <TableRow key={edge.node.Id}>
-                  <TableCell>{edge.node.animalos__Animal_Name__c?.value}</TableCell>
-                  <TableCell>{edge.node.animalos__Primary_Breed_Formula__c?.value}</TableCell>
-                  <TableCell>{edge.node.animalos__Calculated_Age__c?.value}</TableCell>
-                  <TableCell>
-                    <Button className="hover:border-primary transition-colors"> Adopt Me!</Button>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-          </div>
-        </CenteredState>
+        <div>
+
+
+            
+          <CenteredState>
+          <div>
+            <div className="flex flex-col gap-2" >
+              <h1 className="text-2xl font-semi-bold"> Welcome {userName}! </h1>
+              <h1 className="text-sm text-muted-foreground mb-6"> store: {storeName} </h1>
+            </div>
+
+            
+
+              <div className="grid gap-4 md:grid-cols-3 mb-6" >
+              
+                <MetricCard  
+                  label="Animals Available"
+                  loading={statsLoading}
+                  error={statsError}
+                  value={stats?.animalCount}
+                  tone="green-soft"
+                  icon={< HomeIcon />}>
+                </MetricCard>
+                
+                <MetricCard                      
+                  label={`Adoptions from ${storeName}`}
+                  loading={statsLoading}
+                  error={statsError}
+                  value={stats?.adoptionCount}
+                  tone="green-soft"
+                  icon={<HeartIcon/>} >
+                </MetricCard>
+
+                <MetricCard
+                label="PlaceHolder"
+                value="placeholder"
+                tone="green-soft"
+                icon={< PawPrintIcon />}>
+                </MetricCard>
+
+              </div>
+                                         
+               <div className="max-h-[500px] overflow-y-auto">
+              <Table>
+                <TableHeader className="sticky top-0 bg-background z-10">
+                  <TableRow>
+                    <TableHead></TableHead>
+                    <TableHead>Name</TableHead>
+                    <TableHead>Breed</TableHead>
+                    <TableHead>Age</TableHead>
+                    <TableHead></TableHead>
+                    <TableHead></TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {animals.map(edge => {
+                    const alerts = alertsByTarget[edge.node.Id] ?? [];
+                    return (
+                      <React.Fragment key={edge.node.Id}>
+                        <TableRow
+                          className="cursor-pointer"
+                          onClick={() =>
+                            setExpandedId(expandedId === edge.node.Id ? null : edge.node.Id)
+                          }
+                        >
+
+                          <TableCell>
+                            <ChevronRight className={`h-4 w-4 transition-duration-200 ${expandedId === edge.node.Id ? 'rotate-90' : ''
+                              }`}
+                            />
+                          </TableCell>
+                          <TableCell>{edge.node.animalos__Animal_Name__c?.value}
+                          </TableCell>
+                          <TableCell>{edge.node.animalos__Primary_Breed_Formula__c?.value}</TableCell>
+                          <TableCell>{edge.node.animalos__Calculated_Age__c?.value}</TableCell>
+                          <TableCell>
+                            <Button className="hover:border-primary transition-colors"
+                              onClick={e => {
+                                e.stopPropagation();
+                              }}> Adopt Me!</Button>
+                          </TableCell>
+                          <TableCell>
+                            <Button className="hover:border-primary transition-colours" variant="secondary" onClick={e => { e.stopPropagation(); }}>
+                              Complete Daily Actions
+                            </Button>
+                          </TableCell>
+                        </TableRow>
+                        {expandedId === edge.node.Id && (
+                          <TableRow className="hover:bg-transparent">
+                            <TableCell colSpan={7} className="animate-in fade-in slide-in-from-top-1 duration">
+                              <div className="flex flex-col gap-2 items-start p-3">
+                                {alerts.length === 0
+                                  ? <Badge variant="ghost"> No Alerts Found</Badge>
+                                  : alertsByTarget[edge.node.Id]?.map(alert => {
+                                    const raw = alert.node?.animalos__Variant__c?.value;
+                                    const variant = VARIANT_MAP[raw?.toLowerCase() ?? ''];
+                                    return <StatusAlert
+                                      variant={variant}
+                                      key={alert.node?.Id}>
+                                      {stripHTML(alert.node?.animalos__Message_Formatted__c?.value)}
+                                    </StatusAlert>
+                                  })}
+                              </div>
+                            </TableCell>
+                          </TableRow>
+                        )}
+                      </React.Fragment>
+                    );
+                  })}
+                </TableBody>
+              </Table>
+              </div>
+            </div>
+          </CenteredState>
+        </div>
+
+
+
+
 
       )}
 

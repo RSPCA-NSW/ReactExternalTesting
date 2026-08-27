@@ -2789,7 +2789,6 @@ export type ApprovalSubmission_RelatedRecord_Filters = {
   ContactRequest?: InputMaybe<ContactRequest_Filter>;
   ContentDocument?: InputMaybe<ContentDocument_Filter>;
   ContentVersion?: InputMaybe<ContentVersion_Filter>;
-  ContextAgent?: InputMaybe<ContextAgent_Filter>;
   Contract?: InputMaybe<Contract_Filter>;
   ContractLineItem?: InputMaybe<ContractLineItem_Filter>;
   ConvEntryRelatedRecordCopy?: InputMaybe<ConvEntryRelatedRecordCopy_Filter>;
@@ -3390,7 +3389,6 @@ export type ApprovalSubmission_RelatedRecord_OrderBys = {
   ContactRequest?: InputMaybe<ContactRequest_OrderBy>;
   ContentDocument?: InputMaybe<ContentDocument_OrderBy>;
   ContentVersion?: InputMaybe<ContentVersion_OrderBy>;
-  ContextAgent?: InputMaybe<ContextAgent_OrderBy>;
   Contract?: InputMaybe<Contract_OrderBy>;
   ContractLineItem?: InputMaybe<ContractLineItem_OrderBy>;
   ConvEntryRelatedRecordCopy?: InputMaybe<ConvEntryRelatedRecordCopy_OrderBy>;
@@ -3408,6 +3406,7 @@ export type ApprovalSubmission_RelatedRecord_OrderBys = {
   DataCommCapActvTarget?: InputMaybe<DataCommCapActvTarget_OrderBy>;
   DataGraph?: InputMaybe<DataGraph_OrderBy>;
   DataKitDeploymentLog?: InputMaybe<DataKitDeploymentLog_OrderBy>;
+  DataKnowledgeRsrchRpt?: InputMaybe<DataKnowledgeRsrchRpt_OrderBy>;
   DataKnowledgeRsrchTmpl?: InputMaybe<DataKnowledgeRsrchTmpl_OrderBy>;
   DataKnowledgeSpace?: InputMaybe<DataKnowledgeSpace_OrderBy>;
   DataKnowledgeSpcJobRun?: InputMaybe<DataKnowledgeSpcJobRun_OrderBy>;
@@ -4087,7 +4086,6 @@ export type ApprovalWorkItem_RelatedRecord_Filters = {
   ContactRequest?: InputMaybe<ContactRequest_Filter>;
   ContentDocument?: InputMaybe<ContentDocument_Filter>;
   ContentVersion?: InputMaybe<ContentVersion_Filter>;
-  ContextAgent?: InputMaybe<ContextAgent_Filter>;
   Contract?: InputMaybe<Contract_Filter>;
   ContractLineItem?: InputMaybe<ContractLineItem_Filter>;
   ConvEntryRelatedRecordCopy?: InputMaybe<ConvEntryRelatedRecordCopy_Filter>;
@@ -4688,7 +4686,6 @@ export type ApprovalWorkItem_RelatedRecord_OrderBys = {
   ContactRequest?: InputMaybe<ContactRequest_OrderBy>;
   ContentDocument?: InputMaybe<ContentDocument_OrderBy>;
   ContentVersion?: InputMaybe<ContentVersion_OrderBy>;
-  ContextAgent?: InputMaybe<ContextAgent_OrderBy>;
   Contract?: InputMaybe<Contract_OrderBy>;
   ContractLineItem?: InputMaybe<ContractLineItem_OrderBy>;
   ConvEntryRelatedRecordCopy?: InputMaybe<ConvEntryRelatedRecordCopy_OrderBy>;
@@ -4706,6 +4703,7 @@ export type ApprovalWorkItem_RelatedRecord_OrderBys = {
   DataCommCapActvTarget?: InputMaybe<DataCommCapActvTarget_OrderBy>;
   DataGraph?: InputMaybe<DataGraph_OrderBy>;
   DataKitDeploymentLog?: InputMaybe<DataKitDeploymentLog_OrderBy>;
+  DataKnowledgeRsrchRpt?: InputMaybe<DataKnowledgeRsrchRpt_OrderBy>;
   DataKnowledgeRsrchTmpl?: InputMaybe<DataKnowledgeRsrchTmpl_OrderBy>;
   DataKnowledgeSpace?: InputMaybe<DataKnowledgeSpace_OrderBy>;
   DataKnowledgeSpcJobRun?: InputMaybe<DataKnowledgeSpcJobRun_OrderBy>;
@@ -16699,59 +16697,6 @@ export type ContentWorkspace_OrderBy = {
   WorkspaceType?: InputMaybe<OrderByClause>;
 };
 
-export type ContextAgent_Filter = {
-  AgentApiName?: InputMaybe<StringOperators>;
-  CreatedBy?: InputMaybe<User_Filter>;
-  CreatedById?: InputMaybe<IdOperators>;
-  CreatedDate?: InputMaybe<DateTimeOperators>;
-  DataSpace?: InputMaybe<DataSpace_Filter>;
-  DataSpaceId?: InputMaybe<IdOperators>;
-  Description?: InputMaybe<StringOperators>;
-  Id?: InputMaybe<IdOperators>;
-  IsDeleted?: InputMaybe<BooleanOperators>;
-  LastModifiedBy?: InputMaybe<User_Filter>;
-  LastModifiedById?: InputMaybe<IdOperators>;
-  LastModifiedDate?: InputMaybe<DateTimeOperators>;
-  Name?: InputMaybe<StringOperators>;
-  Owner?: InputMaybe<ContextAgent_Owner_Filters>;
-  OwnerId?: InputMaybe<IdOperators>;
-  SystemModstamp?: InputMaybe<DateTimeOperators>;
-  and?: InputMaybe<Array<InputMaybe<ContextAgent_Filter>>>;
-  not?: InputMaybe<ContextAgent_Filter>;
-  or?: InputMaybe<Array<InputMaybe<ContextAgent_Filter>>>;
-};
-
-export type ContextAgent_OrderBy = {
-  AgentApiName?: InputMaybe<OrderByClause>;
-  CreatedBy?: InputMaybe<User_OrderBy>;
-  CreatedById?: InputMaybe<OrderByClause>;
-  CreatedDate?: InputMaybe<OrderByClause>;
-  DataSpace?: InputMaybe<DataSpace_OrderBy>;
-  DataSpaceId?: InputMaybe<OrderByClause>;
-  Description?: InputMaybe<OrderByClause>;
-  Id?: InputMaybe<OrderByClause>;
-  IsDeleted?: InputMaybe<OrderByClause>;
-  LastModifiedBy?: InputMaybe<User_OrderBy>;
-  LastModifiedById?: InputMaybe<OrderByClause>;
-  LastModifiedDate?: InputMaybe<OrderByClause>;
-  Name?: InputMaybe<OrderByClause>;
-  Owner?: InputMaybe<ContextAgent_Owner_OrderBys>;
-  OwnerId?: InputMaybe<OrderByClause>;
-  SystemModstamp?: InputMaybe<OrderByClause>;
-};
-
-export type ContextAgent_Owner_Filters = {
-  Group?: InputMaybe<Group_Filter>;
-  Name?: InputMaybe<Name_Filter>;
-  User?: InputMaybe<User_Filter>;
-};
-
-export type ContextAgent_Owner_OrderBys = {
-  Group?: InputMaybe<Group_OrderBy>;
-  Name?: InputMaybe<Name_OrderBy>;
-  User?: InputMaybe<User_OrderBy>;
-};
-
 export type ContractContactRole_Filter = {
   Contact?: InputMaybe<Contact_Filter>;
   ContactId?: InputMaybe<IdOperators>;
@@ -17067,12 +17012,14 @@ export type ConvEntryRelatedRecordCopy_Owner_OrderBys = {
 };
 
 export type ConvEntryRelatedRecordCopy_RelatedRecord_Filters = {
+  ConversationEntryCopy?: InputMaybe<ConversationEntryCopy_Filter>;
   MessagingSession?: InputMaybe<MessagingSession_Filter>;
   Name?: InputMaybe<Name_Filter>;
   VoiceCall?: InputMaybe<VoiceCall_Filter>;
 };
 
 export type ConvEntryRelatedRecordCopy_RelatedRecord_OrderBys = {
+  ConversationEntryCopy?: InputMaybe<ConversationEntryCopy_OrderBy>;
   MessagingSession?: InputMaybe<MessagingSession_OrderBy>;
   Name?: InputMaybe<Name_OrderBy>;
   VoiceCall?: InputMaybe<VoiceCall_OrderBy>;
@@ -18438,6 +18385,7 @@ export type DataKitDeploymentLog_Filter = {
   DataKitName?: InputMaybe<StringOperators>;
   DataPackageKitDefinition?: InputMaybe<PicklistOperators>;
   DataSpaceName?: InputMaybe<StringOperators>;
+  DeployExtensionIdentifier?: InputMaybe<StringOperators>;
   DeployJob?: InputMaybe<StringOperators>;
   DeploymentAction?: InputMaybe<PicklistOperators>;
   DeploymentError?: InputMaybe<LongTextAreaOperators>;
@@ -18477,6 +18425,7 @@ export type DataKitDeploymentLog_OrderBy = {
   DataKitName?: InputMaybe<OrderByClause>;
   DataPackageKitDefinition?: InputMaybe<OrderByClause>;
   DataSpaceName?: InputMaybe<OrderByClause>;
+  DeployExtensionIdentifier?: InputMaybe<OrderByClause>;
   DeployJob?: InputMaybe<OrderByClause>;
   DeploymentAction?: InputMaybe<OrderByClause>;
   DeploymentError?: InputMaybe<AggregateOrderByStringClause>;
@@ -18592,9 +18541,68 @@ export type DataKnowledgeGraph_Filter = {
 };
 
 export type DataKnowledgeRsrchRpt_Filter = {
+  CreatedBy?: InputMaybe<User_Filter>;
+  CreatedById?: InputMaybe<IdOperators>;
+  CreatedDate?: InputMaybe<DateTimeOperators>;
+  FilePath?: InputMaybe<LongTextAreaOperators>;
+  Id?: InputMaybe<IdOperators>;
+  IsDeleted?: InputMaybe<BooleanOperators>;
+  KnowledgeSpace?: InputMaybe<DataKnowledgeSpace_Filter>;
+  KnowledgeSpaceId?: InputMaybe<IdOperators>;
+  LastModifiedBy?: InputMaybe<User_Filter>;
+  LastModifiedById?: InputMaybe<IdOperators>;
+  LastModifiedDate?: InputMaybe<DateTimeOperators>;
+  Name?: InputMaybe<StringOperators>;
+  Owner?: InputMaybe<DataKnowledgeRsrchRpt_Owner_Filters>;
+  OwnerId?: InputMaybe<IdOperators>;
+  Plan?: InputMaybe<LongTextAreaOperators>;
+  ReportIdentifier?: InputMaybe<StringOperators>;
+  ResearchTemplate?: InputMaybe<DataKnowledgeRsrchTmpl_Filter>;
+  ResearchTemplateId?: InputMaybe<IdOperators>;
+  ResearchType?: InputMaybe<PicklistOperators>;
+  Sources?: InputMaybe<LongTextAreaOperators>;
+  Status?: InputMaybe<PicklistOperators>;
+  SystemModstamp?: InputMaybe<DateTimeOperators>;
   and?: InputMaybe<Array<InputMaybe<DataKnowledgeRsrchRpt_Filter>>>;
   not?: InputMaybe<DataKnowledgeRsrchRpt_Filter>;
   or?: InputMaybe<Array<InputMaybe<DataKnowledgeRsrchRpt_Filter>>>;
+};
+
+export type DataKnowledgeRsrchRpt_OrderBy = {
+  CreatedBy?: InputMaybe<User_OrderBy>;
+  CreatedById?: InputMaybe<OrderByClause>;
+  CreatedDate?: InputMaybe<OrderByClause>;
+  FilePath?: InputMaybe<AggregateOrderByStringClause>;
+  Id?: InputMaybe<OrderByClause>;
+  IsDeleted?: InputMaybe<OrderByClause>;
+  KnowledgeSpace?: InputMaybe<DataKnowledgeSpace_OrderBy>;
+  KnowledgeSpaceId?: InputMaybe<OrderByClause>;
+  LastModifiedBy?: InputMaybe<User_OrderBy>;
+  LastModifiedById?: InputMaybe<OrderByClause>;
+  LastModifiedDate?: InputMaybe<OrderByClause>;
+  Name?: InputMaybe<OrderByClause>;
+  Owner?: InputMaybe<DataKnowledgeRsrchRpt_Owner_OrderBys>;
+  OwnerId?: InputMaybe<OrderByClause>;
+  Plan?: InputMaybe<AggregateOrderByStringClause>;
+  ReportIdentifier?: InputMaybe<OrderByClause>;
+  ResearchTemplate?: InputMaybe<DataKnowledgeRsrchTmpl_OrderBy>;
+  ResearchTemplateId?: InputMaybe<OrderByClause>;
+  ResearchType?: InputMaybe<OrderByClause>;
+  Sources?: InputMaybe<AggregateOrderByStringClause>;
+  Status?: InputMaybe<OrderByClause>;
+  SystemModstamp?: InputMaybe<OrderByClause>;
+};
+
+export type DataKnowledgeRsrchRpt_Owner_Filters = {
+  Group?: InputMaybe<Group_Filter>;
+  Name?: InputMaybe<Name_Filter>;
+  User?: InputMaybe<User_Filter>;
+};
+
+export type DataKnowledgeRsrchRpt_Owner_OrderBys = {
+  Group?: InputMaybe<Group_OrderBy>;
+  Name?: InputMaybe<Name_OrderBy>;
+  User?: InputMaybe<User_OrderBy>;
 };
 
 export type DataKnowledgeRsrchTmpl_Filter = {
@@ -19504,6 +19512,7 @@ export type DataSemanticSearch_Filter = {
   LastViewedDate?: InputMaybe<DateTimeOperators>;
   Name?: InputMaybe<StringOperators>;
   PrimaryDmo?: InputMaybe<StringOperators>;
+  ProblemRecordDmo?: InputMaybe<StringOperators>;
   RuntimeStatus?: InputMaybe<PicklistOperators>;
   SearchType?: InputMaybe<PicklistOperators>;
   SemanticSearchApiName?: InputMaybe<StringOperators>;
@@ -19535,6 +19544,7 @@ export type DataSemanticSearch_OrderBy = {
   LastViewedDate?: InputMaybe<OrderByClause>;
   Name?: InputMaybe<OrderByClause>;
   PrimaryDmo?: InputMaybe<OrderByClause>;
+  ProblemRecordDmo?: InputMaybe<OrderByClause>;
   RuntimeStatus?: InputMaybe<OrderByClause>;
   SearchType?: InputMaybe<OrderByClause>;
   SemanticSearchApiName?: InputMaybe<OrderByClause>;
@@ -26625,7 +26635,6 @@ export type FlowOrchestrationWorkItem_RelatedRecord_Filters = {
   ContactRequest?: InputMaybe<ContactRequest_Filter>;
   ContentDocument?: InputMaybe<ContentDocument_Filter>;
   ContentVersion?: InputMaybe<ContentVersion_Filter>;
-  ContextAgent?: InputMaybe<ContextAgent_Filter>;
   Contract?: InputMaybe<Contract_Filter>;
   ContractLineItem?: InputMaybe<ContractLineItem_Filter>;
   ConvEntryRelatedRecordCopy?: InputMaybe<ConvEntryRelatedRecordCopy_Filter>;
@@ -27226,7 +27235,6 @@ export type FlowOrchestrationWorkItem_RelatedRecord_OrderBys = {
   ContactRequest?: InputMaybe<ContactRequest_OrderBy>;
   ContentDocument?: InputMaybe<ContentDocument_OrderBy>;
   ContentVersion?: InputMaybe<ContentVersion_OrderBy>;
-  ContextAgent?: InputMaybe<ContextAgent_OrderBy>;
   Contract?: InputMaybe<Contract_OrderBy>;
   ContractLineItem?: InputMaybe<ContractLineItem_OrderBy>;
   ConvEntryRelatedRecordCopy?: InputMaybe<ConvEntryRelatedRecordCopy_OrderBy>;
@@ -27244,6 +27252,7 @@ export type FlowOrchestrationWorkItem_RelatedRecord_OrderBys = {
   DataCommCapActvTarget?: InputMaybe<DataCommCapActvTarget_OrderBy>;
   DataGraph?: InputMaybe<DataGraph_OrderBy>;
   DataKitDeploymentLog?: InputMaybe<DataKitDeploymentLog_OrderBy>;
+  DataKnowledgeRsrchRpt?: InputMaybe<DataKnowledgeRsrchRpt_OrderBy>;
   DataKnowledgeRsrchTmpl?: InputMaybe<DataKnowledgeRsrchTmpl_OrderBy>;
   DataKnowledgeSpace?: InputMaybe<DataKnowledgeSpace_OrderBy>;
   DataKnowledgeSpcJobRun?: InputMaybe<DataKnowledgeSpcJobRun_OrderBy>;
@@ -30570,7 +30579,6 @@ export type JoinInput = {
   ContentVersion?: InputMaybe<ContentVersion_Filter>;
   ContentVersionHistory?: InputMaybe<ContentVersionHistory_Filter>;
   ContentWorkspace?: InputMaybe<ContentWorkspace_Filter>;
-  ContextAgent?: InputMaybe<ContextAgent_Filter>;
   Contract?: InputMaybe<Contract_Filter>;
   ContractContactRole?: InputMaybe<ContractContactRole_Filter>;
   ContractHistory?: InputMaybe<ContractHistory_Filter>;
@@ -35486,6 +35494,7 @@ export type MessagingChannel_Filter = {
   OptInPrompt?: InputMaybe<LongTextAreaOperators>;
   OptionsConversationalSurveysToggle?: InputMaybe<BooleanOperators>;
   OptionsIdentifyEndUserLanguage?: InputMaybe<BooleanOperators>;
+  OptionsIsAgentMessageResetInactivityEnabled?: InputMaybe<BooleanOperators>;
   OptionsIsBusinessNameAsSenderEnabled?: InputMaybe<BooleanOperators>;
   OptionsIsEstimatedWaitTimeEnabled?: InputMaybe<BooleanOperators>;
   OptionsIsFeedbackEnabled?: InputMaybe<BooleanOperators>;
@@ -35553,6 +35562,7 @@ export type MessagingChannel_OrderBy = {
   OptInPrompt?: InputMaybe<AggregateOrderByStringClause>;
   OptionsConversationalSurveysToggle?: InputMaybe<NoFunctionAggregateOrderByClause>;
   OptionsIdentifyEndUserLanguage?: InputMaybe<NoFunctionAggregateOrderByClause>;
+  OptionsIsAgentMessageResetInactivityEnabled?: InputMaybe<NoFunctionAggregateOrderByClause>;
   OptionsIsBusinessNameAsSenderEnabled?: InputMaybe<NoFunctionAggregateOrderByClause>;
   OptionsIsEstimatedWaitTimeEnabled?: InputMaybe<NoFunctionAggregateOrderByClause>;
   OptionsIsFeedbackEnabled?: InputMaybe<NoFunctionAggregateOrderByClause>;
@@ -40836,6 +40846,8 @@ export type PermissionSetLicense_Filter = {
   MaximumPermissionsContentHubUser?: InputMaybe<BooleanOperators>;
   MaximumPermissionsContentWorkspaces?: InputMaybe<BooleanOperators>;
   MaximumPermissionsConvertLeads?: InputMaybe<BooleanOperators>;
+  MaximumPermissionsCoworkerDesktopAppUser?: InputMaybe<BooleanOperators>;
+  MaximumPermissionsCoworkerMobileAppUser?: InputMaybe<BooleanOperators>;
   MaximumPermissionsCreateAuditFields?: InputMaybe<BooleanOperators>;
   MaximumPermissionsCreateCustomizeDashboards?: InputMaybe<BooleanOperators>;
   MaximumPermissionsCreateCustomizeFilters?: InputMaybe<BooleanOperators>;
@@ -41215,6 +41227,7 @@ export type PermissionSetLicense_Filter = {
   MaximumPermissionsSimpleCsvDataImportUser?: InputMaybe<BooleanOperators>;
   MaximumPermissionsSkipIdentityConfirmation?: InputMaybe<BooleanOperators>;
   MaximumPermissionsSlackFromTableau?: InputMaybe<BooleanOperators>;
+  MaximumPermissionsSlackbotUi?: InputMaybe<BooleanOperators>;
   MaximumPermissionsSmartDataDiscoveryForCommunity?: InputMaybe<BooleanOperators>;
   MaximumPermissionsSolutionImport?: InputMaybe<BooleanOperators>;
   MaximumPermissionsStageManagementDesignUser?: InputMaybe<BooleanOperators>;
@@ -41546,6 +41559,8 @@ export type PermissionSet_Filter = {
   PermissionsContentHubUser?: InputMaybe<BooleanOperators>;
   PermissionsContentWorkspaces?: InputMaybe<BooleanOperators>;
   PermissionsConvertLeads?: InputMaybe<BooleanOperators>;
+  PermissionsCoworkerDesktopAppUser?: InputMaybe<BooleanOperators>;
+  PermissionsCoworkerMobileAppUser?: InputMaybe<BooleanOperators>;
   PermissionsCreateAuditFields?: InputMaybe<BooleanOperators>;
   PermissionsCreateCustomizeDashboards?: InputMaybe<BooleanOperators>;
   PermissionsCreateCustomizeFilters?: InputMaybe<BooleanOperators>;
@@ -41925,6 +41940,7 @@ export type PermissionSet_Filter = {
   PermissionsSimpleCsvDataImportUser?: InputMaybe<BooleanOperators>;
   PermissionsSkipIdentityConfirmation?: InputMaybe<BooleanOperators>;
   PermissionsSlackFromTableau?: InputMaybe<BooleanOperators>;
+  PermissionsSlackbotUi?: InputMaybe<BooleanOperators>;
   PermissionsSmartDataDiscoveryForCommunity?: InputMaybe<BooleanOperators>;
   PermissionsSolutionImport?: InputMaybe<BooleanOperators>;
   PermissionsStageManagementDesignUser?: InputMaybe<BooleanOperators>;
@@ -44022,7 +44038,6 @@ export type ProcessInstance_TargetObject_Filters = {
   ContactPointEmail?: InputMaybe<ContactPointEmail_Filter>;
   ContactPointPhone?: InputMaybe<ContactPointPhone_Filter>;
   ContactPointTypeConsent?: InputMaybe<ContactPointTypeConsent_Filter>;
-  ContextAgent?: InputMaybe<ContextAgent_Filter>;
   Contract?: InputMaybe<Contract_Filter>;
   ConvEntryRelatedRecordCopy?: InputMaybe<ConvEntryRelatedRecordCopy_Filter>;
   ConversationApiLog?: InputMaybe<ConversationApiLog_Filter>;
@@ -46388,6 +46403,8 @@ export type Profile_Filter = {
   PermissionsContentHubUser?: InputMaybe<BooleanOperators>;
   PermissionsContentWorkspaces?: InputMaybe<BooleanOperators>;
   PermissionsConvertLeads?: InputMaybe<BooleanOperators>;
+  PermissionsCoworkerDesktopAppUser?: InputMaybe<BooleanOperators>;
+  PermissionsCoworkerMobileAppUser?: InputMaybe<BooleanOperators>;
   PermissionsCreateAuditFields?: InputMaybe<BooleanOperators>;
   PermissionsCreateCustomizeDashboards?: InputMaybe<BooleanOperators>;
   PermissionsCreateCustomizeFilters?: InputMaybe<BooleanOperators>;
@@ -46767,6 +46784,7 @@ export type Profile_Filter = {
   PermissionsSimpleCsvDataImportUser?: InputMaybe<BooleanOperators>;
   PermissionsSkipIdentityConfirmation?: InputMaybe<BooleanOperators>;
   PermissionsSlackFromTableau?: InputMaybe<BooleanOperators>;
+  PermissionsSlackbotUi?: InputMaybe<BooleanOperators>;
   PermissionsSmartDataDiscoveryForCommunity?: InputMaybe<BooleanOperators>;
   PermissionsSolutionImport?: InputMaybe<BooleanOperators>;
   PermissionsStageManagementDesignUser?: InputMaybe<BooleanOperators>;
@@ -47092,6 +47110,8 @@ export type Profile_OrderBy = {
   PermissionsContentHubUser?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsContentWorkspaces?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsConvertLeads?: InputMaybe<NoFunctionAggregateOrderByClause>;
+  PermissionsCoworkerDesktopAppUser?: InputMaybe<NoFunctionAggregateOrderByClause>;
+  PermissionsCoworkerMobileAppUser?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsCreateAuditFields?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsCreateCustomizeDashboards?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsCreateCustomizeFilters?: InputMaybe<NoFunctionAggregateOrderByClause>;
@@ -47471,6 +47491,7 @@ export type Profile_OrderBy = {
   PermissionsSimpleCsvDataImportUser?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsSkipIdentityConfirmation?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsSlackFromTableau?: InputMaybe<NoFunctionAggregateOrderByClause>;
+  PermissionsSlackbotUi?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsSmartDataDiscoveryForCommunity?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsSolutionImport?: InputMaybe<NoFunctionAggregateOrderByClause>;
   PermissionsStageManagementDesignUser?: InputMaybe<NoFunctionAggregateOrderByClause>;
@@ -105585,6 +105606,13 @@ export type SearchAccountsQueryVariables = Exact<{
 
 export type SearchAccountsQuery = { uiapi: { query: { Account?: { totalCount: number, edges?: Array<{ node?: { Id: string, Name?: { value?: string | null, displayValue?: string | null } | null, Industry?: { value?: string | null, displayValue?: string | null } | null, Type?: { value?: string | null, displayValue?: string | null } | null, Phone?: { value?: string | null, displayValue?: string | null } | null, Owner?: { Name?: { value?: string | null, displayValue?: string | null } | null } | null, AnnualRevenue?: { value?: number | null, displayValue?: string | null } | null } | null } | null> | null, pageInfo: { hasNextPage: boolean, hasPreviousPage: boolean, endCursor?: string | null, startCursor?: string | null } } | null } } };
 
+export type AlertsQueryVariables = Exact<{
+  ids?: InputMaybe<Array<Scalars['String']['input']> | Scalars['String']['input']>;
+}>;
+
+
+export type AlertsQuery = { uiapi: { query: { animalos__Alert__c?: { edges?: Array<{ node?: { Id: string, animalos__Message_Formatted__c?: { value?: string | null } | null, animalos__Variant__c?: { value?: string | null } | null, animalos__Target_Record_Id__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
+
 export type FosterAnimalsQueryVariables = Exact<{
   unitIds?: InputMaybe<Array<Scalars['ID']['input']> | Scalars['ID']['input']>;
 }>;
@@ -105597,13 +105625,6 @@ export type FosterLocationsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type FosterLocationsQuery = { uiapi: { query: { animalos__Location__c?: { edges?: Array<{ node?: { Id: string, Name?: { value?: string | null } | null } | null } | null> | null } | null } } };
 
-export type PetbarnAnimalAlertsQueryVariables = Exact<{
-  animalIds?: InputMaybe<Array<Scalars['String']['input']> | Scalars['String']['input']>;
-}>;
-
-
-export type PetbarnAnimalAlertsQuery = { uiapi: { query: { animalos__Alert__c?: { edges?: Array<{ node?: { Id: string, animalos__Message_Formatted__c?: { value?: string | null } | null, animalos__Variant__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
-
 export type PetbarnAnimalsQueryVariables = Exact<{
   locationIds?: InputMaybe<Array<Scalars['ID']['input']> | Scalars['ID']['input']>;
 }>;
@@ -105615,3 +105636,8 @@ export type PetbarnLocationsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type PetbarnLocationsQuery = { uiapi: { query: { animalos__Location__c?: { edges?: Array<{ node?: { Id: string, Name?: { value?: string | null } | null } | null } | null> | null } | null } } };
+
+export type GetCurrentUserQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetCurrentUserQuery = { uiapi: { currentUser?: { Id: string, FirstName?: { value?: string | null } | null, LastName?: { value?: string | null } | null } | null } };

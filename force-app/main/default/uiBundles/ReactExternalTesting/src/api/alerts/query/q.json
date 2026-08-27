@@ -1,0 +1,6 @@
+{
+  "query": "query AnimalAlerts($ids: [String]) { uiapi { query { animalos__Alert__c(where: { animalos__Target_Record_Id__c: { in: $ids } }) { edges { node { Id animalos__Message_Formatted__c { value } animalos__Variant__c { value } animalos__Target_Record_Id__c { value } } } } } } }",
+  "variables": {
+    "ids": ["a8n9r0000009i9yAAA"]
+  }
+}

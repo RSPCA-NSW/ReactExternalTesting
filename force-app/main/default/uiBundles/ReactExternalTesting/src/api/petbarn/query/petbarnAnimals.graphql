@@ -33,11 +33,10 @@ query PetbarnAnimals ($locationIds: [ID!]){
                         animalos__Calculated_Age__c{
                             value
                         }
-                        Alerts__r
                     }
+                }
                 }
 
             }
         }
     }
-}
