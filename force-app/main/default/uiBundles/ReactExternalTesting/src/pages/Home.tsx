@@ -1,16 +1,17 @@
 import { usePetbarnHome } from "@/hooks/usePetbarnHome";
 import { CenteredState } from "@/components/CenteredState";
 import { PawLoader, MetricCard } from "@/components/brand";
-import { Button, Skeleton, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
+import { Button, Skeleton, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, DialogTrigger, Dialog } from "@/components/ui";
 import { useAlerts } from "@/hooks/useAlerts";
 import { StatusAlert } from "@/components/alerts/status-alert";
 import React from "react";
 import { useState } from "react";
 import { stripHTML } from "@/lib/utils";
-import { ChevronRight, HeartIcon, HomeIcon, PawPrintIcon } from "lucide-react";
+import { ChevronRight, HeartIcon, HomeIcon, PawPrintIcon, ExternalLink } from "lucide-react";
 import { Badge } from "@components/ui/badge";
 import { usePetbarnStats } from "@/hooks/usePetbarnStats";
 import { useUserData } from "@/hooks/useUserData";
+import { AnimalActionsDialog } from "@/components/brand/AnimalActionsDialog";
 
 
 
@@ -26,12 +27,13 @@ const VARIANT_MAP: Record<string, "success" | "info" | "error"> = {
 
 export default function HomePage() {
   const { animals, locations, loading, error } = usePetbarnHome();
-  const [expandedId, setExpandedId] = useState<String | null>(null);
+  const [expandedId, setExpandedId] = useState<string | null>(null);
   const animalIds = animals.map(e => e.node.Id);
   const { alertsByTarget } = useAlerts(animalIds);
   const locationId = animals.map(l => l.node.animalos__Current_Site__c?.value);
   const { stats, statsLoading, statsError } = usePetbarnStats(locationId);
   const { user, userLoading, userError } = useUserData();
+  const [selectedId, setSelectedId] = useState<string | null>(null);
 
   let storeName = locations[0]?.node?.Name?.value.replace("Petbarn", "")
   
@@ -39,6 +41,17 @@ export default function HomePage() {
   if(userLoading) userName = <Skeleton></Skeleton>;
   else if(userError) userName = <StatusAlert variant="error">{userError}</StatusAlert>
   else userName = user?.FirstName?.value
+  
+  function handleAnimalActions(e: React.MouseEvent, id: string){
+    setSelectedId(selectedId === id ? null : id);
+    e.stopPropagation();
+  }
+
+  
+  
+  
+  
+  
   return (
     <div>
 
@@ -56,7 +69,7 @@ export default function HomePage() {
 
             
           <CenteredState>
-          <div>
+          <div className="mb-6">
             <div className="flex flex-col gap-2" >
               <h1 className="text-2xl font-semi-bold"> Welcome {userName}! </h1>
               <h1 className="text-sm text-muted-foreground mb-6"> store: {storeName} </h1>
@@ -127,16 +140,25 @@ export default function HomePage() {
                           <TableCell>{edge.node.animalos__Primary_Breed_Formula__c?.value}</TableCell>
                           <TableCell>{edge.node.animalos__Calculated_Age__c?.value}</TableCell>
                           <TableCell>
-                            <Button className="hover:border-primary transition-colors"
+                            <Button 
+                            className="hover:border-primary transition-colors"
                               onClick={e => {
                                 e.stopPropagation();
-                              }}> Adopt Me!</Button>
+                              }}> Adopt Me! {<ExternalLink />}</Button>
                           </TableCell>
-                          <TableCell>
-                            <Button className="hover:border-primary transition-colours" variant="secondary" onClick={e => { e.stopPropagation(); }}>
-                              Complete Daily Actions
+                        
+                        <TableCell>
+                          <Dialog>
+                          <DialogTrigger>                            
+                            <Button className="hover:border-primary transition-colours" variant="secondary" 
+                             onClick={e => handleAnimalActions(e, edge.node.Id)}>
+                              Animal Actions
                             </Button>
-                          </TableCell>
+                            {selectedId && <AnimalActionsDialog animalId={selectedId} open={selectedId !== null} onClose={() => setSelectedId(null)}/>}                         
+                          </DialogTrigger>
+                          </Dialog>
+                        </TableCell>
+                        
                         </TableRow>
                         {expandedId === edge.node.Id && (
                           <TableRow className="hover:bg-transparent">
