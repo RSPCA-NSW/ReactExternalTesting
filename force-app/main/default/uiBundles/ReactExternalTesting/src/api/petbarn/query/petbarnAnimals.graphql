@@ -33,6 +33,12 @@ query PetbarnAnimals ($locationIds: [ID!]){
                         animalos__Calculated_Age__c{
                             value
                         }
+                        animalos__Current_Weight__c{
+                            value
+                        }
+                        animalos__Primary_Colour__c{
+                            value
+                        }
                     }
                 }
                 }

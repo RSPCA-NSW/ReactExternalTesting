@@ -4,9 +4,10 @@
  * transaction - aos_CommonCtrl holds the savepoint, so throwing anywhere
  * in here rolls the whole thing back.
  */
-public with sharing class PetbarnLogWeightProc extends aos_AbstractProcessor {
 
-    private static final String WEIGHT_RT = 'Weight';
+public without sharing class PetbarnLogWeightProc extends aos_AbstractProcessor {
+
+    private static final String WEIGHT_RT = 'Weigh_In';
     private static final Decimal MAX_SANE_KG = 200;
 
     public override aos_Response process(aos_Request request) {
@@ -22,6 +23,7 @@ public with sharing class PetbarnLogWeightProc extends aos_AbstractProcessor {
             'animalId', 'No animal was supplied.'
         );
         Decimal weightKg = this.request.getDecimal('weightKg');
+        Decimal weightRound = weightKg.setScale(2);
         String loggedAtRaw = this.request.getString('loggedAt');
 
         this.validateWeight(weightKg);
@@ -44,8 +46,11 @@ public with sharing class PetbarnLogWeightProc extends aos_AbstractProcessor {
         animalos__Animal_Action__c action = new animalos__Animal_Action__c(
             RecordTypeId = weightRtId,
             animalos__Animal__c = animalId,
-            animalos__Weight_KG__c = weightKg,
-            animalos__Date_Time_Action_Completed__c = loggedAt      
+            animalos__Weight_KG__c = weightRound,
+            animalos__Date_Time_Action_Completed__c = loggedAt,
+            animalos__Date_Time_of_Action__c = loggedAt,
+            animalos__Action_Status__c = 'given'
+
         );
 
         // --- commit, parents first --------------------------------------
@@ -65,12 +70,12 @@ public with sharing class PetbarnLogWeightProc extends aos_AbstractProcessor {
         });
     }
 
-    private void validateWeight(Decimal weightKg) {
-        if (weightKg == 0) {
+    private void validateWeight(Decimal weightRound) {
+        if (weightRound == 0) {
             throw new aos_Structs.CommonException(
                 'Enter a weight greater than zero.');
         }
-        if (weightKg > MAX_SANE_KG) {
+        if (weightRound > MAX_SANE_KG) {
             throw new aos_Structs.CommonException(
                 'That weight looks too high. Please check and try again.');
         }

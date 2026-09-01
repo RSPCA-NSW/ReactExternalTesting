@@ -105630,7 +105630,7 @@ export type PetbarnAnimalsQueryVariables = Exact<{
 }>;
 
 
-export type PetbarnAnimalsQuery = { uiapi: { query: { animalos__Animal__c?: { edges?: Array<{ node?: { Id: string, animalos__Animal_Name__c?: { value?: string | null } | null, animalos__Stage__c?: { value?: string | null } | null, animalos__Status__c?: { value?: string | null } | null, animalos__Current_Site__c?: { value?: string | null } | null, animalos__Primary_Breed_Formula__c?: { value?: string | null } | null, animalos__Calculated_Age__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
+export type PetbarnAnimalsQuery = { uiapi: { query: { animalos__Animal__c?: { edges?: Array<{ node?: { Id: string, animalos__Animal_Name__c?: { value?: string | null } | null, animalos__Stage__c?: { value?: string | null } | null, animalos__Status__c?: { value?: string | null } | null, animalos__Current_Site__c?: { value?: string | null } | null, animalos__Primary_Breed_Formula__c?: { value?: string | null } | null, animalos__Calculated_Age__c?: { value?: string | null } | null, animalos__Current_Weight__c?: { value?: number | null } | null, animalos__Primary_Colour__c?: { value?: string | null } | null } | null } | null> | null } | null } } };
 
 export type PetbarnLocationsQueryVariables = Exact<{ [key: string]: never; }>;
 
