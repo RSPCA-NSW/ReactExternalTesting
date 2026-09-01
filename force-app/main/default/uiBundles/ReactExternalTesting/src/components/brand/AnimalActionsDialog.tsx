@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Dialog, DialogHeader, DialogContent, DialogTitle, Button, Label } from "../ui"
+import { logWeight } from "@/api/petbarnAnimalActionsService";
 
 
 export function AnimalActionsDialog({ animalId, open, onClose }: {
-    animalId: string | null;
+    animalId: string;
     open: boolean;
     onClose: () => void;
 }) {
 
     const [view, setView] = useState<'menu' | 'weight'>('menu');
+    const [inputWeight, setInputWeight] = useState<any>(0);
 
     function stopP(e: React.MouseEvent){
         e.stopPropagation();
@@ -24,9 +26,25 @@ export function AnimalActionsDialog({ animalId, open, onClose }: {
         stopP(e);
     }
 
-   /* function handleSubmit(e: React.MouseEvent){
-        stopP(e);
-    } */
+    
+    const handleWeightChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setInputWeight(e.target.value);
+    };
+    
+    
+    function handleSubmit(e: React.MouseEvent){
+    logWeight(animalId, inputWeight);
+    stopP(e);
+    }
+
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+    const day = String(today.getDate()).padStart(2, '0');
+
+    const formattedDate = `${year}-${month}-${day}`;
+
+
 
 
     if(!animalId) return;
@@ -53,11 +71,13 @@ export function AnimalActionsDialog({ animalId, open, onClose }: {
     else if (view === 'weight') content =
         <DialogHeader onClick={e => {stopP(e)}}>
             <DialogTitle className="mx-auto mb-4 text-base">Please Log the weight below</DialogTitle>                    
-                <div className="grid gap-2 grid-cols-3">
-                    <Label className="col-span-1 test-sm font-semibold">Weight(Kg): </Label>
-                    <input className="col-span-2 w-full rounded-mb border border-input bg-backround" type="Number"></input>
-                </div>
-                <Button className="hover:border-primary transition-colors" variant="secondary">Submit</Button>
+                <div className="grid gap-2 grid-cols-3 flex flex-col gap-2">
+                    <Label className="col-span-1 test-sm font-semibold">Weight (KG): </Label>
+                    <input name="weight" className="col-span-2 w-full rounded-mb border border-input bg-backround" type="number" value={inputWeight} onChange={handleWeightChange}></input>               
+                <Label> Date Given </Label>
+                <input type="Date" defaultValue={formattedDate}></input>
+                 </div>
+                <Button className="hover:border-primary transition-colors" variant="secondary" onClick={e => {handleSubmit(e)}}>Submit</Button>
         </DialogHeader>
 
 
