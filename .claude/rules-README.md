@@ -6,6 +6,8 @@ essays. The reasoning behind them lives in `docs/REACT_CONVENTIONS.md`.
 Files use `.mdc` (markdown plus YAML frontmatter) so they work as
 `.cursor/rules/` entries, as Claude Code rules, and as plain documentation.
 
+all rules can be found in /home/admin2/ReactExternalTesting/react-rules/rules
+
 | File | Covers |
 |---|---|
 | `01-architecture-layers.mdc` | The four layers and what may import what |
@@ -26,7 +28,7 @@ Files use `.mdc` (markdown plus YAML frontmatter) so they work as
 ## Precedence
 
 `03` and `13` are hard rules — breaking them produces a broken build or a
-security gap. The rest are conventions: deviate with a reason, in a comment.
+security gap. The rest are conventions: if you need/want to deviate, you MUST check with the user with justifaction and not proceed without their go-ahead
 
 ## Before adding a rule
 
