@@ -1,0 +1,56 @@
+---
+description: Feature-first folders and file naming
+globs: ["**/*.ts", "**/*.tsx", "**/*.graphql"]
+alwaysApply: true
+---
+
+# Folder structure
+
+Organise **by feature**, not by layer. This bundle hosts two portals with more
+coming; splitting by layer interleaves them until they cannot be separated.
+
+```
+src/
+├── api/
+│   ├── apexClient.ts                shared — Apex via the bridge
+│   ├── graphqlClient.ts             shared — GraphQL via the SDK
+│   └── graphql-operations-types.ts  GENERATED — never edit
+├── features/
+│   └── petbarn/
+│       ├── api/  hooks/  components/  pages/
+│       └── api/query/*.graphql
+├── components/
+│   ├── ui/        shadcn primitives — do not hand-edit
+│   ├── layout/    app frame: header, footer
+│   └── shared/    domain-agnostic: CenteredState, PawLoader
+├── hooks/         cross-feature only
+├── lib/           pure functions, no React
+└── routes.tsx
+```
+
+## Rules
+
+- **Feature-owned code lives under `features/<name>/`** — its api, hooks,
+  components and pages together.
+- **`components/shared/` is for domain-agnostic pieces only.** The test: if it
+  mentions the business domain, it belongs to a feature. A `Button` does not
+  know what an animal is; an `AnimalCard` does.
+- **`components/ui/` is generated shadcn output.** Do not hand-edit. Override
+  by passing `className`, which `cn()` merges.
+- **`lib/` contains no React.** Pure functions only.
+- **One folder named `layout`.** Not both `layout` and `layouts`.
+
+## Naming
+
+| Thing | Convention | Example |
+|---|---|---|
+| Components | PascalCase | `StatCard.tsx` |
+| Hooks | camelCase, `use` prefix | `usePetbarnAnimals.ts` |
+| Services | camelCase, `Service` suffix | `petbarnService.ts` |
+| GraphQL files | camelCase | `petbarnAnimals.graphql` |
+| GraphQL operations | PascalCase | `query PetbarnAnimals` |
+| Types | PascalCase | `PetbarnStats` |
+
+- **`.tsx` for anything containing JSX**, `.ts` otherwise. A `.ts` file with
+  JSX produces parse errors that surface as "not a module".
+- **Never commit test artefacts** — no `q.json` or scratch files in `query/`.

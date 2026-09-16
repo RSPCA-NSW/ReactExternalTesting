@@ -1,0 +1,57 @@
+---
+description: Codegen, UI API field access, when any is acceptable
+globs: ["**/*.ts", "**/*.tsx", "**/*.graphql"]
+alwaysApply: true
+---
+
+# Types
+
+TypeScript is not optional here. Codegen generates types from the org schema,
+and those types prove field names and FLS before the org is ever called.
+
+## Rules
+
+- **After changing any `.graphql` file**, run `npm run graphql:schema` then
+  `npm run graphql:codegen`. If codegen fails on a field name, that is your
+  spelling or FLS answer, for free.
+- **Never edit `graphql-operations-types.ts`.** It is generated.
+- **`any` is acceptable in a function body while moving fast. Never in a
+  service signature** — a service is a contract.
+- **Never type a payload as `{}`** — it means "any non-null value" and checks
+  nothing.
+
+## UI API field access
+
+Two rules that catch everyone:
+
+- **`node.Id` is bare. Every other field is wrapped:** `node.Name.value`.
+- **Case matters.** `node.id` yields `undefined` silently and produces an empty
+  screen with no error. This cost a debugging session.
+
+## Hand-written versus derived types
+
+We use hand-written shapes for readability. **The cost: changing a query
+requires changing the type in the same commit**, or it silently lies.
+
+```ts
+export type AlertEdge = {
+  node?: { Id: string; animalos__Variant__c?: { value?: string | null } | null } | null;
+};
+```
+
+Copy the nullability from the error message — UI API is nullable almost
+everywhere, so fields are `?:` and `| null`.
+
+For anything long-lived, derive instead so it follows the schema:
+
+```ts
+export type AlertEdge = NonNullable<
+  NonNullable<AnimalAlertsQuery["uiapi"]["query"]["animalos__Alert__c"]>["edges"]
+>[number];
+```
+
+## Reading errors
+
+**Read the last line of a TypeScript error first.** Everything above it is the
+compiler explaining how it got there. `X is not assignable to Y` at the bottom
+is the whole message.

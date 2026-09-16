@@ -1,0 +1,49 @@
+---
+description: Tailwind and shadcn conventions
+globs: ["**/*.tsx", "**/*.css"]
+alwaysApply: true
+---
+
+# Styling
+
+## Rules
+
+- **Use `components/ui/` primitives before hand-writing markup.**
+- **Layout belongs to the parent.** A child never centres itself. Centring is
+  `flex items-center justify-center` on the container — and it needs height.
+- **`appLayout.tsx` already provides the page container**
+  (`mx-auto max-w-7xl px-4 py-8`). Do not add another inside a page — you get
+  double padding and a narrower column than intended.
+- **Never build class names dynamically.** Tailwind scans source text at build
+  time, so `text-${colour}-500` is never generated and the style silently does
+  not exist. Map values to complete class strings:
+
+```ts
+const VARIANT: Record<string, string> = { warning: 'bg-amber-100 text-amber-900' };
+```
+
+- **Normalise lookup keys.** Picklist casing will not match your map. Use
+  `.toLowerCase()` and give the lookup a fallback — a new picklist value should
+  render plainly, not break.
+- **Prefer semantic colours** (`bg-muted`, `text-muted-foreground`,
+  `bg-destructive`) over raw palette values, so a theme change follows.
+- **`className` must be forwarded.** Your own components ignore it unless they
+  spread it onto an element. shadcn merges it via `cn()`.
+- **Later class wins inside `cn()`** — that is how a shadcn default is
+  overridden. Plain string concatenation does not do this.
+
+## shadcn defaults worth remembering
+
+- **`TableCell` sets `whitespace-nowrap`** — long text widens the table instead
+  of wrapping. Override with `whitespace-normal` per cell.
+- **`TableRow` sets `hover:bg-muted/50`** — kill it on non-interactive rows
+  with `hover:bg-transparent`.
+
+## Interaction
+
+- **Hover does not exist on touch.** Do not rely on it to signal that something
+  is tappable. `active:scale-95` is the touch equivalent.
+- **Always pair a state change with a transition** or it snaps and reads cheap.
+  150–300ms.
+- **CSS cannot animate `h-auto`.** For an expanding row use
+  `animate-in fade-in slide-in-from-top-1`, or grid-rows `0fr → 1fr`.

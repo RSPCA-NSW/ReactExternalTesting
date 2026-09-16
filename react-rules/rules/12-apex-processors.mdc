@@ -1,0 +1,65 @@
+---
+description: The processor contract, from the React side
+globs: ["**/*Proc.cls", "**/*Proc_Test.cls"]
+alwaysApply: true
+---
+
+# Apex processors
+
+Full detail in `docs/aos-framework-reference.html`. The rules that matter when
+building for React.
+
+## Structure
+
+- **One processor per action.** Not one class branching on an `action` field —
+  the factory already dispatches by name, and a switch is a second dispatch
+  layer that grows into the file nobody wants to touch.
+- **Extend `aos_AbstractProcessor` for actions and writes.** **No
+  `super.process()`** — it is abstract and the call will not compile.
+  `this.response` is initialised at construction.
+- **`aos_MetadataProcessor` is for screen bootstrap only** (picklists, field
+  metadata). It *does* need the super call, and its request must be cast to
+  `MetadataRequest`.
+- **`process()` is structural: assign the request, delegate, return
+  `this.response`.** The work goes in a private void method that reads
+  `this.request` and writes `this.response`.
+
+## Contract
+
+- **`response.put()` lands under `dto`** — `aos_Response extends aos_DTO`. The
+  client reads `envelope.dto.<key>`.
+- **Group related values under one key** rather than scattering top-level keys.
+  Adding a stat is then a map entry, not a client change.
+- **`getDecimal` for anything with decimals.** `getInteger` silently drops
+  them.
+- **`getRequiredString(path, message)`** — use the two-argument form. The
+  default message names the internal key, which reaches a partner's screen.
+- **`getListAsStrings` then `new Set<String>(...)`** for Id lists — dedupes
+  before an `IN` bind.
+
+## Transactions and errors
+
+- **Never add your own savepoint.** `aos_CommonCtrl` wraps every call and rolls
+  back on throw.
+- **Throw `aos_Structs.CommonException`** with a message written for the person
+  reading the screen. Raw exceptions serialise their stack trace — class names
+  and line numbers — into the response, which reaches a partner's browser.
+- **Validate before building records** so a rejection costs no DML.
+- **`aos_UnitOfWork` type list is parents first.** `registerUpsert` decides
+  insert or update by whether `Id` is set.
+
+## Security
+
+- **Declare sharing deliberately.** `without sharing` is a security decision
+  and needs a comment saying why. The bridge is a REST class with no caller, so
+  `inherited sharing` resolves to *with sharing* at the boundary.
+- **The default UnitOfWork DML does not enforce CRUD or FLS.** `with sharing`
+  on the class does not cover DML. Use `DMLManagerAsUserImpl` where user-mode
+  writes matter.
+
+## Tests
+
+- **Test the processor directly** — instantiate it and call `process()`. The
+  bridge and `aos_CommonCtrl` are framework code with their own coverage.
+- **Cover the validation paths**, not just the happy one. The test is also
+  where record type and field API names get proven before a user hits them.

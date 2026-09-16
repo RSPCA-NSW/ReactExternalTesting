@@ -1,0 +1,100 @@
+---
+description: All Apex calls from React go through AOS_RestBridge. Hard rule.
+globs: ["**/api/**", "**/*Proc.cls", "**/AOS_RestBridge.cls"]
+alwaysApply: true
+---
+
+# The AOS REST bridge
+
+**Every Apex call from a UI Bundle goes through `AOS_RestBridge`. There is one
+bridge. Do not add another.**
+
+## Why it exists
+
+React cannot call `@AuraEnabled` methods — those are reachable only from Aura
+and LWC. Only Apex REST endpoints are callable from a UI Bundle. So the
+existing `aos_CommonCtrl.execute()` dispatcher needs a REST front door, and
+`AOS_RestBridge` is it.
+
+This is structural, not a workaround.
+
+```
+React service
+  → AOS_RestBridge.execute(processor, requestJSON)   REST, org-local
+  → aos_CommonCtrl.execute                            savepoint here
+  → aos_ProcessorFactory                              Type.forName
+  → YourProc.process()
+```
+
+LWCs skip the bridge entirely and call `aos_CommonCtrl` direct via
+`c/aosUtils`. Same processors, same contracts, different front door.
+
+## Rules
+
+### Never bypass it
+
+- **Do not write a bespoke `@RestResource` class per feature.** One bridge,
+  many processors. A second endpoint means a second thing to secure, grant
+  access to, and keep consistent.
+- **Do not call `aos_CommonCtrl` from React.** It is `@AuraEnabled`; the call
+  will not resolve.
+- **Do not add flow invocation to the bridge.** If a processor needs to run an
+  autolaunched flow, the *processor* invokes it. Letting the bridge run any
+  flow by name widens the surface far beyond dispatching a read-only proc.
+
+### Use the SDK's fetch, never the global one
+
+```ts
+const sdk = await createDataSDK();
+const response = await sdk.fetch('/services/apexrest/aos/execute', { ... });
+```
+
+**Apex REST endpoints are CSRF-protected on every method.** The SDK's request
+interceptor supplies the token; a bare `fetch()` returns **403**. Salesforce's
+own documentation says to use plain fetch — it is wrong, and their SDK's
+`csrf/header.interceptor` is the authority.
+
+### Payload shape
+
+```ts
+{
+  processor:   'PetbarnLogWeightProc',   // bare class name
+  requestJSON: JSON.stringify(payload)   // stringified, not an object
+}
+```
+
+- **Bare class name.** No `.cls` suffix, no namespace prefix.
+- The factory retries with the package namespace when a name fails to resolve.
+  So `No Processor Type with Name: animalos.X` almost always means a typo or an
+  undeployed class — **not** a namespace problem.
+- **Strip GraphQL wrappers before sending.** Values taken from a query result
+  are `{value: "..."}` objects, not strings. Apex then binds an object, matches
+  nothing, and returns a clean zero with no error. Use `?.value`.
+
+### Response shape
+
+The response is parsed **twice** — the bridge returns Apex `String`, so REST
+wraps JSON inside JSON.
+
+```ts
+const envelope = JSON.parse(await response.json());
+if (envelope.isValid !== true) throw new Error(...);
+return envelope.dto.result;
+```
+
+- **`response.put()` in Apex lands under `dto`**, because `aos_Response extends
+  aos_DTO`. Read `envelope.dto.<key>`, never `envelope.<key>`.
+- `isValid` is the success test. `errors[]` carries the messages.
+- Errors travel by **throwing** from the client, never by returning a failure
+  object.
+
+### Access
+
+A portal user needs Apex class access to **the processor and the bridge**. A
+missing grant on either surfaces as a 403, not a useful message.
+
+## Outstanding
+
+The bridge currently accepts **any** processor name. That was a deliberate
+decision to get moving and **must not reach production** — a processor
+allowlist is required before any non-pilot use. Tracked as a pilot finding.

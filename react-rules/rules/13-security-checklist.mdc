@@ -1,0 +1,51 @@
+---
+description: Run before testing any new screen or object. Hard rule.
+globs: ["**/*.graphql", "**/permissionsets/**", "**/*Proc.cls"]
+alwaysApply: true
+---
+
+# Security checklist — new screen or object
+
+**Every gap below has surfaced as a 403, an "Unauthorized", or a silent empty
+result rather than a useful message.** Work through it before testing, not
+after.
+
+- [ ] **API Enabled** on the portal user's profile. GraphQL is an API. Not
+      grantable on all licence types — Customer Community Plus and Partner
+      Community can have it; plain Customer Community cannot.
+- [ ] **Experience Cloud site membership** for the profile, and the site active.
+- [ ] **Object permissions** for every object the screen touches.
+- [ ] **FLS on every field** — including fields used only in a `where` clause,
+      not just displayed ones. **One missing field fails the entire query**,
+      not just that field, and returns no useful error.
+- [ ] **Sharing.** Records must actually be shared. The foster model uses
+      manual `Animal__Share` rows driven by foster Locations, and a resync flow
+      exists because they drift.
+- [ ] **Record type access** where a query filters on one.
+- [ ] **Community visibility flags.** `Available_in_Community__c` on Location
+      and Alert gate records independently of permissions. A record can exist,
+      be shared, be readable, and still not appear.
+- [ ] **Apex class access** on the processor **and** `AOS_RestBridge`.
+- [ ] **Tested as a real portal user.** Admins bypass FLS and sharing, so an
+      admin test proves nothing about the security model.
+
+## Rules
+
+- **Build the permission set from the `.graphql` files.** Read every field in
+  every query and grant them all as committed metadata. Do not discover them
+  one error at a time.
+- **Empty states must be honest.** A missing share or an unticked community
+  flag produces an empty list identical to "nothing to show". Say "expecting
+  something here? contact us" rather than "no records".
+- **Never widen CRUD, FLS or OWD to make a screen work.** If the app cannot
+  see something, that is the model working. Fix the grant, not the model.
+
+## Reading a failure
+
+| Symptom | Look at |
+|---|---|
+| No request, or HTTP error | site membership, site active |
+| `Unauthorized` on GraphQL | API Enabled, licence type |
+| 200 with `errors[]` populated | object permission, FLS, record type |
+| 200 with `edges: []` | sharing, or a community visibility flag |
+| 403 on an Apex call | class access on proc or bridge, or CSRF (see 03) |
