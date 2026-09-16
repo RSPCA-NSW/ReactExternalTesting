@@ -17,6 +17,9 @@ query PetbarnAnimals ($locationIds: [ID!]){
                         animalos__Animal_Name__c{
                             value
                         }
+                        Name{
+                            value
+                        }
                         animalos__Stage__c{
                             value
                         }
@@ -24,8 +27,7 @@ query PetbarnAnimals ($locationIds: [ID!]){
                             value
                         }
                         animalos__Current_Site__c{
-                            value
-                            
+                            value                            
                         }
                         animalos__Primary_Breed_Formula__c{
                             value

@@ -1,7 +1,7 @@
 import { usePetbarnHome } from "@/hooks/usePetbarnHome";
 import { CenteredState } from "@/components/CenteredState";
 import { PawLoader, MetricCard } from "@/components/brand";
-import { Button, Skeleton, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, DialogTrigger, Dialog } from "@/components/ui";
+import { Button, Skeleton, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
 import { useAlerts } from "@/hooks/useAlerts";
 import { StatusAlert } from "@/components/alerts/status-alert";
 import React from "react";
@@ -11,7 +11,7 @@ import { ChevronRight, HeartIcon, HomeIcon, PawPrintIcon, ExternalLink } from "l
 import { Badge } from "@components/ui/badge";
 import { usePetbarnStats } from "@/hooks/usePetbarnStats";
 import { useUserData } from "@/hooks/useUserData";
-import { LogWeightDialog } from "@/components/brand/logWeightDialog";
+import { AnimalActionsDialog } from "@/components/brand/animalActionsDialog";
 
 
 
@@ -114,6 +114,7 @@ export default function HomePage() {
                     <TableRow>
                       <TableHead></TableHead>
                       <TableHead>Name</TableHead>
+                      <TableHead>Animal ID</TableHead>
                       <TableHead>Breed</TableHead>
                       <TableHead>Age</TableHead>
                       <TableHead>Primary Colour</TableHead>
@@ -138,8 +139,8 @@ export default function HomePage() {
                                 }`}
                               />
                             </TableCell>
-                            <TableCell>{edge.node.animalos__Animal_Name__c?.value}
-                            </TableCell>
+                            <TableCell>{edge.node.animalos__Animal_Name__c?.value}</TableCell>
+                            <TableCell>{edge.node.Name?.value}</TableCell>
                             <TableCell>{edge.node.animalos__Primary_Breed_Formula__c?.value}</TableCell>
                             <TableCell>{edge.node.animalos__Calculated_Age__c?.value}</TableCell>
                             <TableCell>{edge.node.animalos__Primary_Colour__c?.value}</TableCell>
@@ -152,15 +153,10 @@ export default function HomePage() {
                             </TableCell>
 
                             <TableCell>
-                              <Dialog>
-                                <DialogTrigger>
-                                  <Button className="hover:border-primary transition-colours" variant="secondary"
-                                    onClick={e => handleAnimalActions(e, edge.node.Id, edge.node.animalos__Current_Weight__c?.value)}>
-                                    Animal Actions
-                                  </Button>
-                                  {selectedId && <LogWeightDialog animalId={selectedId} open={selectedId !== null} currentWeight={currentWeight} onClose={() => { setSelectedId(null); setCurrentWeight(null) }} />}
-                                </DialogTrigger>
-                              </Dialog>
+                              <Button className="hover:border-primary transition-colours" variant="secondary"
+                                onClick={e => handleAnimalActions(e, edge.node.Id, edge.node.animalos__Current_Weight__c?.value)}>
+                                Animal Actions
+                              </Button>
                             </TableCell>
 
                           </TableRow>
@@ -189,6 +185,16 @@ export default function HomePage() {
                   </TableBody>
                 </Table>
               </div>
+
+              {selectedId && (
+                <AnimalActionsDialog
+                  key={selectedId}
+                  animalId={selectedId}
+                  currentWeight={currentWeight}
+                  open={selectedId !== null}
+                  onClose={() => { setSelectedId(null); setCurrentWeight(null) }}
+                />
+              )}
             </div>
           </CenteredState>
         </div>
