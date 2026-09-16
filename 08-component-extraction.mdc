@@ -1,0 +1,70 @@
+---
+description: When to extract a component instead of branching in a page
+globs: ["**/*.tsx"]
+alwaysApply: true
+---
+
+# Component extraction
+
+Branching logic accumulating in one file is the most common way a React
+codebase becomes unreadable. Extract early — it is cheaper than untangling.
+
+## Extract when any of these is true
+
+- **Two or more branches** decide what renders in the same region. One ternary
+  is fine; a chain is a component.
+- **A chunk holds state nothing else uses.** This is the strongest signal. If a
+  section owns `view`, `saving` and `error` that no sibling reads, it wants to
+  be its own component.
+- **A section has its own data lifecycle** — its own fetch, its own loading and
+  error states. Two unrelated fetch lifecycles in one file means two sets of
+  everything and no way to fail independently.
+- **The same JSX appears more than twice.** Third occurrence, extract.
+- **The file passes ~150 lines**, or you scroll to find the return.
+- **A `.map()` body grows past a handful of lines.** The per-item markup is a
+  component; the map stays.
+
+## Do not extract when
+
+- It is used once, is a few lines, and needs no state.
+- Extracting would need **five or more props** — that usually means the
+  boundary is in the wrong place. Split differently, or pass `children`.
+- The only motive is file length. Length alone is not the test; **state
+  ownership** is.
+
+## The test
+
+> Does this chunk have state or data that nothing outside it needs?
+
+Yes → component. No → it probably belongs where it is.
+
+## Applied
+
+`AnimalActionsDialog` was one file holding a menu, a weight form and daily
+actions. Each form has its own inputs, its own saving and error state, and
+daily actions has its own fetch. So:
+
+```
+AnimalActionsDialog     shell — owns `view`, renders the Dialog
+├── ActionsMenu         the buttons
+├── LogWeightForm       owns weight input, saving, error
+└── DailyActionsForm    owns answers, its own fetch, saving, error
+```
+
+The shell became a switchboard. Each child owns its own state, fails
+independently, and can be reused on a detail page.
+
+## Rules for the split
+
+- **Props down, callbacks up.** A child cannot close its own dialog — whether
+  it exists is the parent's decision. It reports `onDone`; the parent acts.
+- **No inheritance.** Components never extend each other. Share UI with
+  `children`, not by deriving from a base.
+- **Push state down as far as it will go.** The page tracks *which animal*;
+  the dialog tracks *which view*; the form tracks *what is typed*.
+- **Prefer conditional rendering for dialogs** — `{selectedId && <Dialog/>}`.
+  The component unmounts on close so its state resets for free, rather than
+  being reset by hand in several places.
+- **Reach for Context only after three layers** of passing something through
+  untouched, or when many unrelated components need the same value. Two levels
+  of props is not prop drilling.
