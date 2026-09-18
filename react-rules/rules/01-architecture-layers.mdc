@@ -1,0 +1,31 @@
+---
+description: Four-layer structure — what each layer may import
+globs: ["**/*.ts", "**/*.tsx"]
+alwaysApply: true
+---
+
+# Architecture layers
+
+Four layers. Each knows only the layer directly below it.
+
+| Layer | Folder | May import | Must never import |
+|---|---|---|---|
+| Pages / components | `pages/`, `components/`, `features/*/components/` | hooks, components | `executeGraphQL`, `fetchProcessor`, `.graphql` files |
+| Hooks | `hooks/`, `features/*/hooks/` | services | JSX, component files |
+| Services | `api/`, `features/*/api/` | clients, queries, generated types | React, `useState`, `useEffect` |
+| Queries | `**/query/*.graphql` | nothing | — |
+
+## Rules
+
+- A page or component **never** imports `executeGraphQL` or `fetchProcessor`.
+  If it does, a layer has been skipped.
+- A service **never** imports from `react`. It has no state and no loading flags.
+- A hook **never** returns JSX. It returns an object.
+- Unwrap transport shapes in the **service**, as low as possible. Everything
+  above deals in clean data.
+
+## Why
+
+When the Apex transport changed from bare `fetch` to the SDK's `fetch` (for
+CSRF), only `api/apexClient.ts` changed. No hook, page or component was
+touched. That is the layering earning its cost.

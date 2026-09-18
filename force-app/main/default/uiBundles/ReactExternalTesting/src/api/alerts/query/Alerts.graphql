@@ -1,0 +1,33 @@
+query Alerts($ids: [String!]) {
+    uiapi{
+        query{
+            animalos__Alert__c(
+                where:{
+                    and: [
+                        { animalos__Target_Record_Id__c: {in: $ids}}
+                        { animalos__Available_In_Community__c: {eq: true}}
+                        { animalos__Active__c: {eq: true}}
+
+                    ]
+                    
+                }
+                first: 200
+            ) {
+                edges{
+                    node{
+                        Id
+                        animalos__Message_Formatted__c{
+                            value
+                        }
+                        animalos__Variant__c{
+                            value
+                        }
+                        animalos__Target_Record_Id__c{
+                            value
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

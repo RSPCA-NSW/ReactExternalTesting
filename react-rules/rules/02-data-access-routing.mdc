@@ -1,0 +1,40 @@
+---
+description: Choosing between GraphQL and the AOS Apex bridge
+globs: ["**/api/**", "**/hooks/**"]
+alwaysApply: true
+---
+
+# Data access routing
+
+GraphQL and the AOS bridge are two independent roads to the org, not a
+pipeline. Data read over one never flows into the other.
+
+| Operation | Route |
+|---|---|
+| Displaying records the user can see | **GraphQL** |
+| Single-field write, no business rules | GraphQL mutation |
+| Any write with business rules | **AOS bridge** |
+| Multi-object write | **AOS bridge** |
+| Aggregation (`COUNT`, `SUM`, `GROUP BY`) | **AOS bridge** |
+| Anything needing system context | **AOS bridge** |
+
+## Rules
+
+- **GraphQL for reads and trivial single-record writes. Apex for anything with
+  rules behind it.**
+- **Never split a multi-object write across GraphQL mutations.** UI API
+  mutations are single-record. Two mutations are two commits with no
+  transaction boundary — a failure between them leaves partial data.
+- **Send identifiers, never records.** When the user acts, send the record Id.
+  Client data is untrusted, may be stale, and processors re-query anyway.
+- **After any write, refetch. Never patch client state.** TDTM handlers and
+  flows may have changed more than you wrote.
+- **Do not reimplement processor logic in React.** The automation fires on your
+  DML either way, so a hand-rolled write gets the automation but skips the
+  pre-DML validation.
+
+## Why GraphQL is safe by default
+
+UI API always enforces the running user's object permissions, FLS and sharing.
+There is no system-context mode. Apex is the surface to be careful with —
+`with sharing` covers records only, not CRUD or FLS.

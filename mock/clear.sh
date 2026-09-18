@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-# Clear mock records from a scratch org. Requires SF_TARGET_ORG (cci task run clear --org <name>).
+
 
 set -euo pipefail
 

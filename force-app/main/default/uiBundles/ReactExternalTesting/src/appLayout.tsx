@@ -3,6 +3,7 @@ import { getAllRoutes } from "./router-utils";
 import { useState } from "react";
 import { AuthMenu } from "./features/authentication/menu/AuthMenu";
 import { Button } from "./components/ui/button";
+import AnimalosLogo  from "./assets/images/AnimalosLogo.png";
 
 export default function AppLayout() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +12,7 @@ export default function AppLayout() {
 	const isActive = (path: string) => location.pathname === path;
 
 	const toggleMenu = () => setIsOpen(!isOpen);
+	const myImageStyle = { height: '50px' };
 
 	const navigationRoutes: { path: string; label: string }[] = getAllRoutes()
 		.filter(
@@ -29,11 +31,11 @@ export default function AppLayout() {
 
 	return (
 		<>
-			<nav className="bg-white border-b border-gray-200">
+			<nav className="bg-card border-b border-border">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex justify-between items-center h-16">
-						<Link to="/" className="text-xl font-semibold text-gray-900">
-							React App
+						<Link to="/" className="flex items-center">
+							<img style={myImageStyle} src={AnimalosLogo} alt="AnimalOS Logo"/>
 						</Link>
 						<div className="flex items-center gap-2">
 							<AuthMenu />

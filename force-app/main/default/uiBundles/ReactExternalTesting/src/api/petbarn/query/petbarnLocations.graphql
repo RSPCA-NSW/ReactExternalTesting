@@ -1,0 +1,26 @@
+query PetbarnLocations {
+    uiapi{
+        query{
+            animalos__Location__c(
+            where: {
+                and: [
+                    { Name: {like: "%Petbarn%"} }
+                    { animalos__Active__c: { eq: true } }
+                ]
+            }
+            first: 200
+            ) {
+                edges {
+                    node{
+                        Id 
+                        Name{
+                            value
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    

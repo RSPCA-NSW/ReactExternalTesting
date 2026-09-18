@@ -1,0 +1,63 @@
+---
+description: Writes are called from handlers, never wrapped in hooks
+globs: ["**/*.tsx"]
+alwaysApply: true
+---
+
+# Writes and handlers
+
+**A write is called directly from the event handler.** It happens once because
+someone clicked — there is nothing to watch, nothing to re-run, no mount to
+hook into. Wrapping it in a hook means inventing a trigger.
+
+## The shape
+
+```ts
+async function handleSubmit() {
+  if (!animalId) return;                       // guards first
+
+  const parsed = parseFloat(weightInput);
+  if (isNaN(parsed) || parsed <= 0) {
+    setError('Enter a weight greater than zero.');
+    return;                                    // no round trip
+  }
+
+  setSaving(true);
+  setError(null);
+
+  try {
+    await logWeight(animalId, parsed);
+    await refetch();                           // stale data
+    setView('success');
+  } catch (e: any) {
+    setError(e.message);
+  } finally {
+    setSaving(false);
+  }
+}
+```
+
+## Rules
+
+- **Guards and validation before `setSaving(true)`.** A rejected submit should
+  never enter the saving state.
+- **Only the risky call goes in the `try`.** Wrapping more means an unrelated
+  bug gets swallowed and presented as a server failure.
+- **`finally` for cleanup** — `setSaving(false)` runs either way rather than
+  being duplicated in both branches.
+- **Success only inside the `try`, after the await.** A throw jumps to `catch`,
+  so the success view never renders on failure.
+- **Close the dialog only on success.** On failure it stays open with the
+  user's input intact.
+- **Refetch after the write.** Never patch client state — server automation may
+  have changed more than you wrote.
+- **`disabled={saving}` on the submit button.** Otherwise a double-click writes
+  twice, with no error, and nobody notices.
+- **Keep `stopPropagation` at the call site**, not inside the handler. Stopping
+  propagation is about this button sitting inside a clickable row — a UI
+  concern. The handler's job is the work, and it should be callable from a card
+  or a keyboard shortcut with no event to hand it.
+- **Pass identifiers, not objects.** `handleThing(id)` not `handleThing(edge)`
+  — the handler only needs the Id, and stays usable where there is no edge.
+- **One handler, many statements.** There is never a need for "two handlers" on
+  one event.

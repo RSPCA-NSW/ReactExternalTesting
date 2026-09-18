@@ -1,0 +1,65 @@
+---
+description: Known Multi-Framework defects and limits
+alwaysApply: true
+---
+
+# Platform constraints
+
+Recorded because each cost time and none are documented where you would look.
+Multi-Framework reached GA in 2026; the tooling is young.
+
+## Apex REST requires a CSRF token
+
+Salesforce's documentation says to call Apex REST "with fetch". Their SDK's
+`csrf/header.interceptor` states Apex REST endpoints are protected on **all**
+methods. A bare `fetch()` returns **403**.
+
+**Use the SDK's `fetch` via `createDataSDK()`.** The interceptor supplies the
+token. The documentation is wrong.
+
+## `@AuraEnabled` is unreachable from React
+
+Only Apex REST endpoints are callable from a UI Bundle. Hence
+`AOS_RestBridge` — structural, not a workaround. See `03-aos-rest-bridge`.
+
+## The local dev proxy cannot forward POSTs
+
+`@salesforce/ui-bundle`'s proxy fails with
+`InvalidArgumentError: invalid content-length header` (undici,
+`UND_ERR_INVALID_ARG`) in `UIBundleProxyHandler.handleSalesforceApi`.
+
+Reproduced from a clean scaffold on Node 22 and 24, with and without our
+`.npmrc`, in two separate repos. **Consequence: no local development against
+the org.** Work on build-and-deploy cycles.
+
+Unreported to Salesforce at time of writing.
+
+## Two project roots
+
+- **`npm` commands** run in `force-app/main/default/uiBundles/<name>/`
+- **`sf` commands** run at the project root
+
+The root `package.json` is the base SFDX template and its `build` script does
+nothing. Keep two terminal tabs.
+
+## UIBundle and CustomApplication are mutually dependent
+
+The bundle targets the app; the app names the bundle. **Deploy both in one
+command** or neither resolves. Separate deploys fail with an unhelpful error.
+
+## StrictMode runs effects twice in development
+
+Two identical requests in the Network tab is expected, not a bug.
+
+## GraphQL has no aggregation
+
+No `COUNT`, `SUM` or `GROUP BY`. Anything aggregate goes through a processor.
+
+## UI API mutations are single-record
+
+No transaction across two mutations. Multi-object writes go through a processor.
+
+## Screen flows are not callable from Apex
+
+Only autolaunched flows. Reusing screen-flow logic means extracting it into an
+autolaunched flow first.

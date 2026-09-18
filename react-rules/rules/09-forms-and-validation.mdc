@@ -1,0 +1,63 @@
+---
+description: Controlled inputs, required fields, validation on both sides
+globs: ["**/*.tsx", "**/*Proc.cls"]
+alwaysApply: true
+---
+
+# Forms and validation
+
+## Controlled inputs
+
+```tsx
+const [date, setDate] = useState(formattedToday);
+<Input type="date" value={date} onChange={e => setDate(e.target.value)} />
+```
+
+- **Use `value` plus `onChange`, never `defaultValue`.** `defaultValue` sets
+  what is *displayed* but leaves state at its initial value — so a user who
+  accepts a pre-filled default submits `null`. This is easy to miss because the
+  form looks correct.
+- **Use `components/ui/` inputs** rather than raw elements. They carry padding,
+  border, radius, focus ring and disabled states that match the rest of the UI.
+- **Void elements self-close.** `<input></input>` crashes React — even a space
+  between the tags is a child.
+- **Hold text inputs as strings**, including numeric ones. A half-typed `"4."`
+  must not break. Convert at submit with `parseFloat`.
+
+## Required fields
+
+- **Distinguish unanswered from `false`.** A yes/no question has three states:
+  `undefined`, `true`, `false`. Check `=== undefined`, never `!value`, or a
+  legitimate "No" reads as unanswered.
+- **Start answer state empty (`{}`)**, not pre-filled. Pre-filling to `false`
+  means the form arrives claiming the animal did not eat, drink or urinate, and
+  a straight submit writes three false negatives.
+- **Derive validation from the field definitions** so adding a question needs
+  one change:
+
+```ts
+const missing = OBSERVATIONS.filter(o => obs[o.key] === undefined);
+if (missing.length > 0) {
+  setError(`Please answer: ${missing.map(o => o.label).join(', ')}`);
+  return;
+}
+```
+
+- **Narrow explicitly before sending.** A `.filter()` check does not tell
+  TypeScript the properties are defined. Destructure and check each, or the
+  payload type will reject `boolean | undefined`.
+
+## Both sides
+
+- **Validate client-side and in Apex.** The client check is for speed and a
+  decent message; it can be bypassed by editing the request. The Apex check is
+  the one that enforces.
+- **Do not disable submit until valid.** A dead button with no explanation is
+  worse than a click that says what is missing.
+- **Highlight invalid fields only after the first failed submit.** Flagging
+  before the user has had a chance to answer is hostile.
+- **Build read-only mode in from the start.** Pass `disabled` on every input
+  even while it is hardcoded `false` — retrofitting it across a dozen inputs
+  later is tedious.
+- **Name state keys after the API fields** they map to. Loading an existing
+  record into the form then becomes an assignment, not a mapping exercise.

@@ -1,0 +1,55 @@
+---
+description: The api/ layer — typed async functions, no state
+globs: ["**/api/**/*.ts"]
+alwaysApply: true
+---
+
+# Services
+
+One file per feature area. Exports typed async functions and types. No state,
+no React, no loading flags.
+
+## GraphQL
+
+```ts
+import QUERY from "./query/petbarnAnimals.graphql?raw";
+import { executeGraphQL } from "@/api/graphqlClient";
+import type { PetbarnAnimalsQuery, PetbarnAnimalsQueryVariables }
+  from "@/api/graphql-operations-types";
+
+export async function fetchPetbarnAnimals(unitIds: string[]) {
+  const data = await executeGraphQL<PetbarnAnimalsQuery, PetbarnAnimalsQueryVariables>(
+    QUERY, { unitIds }
+  );
+  return data.uiapi.query.animalos__Animal__c;
+}
+```
+
+## Apex
+
+```ts
+export type LogWeightResult = { animalActionId: string; currentWeight: number };
+
+export async function logWeight(animalId: string, weightKg: number): Promise<LogWeightResult> {
+  const envelope = await fetchProcessor<any>("PetbarnLogWeightProc", { animalId, weightKg });
+  return envelope.dto.result;
+}
+```
+
+## Rules
+
+- **`?raw` is required** on `.graphql` imports — it is how Vite inlines the
+  file as a string. Without it the import fails at build.
+- **Unwrap here, not above.** The service strips `uiapi.query.X` or
+  `envelope.dto`. Hooks and pages never see transport shapes.
+- **Errors throw, never return.** A returned `{ ok: false }` can be ignored; a
+  throw cannot. `apexClient` throws on `isValid !== true`; `graphqlClient`
+  throws on `errors[]`.
+- **Never type a payload as `{}`.** In TypeScript that means "any non-null
+  value" and checks nothing. Declare the shape.
+- **The return type is the success shape only.** Not a union of
+  success-or-failure — failure exits via the throw.
+- **A service is a contract: no `any` in its signature.** `any` inside the body
+  while moving fast is acceptable; in the signature it is not.
+- **Take one payload object, not scattered arguments.** Adding a field then
+  touches the payload and the Apex, not every caller.

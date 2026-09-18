@@ -9,6 +9,7 @@ export { AnimalOsLogo, RspcaLogo, BrandLockup } from './logos';
 export { PageHeader } from './page-header';
 export { Section } from './section';
 export { StatCard } from './stat-card';
+export { MetricCard } from './metric-card';
 export { StatusBadge, statusBadgeVariants } from './status-badge';
 export { EmptyState } from './empty-state';
 export { LoadingState, ErrorState } from './async-states';

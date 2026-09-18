@@ -1,0 +1,85 @@
+---
+description: Read hooks — the three-state pattern and dependency safety
+globs: ["**/hooks/**/*.ts"]
+alwaysApply: true
+---
+
+# Read hooks
+
+**Reads use hooks. Writes do not.** A hook manages state over time — fetch on
+mount, refetch when inputs change. See `07-writes-and-handlers`.
+
+## The pattern
+
+```ts
+export function usePetbarnAnimals(locationIds: string[]) {
+  const [animals, setAnimals] = useState<AnimalEdge[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const idKey = locationIds.join(",");
+
+  useEffect(() => {
+    if (locationIds.length === 0) { setLoading(false); return; }
+
+    let cancelled = false;
+    setLoading(true);
+    setError(null);
+
+    fetchPetbarnAnimals(locationIds)
+      .then(r => { if (!cancelled) setAnimals(r?.edges ?? []); })
+      .catch(e => { if (!cancelled) setError(e.message); })
+      .finally(() => { if (!cancelled) setLoading(false); });
+
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [idKey]);
+
+  return { animals, loading, error };
+}
+```
+
+## Rules
+
+- **Three states, always** — data, loading, error. A fetch has three outcomes.
+- **The cancelled flag is not optional.** Without it, a request resolving after
+  unmount sets state on nothing, and a slow request for an old input can land
+  after a fast one for the new input, silently overwriting correct data.
+- **Never put an object or array in a dependency array.** React compares by
+  identity; a literal built during render is new every time. The effect
+  re-runs, sets state, re-renders, re-runs — an infinite loop hammering the
+  org. Derive a stable primitive and depend on that.
+- **The `exhaustive-deps` disable is the one sanctioned lint override**, and
+  only for the stability workaround above. It needs a comment saying why.
+- **Initial state mirrors the shape.** Arrays start `[]`, single objects start
+  `null`. An array starting `null` forces every consumer to guard.
+- **Guard the empty input case** and return early. Do not call the org with an
+  empty bind.
+- **Never set state during render.** Setters belong in effects and handlers.
+  Setting during render is an instant infinite loop.
+
+## Composing
+
+Small single-purpose hooks; one composing hook per screen.
+
+```ts
+export function usePetbarnHome() {
+  const loc = usePetbarnLocations();
+  const animals = usePetbarnAnimals(loc.locations);
+  const stats = usePetbarnStats(loc.locationIds);
+
+  return {
+    animals: animals.animals,
+    loading: loc.loading || animals.loading,
+    error: loc.error ?? animals.error,
+    stats: stats.stats,
+    statsLoading: stats.loading,
+  };
+}
+```
+
+- **Combine loading with `||`** for anything the page must wait for, or it
+  flashes an empty state between sequential fetches.
+- **First error wins** (`??`) — it is the root cause; later errors are symptoms.
+- **Secondary data gets its own flag.** Stats must not gate the table. A failed
+  stat card must not hide the animals.

@@ -19,3 +19,4 @@ export async function fetchFosterAnimals(unitIds: string[]) {
   );
   return data.uiapi.query.animalos__Animal__c;
 }
+

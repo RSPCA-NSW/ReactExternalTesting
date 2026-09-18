@@ -1,0 +1,50 @@
+query PetbarnAnimals ($locationIds: [ID!]){
+    uiapi {
+        query{
+            animalos__Animal__c(
+                where:{
+                    and: [
+                        {animalos__Current_Site__c: { in: $locationIds} }
+                        {animalos__Stage__c: {like: "%Adoption Ready%" }}
+                    ]
+                }
+                orderBy: { animalos__Animal_Name__c: { order: ASC } }
+                first: 200
+            ) {
+                edges{
+                    node{
+                        Id
+                        animalos__Animal_Name__c{
+                            value
+                        }
+                        Name{
+                            value
+                        }
+                        animalos__Stage__c{
+                            value
+                        }
+                        animalos__Status__c{
+                            value
+                        }
+                        animalos__Current_Site__c{
+                            value                            
+                        }
+                        animalos__Primary_Breed_Formula__c{
+                            value
+                        }
+                        animalos__Calculated_Age__c{
+                            value
+                        }
+                        animalos__Current_Weight__c{
+                            value
+                        }
+                        animalos__Primary_Colour__c{
+                            value
+                        }
+                    }
+                }
+                }
+
+            }
+        }
+    }
