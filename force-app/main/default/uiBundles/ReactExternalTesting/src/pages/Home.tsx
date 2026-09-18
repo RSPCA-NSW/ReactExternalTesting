@@ -73,7 +73,6 @@ export default function HomePage() {
           <PageHeader
             eyebrow={storeName ? `Petbarn ${storeName.trim()}` : 'Petbarn'}
             title={<>Welcome, {userName}</>}
-            description="Your animals in store, adoption activity and daily observations at a glance."
           />
 
           <div className="grid gap-4 md:grid-cols-3">
@@ -97,8 +96,10 @@ export default function HomePage() {
             </MetricCard>
 
             <MetricCard
-              label="PlaceHolder"
-              value="placeholder"
+              label="Adoptions Completed By You"
+              loading={statsLoading}
+              error={statsError}
+              value={stats?.adoptionsByUserCount}
               tone="green-soft"
               icon={< PawPrintIcon />}>
             </MetricCard>

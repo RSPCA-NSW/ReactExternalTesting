@@ -131,15 +131,15 @@ export function DailyActionsDialog({ open, onClose, animalId, options }: {
                     <div className="flex flex-col gap-2">
                         <Label htmlFor="faeces-score">Faecal scoring</Label>
                         <Select
-                            value={String(faecesScore)}
+                            value={faecesScore === null ? '' :String(faecesScore)}
                             onValueChange={(v) => setFaecesScore(Number(v))}
                         >
                             <SelectTrigger id="faeces-score" className="w-full">
-                                <SelectValue placeholder="Score 0-7" />
+                                <SelectValue placeholder='0-7' />
                             </SelectTrigger>
                             <SelectContent>
                                 {FAECES_SCORES.map((n) => (
-                                    <SelectItem key={n} value={String(n)}>{n}</SelectItem>
+                                    <SelectItem key={n} value={String(n)}>{String(n)}</SelectItem>
                                 ))}
                             </SelectContent>
                         </Select>

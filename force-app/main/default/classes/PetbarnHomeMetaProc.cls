@@ -20,6 +20,8 @@ public without sharing class PetbarnHomeMetaProc extends aos_MetadataProcessor {
         List<String> locationId = this.request.getListAsStrings('locationId');
         Set<String> locationIds = new Set<String>(locationId);
 
+        Id currentUserId = UserInfo.getUserId();
+
         Integer adoptionCount = [
             SELECT COUNT()
             FROM animalos__Animal_Referral__c
@@ -34,10 +36,22 @@ public without sharing class PetbarnHomeMetaProc extends aos_MetadataProcessor {
             WHERE animalos__current_site__c IN :locationIds
         ];
 
+        Integer adoptionsByUserCount = [
+            SELECT COUNT()
+            FROM animalos__Animal_Referral__c
+            WHERE animalos__Site__c IN :locationIds
+            AND animalos__Referral__r.RecordType.DeveloperName = 'Adoption'
+            AND createdById = :currentUserId
+            AND animal_Referral_Stage__c = 'Completed'
+        ];
+
+        
+
 
         this.response.put('stats', new Map<String, Object>{
             'adoptionCount' => adoptionCount,
-            'animalCount' => animalCount 
+            'animalCount' => animalCount,
+            'adoptionsByUserCount' => adoptionsByUserCount 
         });
     }
 

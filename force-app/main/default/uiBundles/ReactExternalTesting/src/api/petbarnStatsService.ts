@@ -6,6 +6,7 @@ export type SelectOptions = Record<string, SelectOption[]>;
 export type PetbarnStats = {
     adoptionCount: number;
     animalCount: number;
+    adoptionsByUserCount: number;
 }
 
 export type PetbarnHomeData = {
