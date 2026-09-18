@@ -31,10 +31,10 @@ export default function AppLayout() {
 
 	return (
 		<>
-			<nav className="bg-white border-b border-gray-200">
+			<nav className="bg-card border-b border-border">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex justify-between items-center h-16">
-						<Link to="/" className="grid gap-4 grid-cols-4">
+						<Link to="/" className="flex items-center">
 							<img style={myImageStyle} src={AnimalosLogo} alt="AnimalOS Logo"/>
 						</Link>
 						<div className="flex items-center gap-2">

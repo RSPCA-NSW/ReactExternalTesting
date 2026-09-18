@@ -1,15 +1,28 @@
 import { fetchProcessor } from "./apexClient";
 
-export interface PetbarnStats {
+export type SelectOption = { value: string; label: string };
+export type SelectOptions = Record<string, SelectOption[]>;
+
+export type PetbarnStats = {
     adoptionCount: number;
     animalCount: number;
 }
 
-export async function fetchPetbarnStats(locationId: any[]): Promise<PetbarnStats> {
-    const response = await fetchProcessor<any>(
+export type PetbarnHomeData = {
+    stats: PetbarnStats;
+    options: SelectOptions;
+}
+
+
+
+export async function fetchPetbarnStats(locationId: any[]): Promise<PetbarnHomeData> {
+    const envelope = await fetchProcessor<any>(
         'PetbarnHomeMetaProc',
         { locationId }
     );
-    return response.dto.stats;
 
+    return {
+        stats: envelope.dto.stats,
+        options: envelope.selectOptions,
+    };
 }

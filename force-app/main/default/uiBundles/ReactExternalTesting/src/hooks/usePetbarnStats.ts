@@ -1,5 +1,5 @@
-import { fetchPetbarnStats, PetbarnStats }  from '@/api/petbarnStatsService';
 import { useState, useEffect } from 'react';
+import { fetchPetbarnStats, type SelectOptions, type PetbarnStats } from '@/api/petbarnStatsService';
 
 
 
@@ -7,6 +7,7 @@ export function usePetbarnStats(location: any){
     const [stats, setStats] = useState<PetbarnStats | null>(null);
     const [statsLoading, setStatsLoading] = useState(true);
     const [statsError, setStatsError] = useState<String | null>(null);
+    const [options, setOptions] = useState<SelectOptions | null>(null);
 
     const idKey = location.join(',')
     useEffect (() =>{
@@ -24,7 +25,9 @@ export function usePetbarnStats(location: any){
 
     fetchPetbarnStats(location)
         .then(result => {
-            if(!cancelled) setStats(result);
+            if(cancelled) return; 
+            setStats(result.stats);
+            setOptions(result.options)
         })
         .catch(error =>{
             if(!cancelled) setStatsError(error.message);
@@ -36,7 +39,7 @@ export function usePetbarnStats(location: any){
     
     }, [idKey]);
 
-    return {stats, statsLoading, statsError};
+    return {stats, options, statsLoading, statsError};
 
 
     }

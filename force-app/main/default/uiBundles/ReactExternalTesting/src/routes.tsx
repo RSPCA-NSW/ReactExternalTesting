@@ -9,8 +9,6 @@ import Profile from "./features/authentication/pages/Profile";
 import ChangePassword from "./features/authentication/pages/ChangePassword";
 import PrivateRoute from "./features/authentication/layouts/privateRouteLayout";
 import { ROUTES } from "./features/authentication/authenticationConfig";
-import AccountSearch from "./pages/AccountSearch";
-import AccountObjectDetail from "./pages/AccountObjectDetailPage";
 import AuthAppLayout from "./features/authentication/layouts/AuthAppLayout";
 
 export const routes: RouteObject[] = [
@@ -61,14 +59,6 @@ export const routes: RouteObject[] = [
             handle: { showInNavigation: false, title: ROUTES.CHANGE_PASSWORD.TITLE }
           }
         ]
-      },
-      {
-        path: "accounts/:recordId",
-        element: <AccountObjectDetail />
-      },
-      {
-        path: "accounts",
-        element: <AccountSearch />
       }
     ]
   }

@@ -5,18 +5,20 @@ export type LogWeightResult = {
   currentWeight: number;
 };
 
-export type dailyActionsResult = {
-    animalActionId: string;
-}
+export type DailyActionsResult = {
+  animalActionId: string;
+};
 
 export type DailyActionsInput = {
-  eat: boolean;
-  drink: boolean;
-  urine: boolean;
+  eat: string;
+  drink: string;
+  urine: string;
   faecalScore: number;
-  loggedAt: string;
-  comments: string
+  vasScore: string | null;
+  loggedAt: string | null;
+  comments: string;
 };
+
 
 
 export async function logWeight(
@@ -29,18 +31,23 @@ export async function logWeight(
     weightKg,
     loggedAt
   });
-  return envelope.dto.result; 
+  return envelope.dto.result;
 }
 
+
+
+/**
+ * Submits a Daily Observation for one animal. The observation fields are
+ * spread onto the top level of the request because PetbarnDailyActionsProc
+ * reads them with flat getters (request.getString('eat'), etc).
+ */
 export async function dailyActions(
-    animalId: string, obs: DailyActionsInput
-
-): Promise<dailyActionsResult>{
-      
-  const envelope = await fetchProcessor<any>('petbarnDailyActionsProc',{
-        animalId,
-        obs
-
-    });
-    return envelope.dto.result;
+  animalId: string,
+  obs: DailyActionsInput
+): Promise<DailyActionsResult> {
+  const envelope = await fetchProcessor<any>('PetbarnDailyActionsProc', {
+    animalId,
+    ...obs
+  });
+  return envelope.dto.result;
 }

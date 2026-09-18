@@ -5,7 +5,9 @@ public without sharing class PetbarnHomeMetaProc extends aos_MetadataProcessor {
             ? new aos_MetadataProcessor.MetadataRequest()
             : (aos_MetadataProcessor.MetadataRequest) request;
 
-        this.request.fields = new Set<SObjectField>{};
+        this.request.fields = new Set<SObjectField>{
+            animalos__Animal_Action__c.Distress_in_Shelter_Score_VAS__c
+        };
 
         super.process(this.request);
 
@@ -38,4 +40,5 @@ public without sharing class PetbarnHomeMetaProc extends aos_MetadataProcessor {
             'animalCount' => animalCount 
         });
     }
+
 }

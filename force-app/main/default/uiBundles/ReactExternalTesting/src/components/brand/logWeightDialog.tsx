@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Dialog, DialogHeader, DialogContent, DialogTitle, Button, Label } from "../ui"
+import { Dialog, DialogHeader, DialogContent, DialogTitle, DialogDescription, Button, Label } from "../ui"
 import { logWeight } from "@/api/petbarnAnimalActionsService";
 import { StatusAlert } from "../alerts/status-alert";
 import { Input } from "../ui";
@@ -73,36 +73,51 @@ export function LogWeightDialog({ animalId, currentWeight, open, onClose }: {
 
     let content;
     if (view === 'weight') content =
-        <DialogHeader onClick={e => {stopP(e)}}>
-            <DialogTitle className="mx-auto mb-4 text-base">Please Log the weight below</DialogTitle>
-                <div className="grid gap-2 grid-cols-3">
-                    <Label className="col-span-1 text-sm font-semibold">Weight (KG): </Label>
-                    <Input step="0.01" className="col-span-2"  type="number" value={inputWeight} onChange={handleWeightChange}/>
-                <Label className="col-span-1"> Date Given: </Label>
-                <Input className="col-span-2" type="Date" value={formattedDate} onChange={handleDateChange}/>
-                 </div>
-                <Button className="hover:border-primary transition-colors" variant="secondary" onClick={handleSubmit} disabled={saving}>{saving ? 'Saving...' : 'Submit'}</Button>
-        </DialogHeader>
+        <div className="grid gap-4" onClick={e => {stopP(e)}}>
+            <DialogHeader>
+                <DialogTitle>Log Weight</DialogTitle>
+                <DialogDescription>Record the animal's weight in kilograms.</DialogDescription>
+            </DialogHeader>
+            <div className="grid gap-4">
+                <div className="flex flex-col gap-2">
+                    <Label htmlFor="weight-kg">Weight (kg)</Label>
+                    <Input id="weight-kg" step="0.01" type="number" value={inputWeight} onChange={handleWeightChange}/>
+                </div>
+                <div className="flex flex-col gap-2">
+                    <Label htmlFor="weight-date">Date given</Label>
+                    <Input id="weight-date" type="date" value={formattedDate} onChange={handleDateChange}/>
+                </div>
+            </div>
+            {error && <StatusAlert variant="error">{error}</StatusAlert>}
+            <div className="flex justify-end gap-2 pt-2">
+                <Button variant="outline" onClick={onClose} disabled={saving}>Cancel</Button>
+                <Button onClick={handleSubmit} disabled={saving}>{saving ? 'Saving...' : 'Submit'}</Button>
+            </div>
+        </div>
 
     else if(view === 'error') content =
-    <DialogHeader>
-        <DialogTitle></DialogTitle>
-        <div className="mx-auto">
-        <StatusAlert variant="error">{error}</StatusAlert>
+        <div className="grid gap-4">
+            <DialogHeader>
+                <DialogTitle>Something went wrong</DialogTitle>
+            </DialogHeader>
+            <StatusAlert variant="error">{error}</StatusAlert>
         </div>
-    </DialogHeader>
 
     else if(view ==='success') content =
-    <DialogHeader>
-        <DialogTitle>
-            Succcess!
-        </DialogTitle>
-    </DialogHeader>
+        <div className="grid gap-4">
+            <DialogHeader>
+                <DialogTitle>Weight logged</DialogTitle>
+            </DialogHeader>
+            <StatusAlert variant="success">The weight has been saved.</StatusAlert>
+            <div className="flex justify-end pt-2">
+                <Button onClick={onClose}>Done</Button>
+            </div>
+        </div>
 
 
 
     return (
-        <Dialog open={open} onOpenChange={onClose}>
+        <Dialog open={open} onOpenChange={(isOpen) => { if (!isOpen) onClose(); }}>
             <DialogContent className="sm:max-w-[425px]">
                 {content}
             </DialogContent>
