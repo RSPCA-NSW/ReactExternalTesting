@@ -12,6 +12,7 @@ import { Badge } from "@components/ui/badge";
 import { usePetbarnStats } from "@/hooks/usePetbarnStats";
 import { useUserData } from "@/hooks/useUserData";
 import { AnimalActionsDialog } from "@/components/brand/animalActionsDialog";
+import { ContactLookUpDialog } from "@/components/brand/contactLookUpDialog";
 
 
 
@@ -36,9 +37,11 @@ export default function HomePage() {
   const { user, userLoading, userError } = useUserData();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [currentWeight, setCurrentWeight] = useState<number | null>(null);
+  const [modal, setModal] = useState<null | 'animalActions' | 'adoptMe'>(null);
 
 
-  let storeName = locations[0]?.node?.Name?.value.replace("Petbarn", "")
+  let storeName = locations[0]?.node?.Name?.value.replace("Petbarn", "");
+  
 
   let userName;
   if (userLoading) userName = <Skeleton className="inline-block h-8 w-32 align-middle" />;
@@ -48,6 +51,13 @@ export default function HomePage() {
   function handleAnimalActions(e: React.MouseEvent, id: string, weight: number) {
     setSelectedId(selectedId === id ? null : id);
     setCurrentWeight(currentWeight === weight ? null : weight);
+    setModal('animalActions');
+    e.stopPropagation();
+  }
+
+  function handleAdoptMe(e: React.MouseEvent, id: string){
+    setSelectedId(selectedId === id ? null : id);
+    setModal('adoptMe');
     e.stopPropagation();
   }
 
@@ -71,44 +81,42 @@ export default function HomePage() {
         <div className="flex flex-col gap-8">
 
           <PageHeader
-            eyebrow={storeName ? `Petbarn ${storeName.trim()}` : 'Petbarn'}
             title={<>Welcome, {userName}</>}
+            eyebrow={storeName ? `Petbarn ${storeName.trim()}` : 'Petbarn'}
+            description='Available Animals & Actions'
+            actions={
+              <div className="grid w-full gap-4 sm:w-auto sm:grid-cols-3">
+                <MetricCard
+                  label="Animals Available"
+                  loading={statsLoading}
+                  error={statsError}
+                  value={stats?.animalCount}
+                  tone="green-soft"
+                  icon={<HomeIcon />}
+                />
+                <MetricCard
+                  label={`Adoptions from ${storeName}`}
+                  loading={statsLoading}
+                  error={statsError}
+                  value={stats?.adoptionCount}
+                  tone="green-soft"
+                  icon={<HeartIcon />}
+                />
+                <MetricCard
+                  label="Adoptions Completed By You"
+                  loading={statsLoading}
+                  error={statsError}
+                  value={stats?.adoptionsByUserCount}
+                  tone="green-soft"
+                  icon={<PawPrintIcon />}
+                />
+              </div>
+            }
           />
-
-          <div className="grid gap-4 md:grid-cols-3">
-
-            <MetricCard
-              label="Animals Available"
-              loading={statsLoading}
-              error={statsError}
-              value={stats?.animalCount}
-              tone="green-soft"
-              icon={< HomeIcon />}>
-            </MetricCard>
-
-            <MetricCard
-              label={`Adoptions from ${storeName}`}
-              loading={statsLoading}
-              error={statsError}
-              value={stats?.adoptionCount}
-              tone="green-soft"
-              icon={<HeartIcon />} >
-            </MetricCard>
-
-            <MetricCard
-              label="Adoptions Completed By You"
-              loading={statsLoading}
-              error={statsError}
-              value={stats?.adoptionsByUserCount}
-              tone="green-soft"
-              icon={< PawPrintIcon />}>
-            </MetricCard>
-
-          </div>
 
           <Section
             title="Animals in store"
-            description="Select a row to see alerts, or open Animal Actions to log observations and weights."
+            className="[&>div:first-child]:justify-center"
           >
             <Card className="py-0 gap-0">
               <div className="max-h-[500px] overflow-y-auto">
@@ -151,9 +159,8 @@ export default function HomePage() {
                             <TableCell className="text-right">
                               <Button
                                 className="hover:border-primary transition-colors"
-                                onClick={e => {
-                                  e.stopPropagation();
-                                }}> Adopt Me! {<ExternalLink />}</Button>
+                                onClick={e => handleAdoptMe(e, edge.node.Id)}
+                                > Adopt Me! {<ExternalLink />}</Button>
                             </TableCell>
 
                             <TableCell className="text-right">
@@ -192,16 +199,26 @@ export default function HomePage() {
             </Card>
           </Section>
 
-          {selectedId && (
+          {modal === 'animalActions' && selectedId && (
             <AnimalActionsDialog
               options={options}
               key={selectedId}
               animalId={selectedId}
               currentWeight={currentWeight}
               open={selectedId !== null}
-              onClose={() => { setSelectedId(null); setCurrentWeight(null) }}
+              onClose={() => { setSelectedId(null); setCurrentWeight(null); setModal(null); }}
             />
           )}
+
+          {modal === 'adoptMe' && selectedId && (
+            <ContactLookUpDialog
+              key={selectedId}
+              animalId={selectedId}
+              open={selectedId !== null}
+              onClose={() => { setSelectedId(null); setModal(null); }}
+            />
+          )}
+
         </div>
 
 

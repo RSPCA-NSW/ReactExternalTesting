@@ -15,22 +15,14 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
-/*
- * Heading face, self-hosted so it survives the Experience Cloud CSP (font
- * CDNs are blocked). Cormorant Garamond ships as static weights, so only
- * the two heading weights are pulled in. Vite copies the woff2 files into
- * dist/assets at build time. Body text uses the platform system stack
- * (see --font-sans below), so nothing else needs bundling.
- */
-@import '@fontsource/cormorant-garamond/500.css';
-@import '@fontsource/cormorant-garamond/600.css';
-
 @custom-variant dark (&:is(.dark *));
 
 @theme {
   /*
-   * Type pairing: Cormorant Garamond (headings) + the Salesforce platform
-   * sans for body text, so the portal reads like the rest of Salesforce.
+   * Single sans family for headings and body, so the portal reads like the
+   * rest of Salesforce. No webfonts are bundled: the platform system stack
+   * is used throughout, which also sidesteps the Experience Cloud CSP
+   * (font CDNs are blocked).
    *
    * Salesforce Sans is proprietary and no longer distributed (the SLDS npm
    * package ships only tokens), so it cannot be bundled. It is listed first
@@ -42,8 +34,9 @@
     'Salesforce Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
-  --font-display:
-    'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif;
+  /* Headings share the body face; kept as a separate token so the heading
+     family can be swapped in one place later. */
+  --font-display: var(--font-sans);
 
   /*
    * Paw loader: the outline draws itself in, holds, then un-draws as the
@@ -203,9 +196,9 @@
     @apply bg-background font-sans text-foreground;
   }
   /*
-   * Type scale. Headings use the display serif; everything else inherits
-   * the body sans. Cormorant has a small x-height, so heading sizes run a
-   * step larger than the equivalent sans would.
+   * Type scale. Headings use the display token (currently the same sans as
+   * the body) at a medium weight to keep hierarchy through size rather
+   * than weight.
    *
    *   h1  page title        text-4xl  font-medium   (PageHeader)
    *   h2  section title     text-2xl  font-medium   (Section)
