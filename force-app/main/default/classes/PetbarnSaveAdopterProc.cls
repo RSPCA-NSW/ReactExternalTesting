@@ -78,8 +78,8 @@ public without sharing class PetbarnSaveAdopterProc extends aos_AbstractProcesso
 
     private Adopter readAdopter() {
         Adopter a = new Adopter();
-        a.firstName = this.clean(this.request.getString('firstName'));
-        a.lastName  = this.clean(this.request.getString('lastName'));
+        a.firstName = PetbarnNameUtils.normaliseName(this.request.getString('firstName'));
+        a.lastName  = PetbarnNameUtils.normaliseName(this.request.getString('lastName'));
         a.email     = this.validateEmail(this.request.getString('email'));
         a.phone     = this.formatPhone(this.request.getString('phone'));
         a.birthdate = this.validateBirthdate(this.request.getString('birthdate'));
@@ -88,12 +88,8 @@ public without sharing class PetbarnSaveAdopterProc extends aos_AbstractProcesso
         a.state     = this.clean(this.request.getString('state'));
         a.postcode  = this.clean(this.request.getString('postcode'));
 
-        if (String.isBlank(a.firstName)) {
-            throw new aos_Structs.ValidationException('A first name is required.');
-        }
-        if (String.isBlank(a.lastName)) {
-            throw new aos_Structs.ValidationException('A surname is required.');
-        }
+        PetbarnNameUtils.validateName(a.firstName, PetbarnNameUtils.FIRST_NAME_MAX_LENGTH, 'first name');
+        PetbarnNameUtils.validateName(a.lastName, PetbarnNameUtils.LAST_NAME_MAX_LENGTH, 'surname');
         if (String.isBlank(a.street) || String.isBlank(a.suburb)
                 || String.isBlank(a.state) || String.isBlank(a.postcode)) {
             throw new aos_Structs.ValidationException(

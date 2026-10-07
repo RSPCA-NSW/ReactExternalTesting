@@ -55,6 +55,32 @@ private class PetbarnContactSearchProcTest {
     }
 
     @IsTest
+    static void search_normalisesPastedNames() {
+        insert new Contact(FirstName = 'Mary Jane', LastName = 'Adopter');
+
+        aos_Response response = new PetbarnContactSearchProc().process(new Map<String, Object>{
+            'firstName' => 'Mary  Jane​',
+            'lastName'  => ' Adopter '
+        });
+
+        Map<String, Object> result = (Map<String, Object>) response.get('result');
+        System.assertEquals(1, ((List<Object>) result.get('contacts')).size());
+    }
+
+    @IsTest
+    static void search_emojiInName_throwsValidation() {
+        try {
+            new PetbarnContactSearchProc().process(new Map<String, Object>{
+                'firstName' => 'Jane 😀',
+                'lastName'  => 'Adopter'
+            });
+            System.assert(false, 'Expected a ValidationException for an emoji in the name');
+        } catch (aos_Structs.ValidationException ex) {
+            System.assert(ex.getMessage().contains('emoji'), ex.getMessage());
+        }
+    }
+
+    @IsTest
     static void masking_handlesEdgeCases() {
         System.assertEquals('No email on file', PetbarnContactSearchProc.maskedEmail(null));
         System.assertEquals('No email on file', PetbarnContactSearchProc.maskedEmail('not-an-email'));

@@ -217,4 +217,35 @@ private class PetbarnSaveAdopterProcTest {
         Contact saved = [SELECT Phone FROM Contact WHERE Id = :(Id) result.get('contactId')];
         System.assertEquals('+64 21 123 4567', saved.Phone);
     }
+
+    @IsTest
+    static void save_messyNameWhitespace_isNormalised() {
+        Map<String, Object> req = validRequest();
+        req.put('firstName', '​Mary   Jane ');
+        req.put('lastName', ' Van Adopter﻿');
+        aos_Response response = new PetbarnSaveAdopterProc().process(req);
+        Map<String, Object> result = (Map<String, Object>) response.get('result');
+        Contact saved = [SELECT FirstName, LastName FROM Contact WHERE Id = :(Id) result.get('contactId')];
+        System.assertEquals('Mary Jane', saved.FirstName);
+        System.assertEquals('Van Adopter', saved.LastName);
+    }
+
+    @IsTest
+    static void save_invalidNames_throwValidation() {
+        Map<String, Object> req = validRequest();
+        req.put('firstName', '​ ');
+        assertValidationError(req, 'A first name is required');
+
+        req = validRequest();
+        req.put('firstName', 'J'.repeat(PetbarnNameUtils.FIRST_NAME_MAX_LENGTH + 1));
+        assertValidationError(req, 'characters or fewer');
+
+        req = validRequest();
+        req.put('lastName', 'Ad\u0007opter');
+        assertValidationError(req, 'invalid characters');
+
+        req = validRequest();
+        req.put('lastName', 'Adopter 😀');
+        assertValidationError(req, 'emoji');
+    }
 }

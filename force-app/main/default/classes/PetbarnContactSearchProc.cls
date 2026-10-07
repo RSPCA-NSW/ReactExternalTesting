@@ -33,12 +33,13 @@ public without sharing class PetbarnContactSearchProc extends aos_AbstractProces
     }
 
     private void search() {
-        String first = this.request.getRequiredString('firstName', 'No first name was given').trim();
-        String last  = this.request.getRequiredString('lastName', 'No surname was given').trim();
+        // Same cleaning as PetbarnSaveAdopterProc, so a name typed (or pasted)
+        // here matches what the save would have stored.
+        String first = PetbarnNameUtils.normaliseName(this.request.getRequiredString('firstName', 'No first name was given'));
+        String last  = PetbarnNameUtils.normaliseName(this.request.getRequiredString('lastName', 'No surname was given'));
 
-        if (String.isBlank(first) || String.isBlank(last)) {
-            throw new aos_Structs.ValidationException('Enter both a first name and a surname.');
-        }
+        PetbarnNameUtils.validateName(first, PetbarnNameUtils.FIRST_NAME_MAX_LENGTH, 'first name');
+        PetbarnNameUtils.validateName(last, PetbarnNameUtils.LAST_NAME_MAX_LENGTH, 'surname');
 
         List<Contact> contacts = this.getContacts(first, last);
         Boolean hasMore = contacts.size() > PAGE_SIZE;
